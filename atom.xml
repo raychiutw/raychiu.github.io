@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Ray&#39;s Note</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://raychiutw.github.io/"/>
+  <updated>2019-03-19T09:22:00.028Z</updated>
+  <id>https://raychiutw.github.io/</id>
+  
+  <author>
+    <name>Ray Chiu</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://raychiutw.github.io/2019/hello-world/"/>
+    <id>https://raychiutw.github.io/2019/hello-world/</id>
+    <published>2019-03-19T09:22:00.028Z</published>
+    <updated>2019-03-19T09:22:00.028Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>用 LINQ 處理分群情境</title>
+    <link href="https://raychiutw.github.io/2018/%E7%94%A8%20LINQ%20%E8%99%95%E7%90%86%E5%88%86%E7%BE%A4%E6%83%85%E5%A2%83/"/>
+    <id>https://raychiutw.github.io/2018/用 LINQ 處理分群情境/</id>
+    <published>2018-05-22T21:33:30.000Z</published>
+    <updated>2019-03-19T08:27:02.199Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;Language Integrated Query (LINQ) 是一組以直接將查詢功能整合至 C# 語言為基礎之技術的名稱。LINQ 最明顯的「語言整合」部分就是查詢運算式。 查詢運算式是以宣告式「查詢語法」撰寫。 透過使用查詢語法，您就可以利用最少的程式碼，針對資料來源執行篩選、排序及分組作業。(&lt;a href=&quot;https://docs.microsoft.com/zh-tw/dotnet/csharp/linq/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;參考來源&lt;/a&gt;)&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="程式開發" scheme="https://raychiutw.github.io/categories/%E7%A8%8B%E5%BC%8F%E9%96%8B%E7%99%BC/"/>
+    
+    
+      <category term="C#" scheme="https://raychiutw.github.io/tags/C/"/>
+    
+      <category term="LINQ" scheme="https://raychiutw.github.io/tags/LINQ/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Git Commit 空資料夾</title>
+    <link href="https://raychiutw.github.io/2018/%E5%9C%A8-Git-Commit-%E7%A9%BA%E8%B3%87%E6%96%99%E5%A4%BE/"/>
+    <id>https://raychiutw.github.io/2018/在-Git-Commit-空資料夾/</id>
+    <published>2018-05-20T14:52:15.000Z</published>
+    <updated>2019-03-19T08:26:53.004Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Git 基本只對檔案作版控，資料夾中若沒有檔案是無法 commit 的，若想要 commit 空資料夾才可採取下面兩種做法。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="版本控制" scheme="https://raychiutw.github.io/categories/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/"/>
+    
+    
+      <category term="Git" scheme="https://raychiutw.github.io/tags/Git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo教學（5）－Material 主題設定</title>
+    <link href="https://raychiutw.github.io/2018/Hexo%E6%95%99%E5%AD%B8-5-Material-%E4%B8%BB%E9%A1%8C%E8%A8%AD%E5%AE%9A/"/>
+    <id>https://raychiutw.github.io/2018/Hexo教學-5-Material-主題設定/</id>
+    <published>2018-05-20T13:42:37.000Z</published>
+    <updated>2019-03-19T09:34:58.082Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;自建 Blog 其中一種樂趣就是可以換很多種風格迥異的主題，不過仍需要一點程式基礎才能做好設定，接下來會以 Hexo 排名第二的主題 - Material 來做說明&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="應用程式" scheme="https://raychiutw.github.io/categories/%E6%87%89%E7%94%A8%E7%A8%8B%E5%BC%8F/"/>
+    
+    
+      <category term="Hexo" scheme="https://raychiutw.github.io/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo（4）－部署到 GitHub Pages</title>
+    <link href="https://raychiutw.github.io/2018/Hexo%E6%95%99%E5%AD%B8-4-%E9%83%A8%E7%BD%B2%E5%88%B0-GitHub-Pages/"/>
+    <id>https://raychiutw.github.io/2018/Hexo教學-4-部署到-GitHub-Pages/</id>
+    <published>2018-05-20T09:42:07.000Z</published>
+    <updated>2019-03-19T09:34:05.186Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;Hexo 產生的靜態網誌預設可以本機執行，但若要讓大家看看到勢必要部署到外部網路空間，由於是靜態網站部署到哪個網頁空間都不成問題，本文是建議部署到 GitHub Pages 上，以下就一步步說明步驟。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="應用程式" scheme="https://raychiutw.github.io/categories/%E6%87%89%E7%94%A8%E7%A8%8B%E5%BC%8F/"/>
+    
+    
+      <category term="Hexo" scheme="https://raychiutw.github.io/tags/Hexo/"/>
+    
+      <category term="Git" scheme="https://raychiutw.github.io/tags/Git/"/>
+    
+      <category term="GitHub" scheme="https://raychiutw.github.io/tags/GitHub/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>在 ASP.NET Core 中使用 AutoMapper</title>
+    <link href="https://raychiutw.github.io/2018/%E5%9C%A8-ASP-NET-Core-%E4%B8%AD%E4%BD%BF%E7%94%A8-AutoMapper/"/>
+    <id>https://raychiutw.github.io/2018/在-ASP-NET-Core-中使用-AutoMapper/</id>
+    <published>2018-05-17T05:39:35.000Z</published>
+    <updated>2019-03-19T09:36:09.907Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;AutoMapper 是一個類別對應轉換的套件，在ASP.NET Core專案中的用法有有點差異，本篇說明適合ASP.NET Core 的簡潔用法。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="程式開發" scheme="https://raychiutw.github.io/categories/%E7%A8%8B%E5%BC%8F%E9%96%8B%E7%99%BC/"/>
+    
+    
+      <category term="C#" scheme="https://raychiutw.github.io/tags/C/"/>
+    
+      <category term="ASP.Net Core" scheme="https://raychiutw.github.io/tags/ASP-Net-Core/"/>
+    
+      <category term="AutoMapper" scheme="https://raychiutw.github.io/tags/AutoMapper/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo（3）－基本設定</title>
+    <link href="https://raychiutw.github.io/2018/Hexo%E6%95%99%E5%AD%B8-3-%E5%9F%BA%E6%9C%AC%E8%A8%AD%E5%AE%9A/"/>
+    <id>https://raychiutw.github.io/2018/Hexo教學-3-基本設定/</id>
+    <published>2018-05-10T08:37:52.000Z</published>
+    <updated>2019-03-19T09:33:20.948Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;有了第一個自己的 Blog，也順利的產身第一篇文章，接下來我們來做一些設定，讓 Blog 更量身打造一些。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="應用程式" scheme="https://raychiutw.github.io/categories/%E6%87%89%E7%94%A8%E7%A8%8B%E5%BC%8F/"/>
+    
+    
+      <category term="Hexo" scheme="https://raychiutw.github.io/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ASP.NET Core 無法使用 DeploymentItem 的替代方案</title>
+    <link href="https://raychiutw.github.io/2018/ASP-NET-Core-%E7%84%A1%E6%B3%95%E4%BD%BF%E7%94%A8-DeploymentItem-%E7%9A%84%E6%9B%BF%E4%BB%A3%E6%96%B9%E6%A1%88/"/>
+    <id>https://raychiutw.github.io/2018/ASP-NET-Core-無法使用-DeploymentItem-的替代方案/</id>
+    <published>2018-05-10T02:32:09.000Z</published>
+    <updated>2019-03-19T08:26:16.964Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;在 MSTest 中，若要在執行測試時能調用實體檔案，通常會用 DeploymentItem Attribute 來指定要同時部署的檔案，但屬性在 ASP.NET Core 中不再支援，本篇說明其他替代方案。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="程式開發" scheme="https://raychiutw.github.io/categories/%E7%A8%8B%E5%BC%8F%E9%96%8B%E7%99%BC/"/>
+    
+    
+      <category term="ASP.NET Core" scheme="https://raychiutw.github.io/tags/ASP-NET-Core/"/>
+    
+      <category term="MSTest" scheme="https://raychiutw.github.io/tags/MSTest/"/>
+    
+      <category term="UnitTest" scheme="https://raychiutw.github.io/tags/UnitTest/"/>
+    
+      <category term="C#" scheme="https://raychiutw.github.io/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ASP.NET Core 啟用 Web.config Transformation</title>
+    <link href="https://raychiutw.github.io/2018/ASP-NET-Core-%E5%95%9F%E7%94%A8-Web-config-Transformation/"/>
+    <id>https://raychiutw.github.io/2018/ASP-NET-Core-啟用-Web-config-Transformation/</id>
+    <published>2018-05-02T07:04:43.000Z</published>
+    <updated>2019-03-19T09:32:30.485Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;.Net Framework 4.0 提供了 Transformation 功能，讓 Web.Config 與 app.Config 可以依據組態設定建置不同的參數，這項好用的功能在 .Net Core 的專案中已無法作用，本文紀錄如何再次啟用這好用的功能。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="程式開發" scheme="https://raychiutw.github.io/categories/%E7%A8%8B%E5%BC%8F%E9%96%8B%E7%99%BC/"/>
+    
+    
+      <category term="ASP.NET Core" scheme="https://raychiutw.github.io/tags/ASP-NET-Core/"/>
+    
+      <category term="Transformation" scheme="https://raychiutw.github.io/tags/Transformation/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo教學（0）－目錄</title>
+    <link href="https://raychiutw.github.io/2018/Hexo%E6%95%99%E5%AD%B8-0-%E7%9B%AE%E9%8C%84/"/>
+    <id>https://raychiutw.github.io/2018/Hexo教學-0-目錄/</id>
+    <published>2018-05-01T01:28:34.000Z</published>
+    <updated>2019-03-19T08:26:04.374Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;Hexo 是一個網誌框架。使用 Markdown 解析文章，透過主題產生靜態檔案。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="應用程式" scheme="https://raychiutw.github.io/categories/%E6%87%89%E7%94%A8%E7%A8%8B%E5%BC%8F/"/>
+    
+    
+      <category term="Hexo" scheme="https://raychiutw.github.io/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo教學（2）－第一篇文章</title>
+    <link href="https://raychiutw.github.io/2018/Hexo%E6%95%99%E5%AD%B8-2-%E5%BB%BA%E7%AB%8B%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/"/>
+    <id>https://raychiutw.github.io/2018/Hexo教學-2-建立第一篇文章/</id>
+    <published>2018-04-29T07:52:38.000Z</published>
+    <updated>2019-03-19T09:32:00.516Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;快速建立第一個 Bolg 之後,接下當然是來產生第一篇文章&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="應用程式" scheme="https://raychiutw.github.io/categories/%E6%87%89%E7%94%A8%E7%A8%8B%E5%BC%8F/"/>
+    
+    
+      <category term="Hexo" scheme="https://raychiutw.github.io/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo教學（1）－快速安裝</title>
+    <link href="https://raychiutw.github.io/2018/Hexo%E6%95%99%E5%AD%B8-1-%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%9D/"/>
+    <id>https://raychiutw.github.io/2018/Hexo教學-1-快速安裝/</id>
+    <published>2018-04-29T04:27:49.000Z</published>
+    <updated>2019-03-19T09:31:45.006Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;那我們就開始吧。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&quot;安裝-Node-js&quot;&gt;&lt;a href=&quot;#安裝-Node-js&quot; class=&quot;headerlink&quot; title=&quot;安裝 Node.js&quot;&gt;&lt;/a&gt;安裝 Node.js&lt;/h4&gt;&lt;p&gt;&lt;a href=&quot;https://nodejs.org/en/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;下載Node.js&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="應用程式" scheme="https://raychiutw.github.io/categories/%E6%87%89%E7%94%A8%E7%A8%8B%E5%BC%8F/"/>
+    
+    
+      <category term="Hexo" scheme="https://raychiutw.github.io/tags/Hexo/"/>
+    
+      <category term="Node.js" scheme="https://raychiutw.github.io/tags/Node-js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>開張大吉</title>
+    <link href="https://raychiutw.github.io/2018/%E9%96%8B%E5%BC%B5%E5%A4%A7%E5%90%89/"/>
+    <id>https://raychiutw.github.io/2018/開張大吉/</id>
+    <published>2018-04-28T00:52:06.000Z</published>
+    <updated>2019-03-19T08:24:17.137Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;為什麼想寫部落格？&lt;/p&gt;
+&lt;p&gt;為什麼到這把年紀才想寫部落格？&lt;/p&gt;
+&lt;p&gt;其實！就是因為這把年紀阿！！&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="雜記" scheme="https://raychiutw.github.io/categories/%E9%9B%9C%E8%A8%98/"/>
+    
+    
+  </entry>
+  
+</feed>

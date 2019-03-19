@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2019%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[用 LINQ 處理分群情境]]></title>
+    <url>%2F2018%2F%E7%94%A8%20LINQ%20%E8%99%95%E7%90%86%E5%88%86%E7%BE%A4%E6%83%85%E5%A2%83%2F</url>
+    <content type="text"><![CDATA[Language Integrated Query (LINQ) 是一組以直接將查詢功能整合至 C# 語言為基礎之技術的名稱。LINQ 最明顯的「語言整合」部分就是查詢運算式。 查詢運算式是以宣告式「查詢語法」撰寫。 透過使用查詢語法，您就可以利用最少的程式碼，針對資料來源執行篩選、排序及分組作業。(參考來源) LINQ的強大不是本文的重點，本文主要是示範如何簡潔的處理資料分群問題。 情境說明一組數量不固定的數字集合，想平均分配至30組中。 土法煉鋼法LINQ 解法範例程式]]></content>
+      <categories>
+        <category>程式開發</category>
+      </categories>
+      <tags>
+        <tag>C#</tag>
+        <tag>LINQ</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Git Commit 空資料夾]]></title>
+    <url>%2F2018%2F%E5%9C%A8-Git-Commit-%E7%A9%BA%E8%B3%87%E6%96%99%E5%A4%BE%2F</url>
+    <content type="text"><![CDATA[Git 基本只對檔案作版控，資料夾中若沒有檔案是無法 commit 的，若想要 commit 空資料夾才可採取下面兩種做法。 新增 .gitkeep / .keep 在目的空資料夾開啟 Git Bash，執行以下命令，產生空檔案 1touch .gitkeep 檔案名稱其實隨意都可，但 .gitkeep / .keep 較常見。 新增 .gitingore 在目的空資夾下新增一個 .gitingore 檔案並編輯如下 1234# 忽略所有文件*# 除了這個文件!.gitignore 我個人是比較喜歡第一種作法，讓 .gitingore 還是總控在根目錄下。]]></content>
+      <categories>
+        <category>版本控制</category>
+      </categories>
+      <tags>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hexo教學（5）－Material 主題設定]]></title>
+    <url>%2F2018%2FHexo%E6%95%99%E5%AD%B8-5-Material-%E4%B8%BB%E9%A1%8C%E8%A8%AD%E5%AE%9A%2F</url>
+    <content type="text"><![CDATA[自建 Blog 其中一種樂趣就是可以換很多種風格迥異的主題，不過仍需要一點程式基礎才能做好設定，接下來會以 Hexo 排名第二的主題 - Material 來做說明 下載主題與更名設定檔Hexo 只需要將主題文件放置於站點目錄的 themes 目錄下。從 Github 下載最新版本。並更名為 material 資料夾可任意更名，但 _config.yml 的設定需同資料夾名稱 第一次啟用時需先將 material 內的 _config.template.yml 更名為 _config.yml 如何變更主題先理解兩個名詞 站點配置文件 站點目錄下的 _config.yml 主題配置文件 material 資料夾下的 _config.yml 開啟站點配置文件，更改 language 與 theme 設定 語系支援清單 العَرَبِيَّة (ar) Deutsch (de) English (en) Español (es) Français (fr) 日本語 (ja) Malay (ms) Portuguese (Brazil) (pt-BR) 简体中文 (zh-CN) 繁體中文 (zh-TW) 1language: zh-TW 1theme: material 為什麼選擇 Material 真的很潮，Material Design 真的很潮，讓人印象深刻。 完整的文件說明，說明連結 整合眾多功能，整合了回覆留言、標籤、分類、時間軸、站內搜尋、 QR Code 等功能 Material 主題設定接下來主題配置文件的設定 設定樣式 Paradox: 標準 Material Design Isolation: 極簡風格 Nexus: 未完成，此專案已經久未更新，應該是沒有完成之日了。 1234# Schemesscheme: Paradox#scheme: Isolation#scheme: Nexus 選單設定 選單設定是比較有趣的地方，可以自由排列想要選單。 icon: 使用 Material icon，完整 icon 清單請參考 material design icons divider: 分隔線 12345678910111213141516171819202122232425262728293031323334353637383940414243# Sidebar Customizesidebar: dropdown: Email Me: link: mail@mail.com icon: email Github: link: "https://github.com/username" icon: layers homepage: use: true icon: home divider: false archives: use: true icon: inbox divider: false categories: use: true icon: chrome_reader_mode divider: false pages: 標籤: link: "/tags" icon: bookmark divider: false 時間軸: link: "/timeline" icon: timeline divider: false #About: #link: "/about" #icon: person #divider: false article_num: use: true divider: false footer: divider: true theme: true support: false feedback: false material: false 如此就一個看起來蠻完整的外觀囉。 其他相關教學請參考系列文章目錄]]></content>
+      <categories>
+        <category>應用程式</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hexo（4）－部署到 GitHub Pages]]></title>
+    <url>%2F2018%2FHexo%E6%95%99%E5%AD%B8-4-%E9%83%A8%E7%BD%B2%E5%88%B0-GitHub-Pages%2F</url>
+    <content type="text"><![CDATA[Hexo 產生的靜態網誌預設可以本機執行，但若要讓大家看看到勢必要部署到外部網路空間，由於是靜態網站部署到哪個網頁空間都不成問題，本文是建議部署到 GitHub Pages 上，以下就一步步說明步驟。 部署說明Hexo 預設可以支援以下部署方式 Git Heroku Rsync OpenShift FTPSync SFTP 手動 Copy public 資料夾 本文使用 Git 部署，需先安裝 hexo-deployer-git 套件 其他部署方式請參考 Hexo部署 1npm install hexo-deployer-git --save GitHub Pages 設定到 GitHub 上新增一個 repo，名稱必須是 {username}.github.io 設定 _config.yml1234deploy: type: git repo: https://&lt;username&gt;:&lt;password&gt;@github.com/&lt;username&gt;/&lt;username&gt;.github.io.git branch: master repo 有幾種驗證方式可以 push 到 Github，這裡選擇最簡單的自帶帳密的方式。 若有多組 Git 部署可以參考以下設定 12345deploy: type: git repo: github: https://github.com/&lt;username&gt;/&lt;username&gt;.github.io.git,master gitcafe: https://gitcafe.com/&lt;username&gt;/&lt;username&gt;.git,gitcafe-pages 若是多種部署方式可參考以下設定 12345deployer:– type: git repo:– type: heroku repo: 開始部署請執行以下命令 1hexo d 也可使用以下兩種指定，產生網頁後部署 1hexo d -g 或 1hexo g -d 執行完之後就算完成部署到外部網頁空間囉。 其他相關教學請參考系列文章目錄]]></content>
+      <categories>
+        <category>應用程式</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>Git</tag>
+        <tag>GitHub</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[在 ASP.NET Core 中使用 AutoMapper]]></title>
+    <url>%2F2018%2F%E5%9C%A8-ASP-NET-Core-%E4%B8%AD%E4%BD%BF%E7%94%A8-AutoMapper%2F</url>
+    <content type="text"><![CDATA[AutoMapper 是一個類別對應轉換的套件，在ASP.NET Core專案中的用法有有點差異，本篇說明適合ASP.NET Core 的簡潔用法。 安裝套件1Install-Package AutoMapper.Extensions.Microsoft.DependencyInjection 此套件是使用 ASP.Net Core 自帶的 DI Framework，讓 AutoMapper 使用上更簡潔優雅，此套件依賴了 AutoMapper，會自動安裝。 加入 Startup.cs123456public void ConfigureServices(IServiceCollection services)&#123; // 加入 AutoMapper services.AddAutoMapper(); services.AddMvc();&#125; ASP.Net Core 專案中要使用什麼東西皆是相同套路，在 ConfigureServices 中 AddAutoMapper 這個 Middleware。 建立 Profile12345678public class UserProfie : Profile&#123; public UserProfie() &#123; // 建立 Profile 對照定義 CreateMap&lt;UserResultModel, UserViewModel&gt;(); &#125;&#125; Profile 的重點在繼承 Profile 這個類別 使用 IMapper1234567891011121314151617181920212223public class HomeController : Controller&#123; private IMapper _mapper; private IUserService _userService; public HomeController(IMapper mapper, IUserService userService) &#123; this._mapper = mapper; this._userService = userService; &#125; public IActionResult Index() &#123; // 取得 user var user = this._userService.Get(); // 將 user 置換成 ViewModel var userViewModel = _mapper.Map&lt;IEnumerable&lt;UserViewModel&gt;&gt;(user); ViewData["User"] = userViewModel; return View(); &#125;&#125; 只要透過建構式注入 IMapper，就可以透過 Map 這個方法 Mapper Profile 有定義到類別。 結論這樣的作法有什麼好處呢？ 夠簡潔。使用 AddAutoMapper 方法，啟動 AutoMapper middleware，簡單明瞭。 低耦合。藉由繼承 Profile ，AutoMapper 自動取得所有定義 Profile，並將 IMapper 注入到需要的區塊中，降低程式碼對 AutoMapper 的耦合度。 簡單的一句話，Asp.Net Core 真叫人愛不釋手。 參考範例 參考連結 Using Automapper In ASP.net Core AutoMapper Docs]]></content>
+      <categories>
+        <category>程式開發</category>
+      </categories>
+      <tags>
+        <tag>C#</tag>
+        <tag>ASP.Net Core</tag>
+        <tag>AutoMapper</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hexo（3）－基本設定]]></title>
+    <url>%2F2018%2FHexo%E6%95%99%E5%AD%B8-3-%E5%9F%BA%E6%9C%AC%E8%A8%AD%E5%AE%9A%2F</url>
+    <content type="text"><![CDATA[有了第一個自己的 Blog，也順利的產身第一篇文章，接下來我們來做一些設定，讓 Blog 更量身打造一些。 請打開目錄下的 _config.yaml ，我們一步步調整。 Site 設定Site 是 Blog 的基本資訊，請修改基本的資訊上去。 12345678# Sitetitle: Hexosubtitle:description:keywords:author: John Doelanguage:timezone: URL 設定123456# URL## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'url: https://raychiutw.github.ioroot: /permalink: :year/:month/:day/:title/permalink_defaults: url：Blog 的網址。 root：若網站有子目錄記得修改。&#39;http://yoursite.com/child&#39; and root as &#39;/child/&#39; permalink：若有 SEO 考量，可改為更簡短的設定 Directory 設定123456789# Directorysource_dir: sourcepublic_dir: publictag_dir: tagsarchive_dir: archivescategory_dir: categoriescode_dir: downloads/codei18n_dir: :langskip_render: 本區使用預設值即可 Extensions 設定1234# Extensions## Plugins: https://hexo.io/plugins/## Themes: https://hexo.io/themes/theme: landscape theme：主題設定預設 landscape，後續會改使用 material。 Deployment 設定1234# Deployment## Docs: https://hexo.io/docs/deployment.htmldeploy: type: 部署的方式會是部署到 Github Pages，這部分有後續有專文說明 結論Hexo 預設的定義並不複雜，但是要讓他更完善好用仍須費一番心思調整，接著就來一一說明。 其他相關教學請參考系列文章目錄]]></content>
+      <categories>
+        <category>應用程式</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[ASP.NET Core 無法使用 DeploymentItem 的替代方案]]></title>
+    <url>%2F2018%2FASP-NET-Core-%E7%84%A1%E6%B3%95%E4%BD%BF%E7%94%A8-DeploymentItem-%E7%9A%84%E6%9B%BF%E4%BB%A3%E6%96%B9%E6%A1%88%2F</url>
+    <content type="text"><![CDATA[在 MSTest 中，若要在執行測試時能調用實體檔案，通常會用 DeploymentItem Attribute 來指定要同時部署的檔案，但屬性在 ASP.NET Core 中不再支援，本篇說明其他替代方案。 好用的 DeploymentItem在寫測試時，我們常會用以下作法調用外部檔案。 1234567891011121314151617using System.IO;using Microsoft.VisualStudio.TestTools.UnitTesting;namespace DeploymentItem.Tests&#123; [TestClass] public class UnitTestWithDeploymentItem &#123; [TestMethod] [DeploymentItem("TestData\\Sample.csv")] public void TestMethod1() &#123; var file = new StreamReader("Sample.csv"); // test code ... &#125; &#125;&#125; 完整使用說明 但在 ASP.NET Core 專案中使用 DeploymentItem 不會報錯，但測試執行後會找不到檔案（因為實際上沒有作用）！ 解決方式其實沒有什麼替代方式，就是不要用了，在程式碼直接指定明確的路徑就好了。 12345678910111213141516using System.IO;using Microsoft.VisualStudio.TestTools.UnitTesting;namespace DeploymentItem.Tests&#123; [TestClass] public class UnitTest1 &#123; [TestMethod] public void TestMethod1() &#123; var file = new StreamReader("TestData\\Sample.csv"); // test code ... &#125; &#125;&#125; 結案～ 範例程式連結https://github.com/raychiutw/asp-net-core-deploymentitem]]></content>
+      <categories>
+        <category>程式開發</category>
+      </categories>
+      <tags>
+        <tag>ASP.NET Core</tag>
+        <tag>MSTest</tag>
+        <tag>UnitTest</tag>
+        <tag>C#</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[ASP.NET Core 啟用 Web.config Transformation]]></title>
+    <url>%2F2018%2FASP-NET-Core-%E5%95%9F%E7%94%A8-Web-config-Transformation%2F</url>
+    <content type="text"><![CDATA[.Net Framework 4.0 提供了 Transformation 功能，讓 Web.Config 與 app.Config 可以依據組態設定建置不同的參數，這項好用的功能在 .Net Core 的專案中已無法作用，本文紀錄如何再次啟用這好用的功能。 情境說明ASP.NET Core 2.0 是靠 application.json 來取代 web.config，但有時候我們仍需要在 web.config 作一些環境參數切換，甚至有些第三方套件仍是倚賴 XML 做設定 (ex: Nlog.xml)，以下步驟將說明如何讓 ASP.NET Core 2.0 重新啟用 Transformation 環境說明 Visual Studio 2017 ASP.Net Core 2.0 加入 web.config 設定ASP.Net Core 範本專案沒有 web.config, 我們先手動新增並輸入以下設定。 1234567&lt;system.webServer&gt; &lt;aspNetCore processPath="%LAUNCHER_PATH%" arguments="%LAUNCHER_ARGS%" stdoutLogEnabled="false" stdoutLogFile=".\logs\stdout"&gt; &lt;environmentVariables&gt; &lt;environmentVariable name="ASPNETCORE_ENVIRONMENT" value="Development" /&gt; &lt;/environmentVariables&gt; &lt;/aspNetCore&gt;&lt;/system.webServer&gt; 再新增 web.release.config 12345678910&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform"&gt; &lt;system.webServer&gt; &lt;aspNetCore&gt; &lt;environmentVariables&gt; &lt;environmentVariable name="ASPNETCORE_ENVIRONMENT" xdt:Transform="Remove" xdt:Locator="Match(name)" /&gt; &lt;/environmentVariables&gt; &lt;/aspNetCore&gt; &lt;/system.webServer&gt;&lt;/configuration&gt; 在 web.config 中指定了環境變數為 Development，而 web.release.config 則在 release 組態建置時 將其移除，如此便達成了 Debug 組態時專案使用 application.development.json，Realese 組態使用 applictaion.json。 編輯 csproj接下來我們直接編輯 csproj，加入以下設定。 1234&lt;ItemGroup&gt; &lt;DotNetCliToolReference Include="Microsoft.DotNet.Xdt.Tools" Version="2.0.0" /&gt; ... 其他套件參考 ...&lt;/ItemGroup&gt; 請直接編輯 csproj，請勿使用 Nuget Manager 安裝。 在 &lt;/project&gt; 之前請輸入以下設定 12345678910&lt;Target Name="ApplyXdtConfigTransform" BeforeTargets="_TransformWebConfig"&gt; &lt;PropertyGroup&gt; &lt;_SourceWebConfig&gt;$(MSBuildThisFileDirectory)Web.config&lt;/_SourceWebConfig&gt; &lt;_XdtTransform&gt;$(MSBuildThisFileDirectory)Web.$(Configuration).config&lt;/_XdtTransform&gt; &lt;_TargetWebConfig&gt;$(PublishDir)Web.config&lt;/_TargetWebConfig&gt; &lt;/PropertyGroup&gt; &lt;Exec Command="dotnet transform-xdt --xml &amp;quot;$(_SourceWebConfig)&amp;quot; --transform &amp;quot;$(_XdtTransform)&amp;quot; --output &amp;quot;$(_TargetWebConfig)&amp;quot;" Condition="Exists('$(_XdtTransform)')" /&gt;&lt;/Target&gt; 主要的執行主體在 &lt;Exec /&gt; 區段，執行的時機設定在 BeforeTargets=&quot;_TransformWebConfig&quot; 完整參數說明如下 12345678.NET Core XML Document TransformationUsage: dotnet transform-xdt [options]Options: -?|-h|--help Show help information --xml|-x The path to the XML file to transform --transform|-t The path to the XDT transform file to apply --output|-o The path where the output (transformed) file will be written --verbose|-v Print verbose messages 發行專案接下來就來測試吧，發行 Debug 組態 與 Release 組態各建置一次， web.config 應如下方有正確的切換了。 Debug 12345678910111213141516&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;configuration&gt; &lt;!-- To customize the asp.net core module uncomment and edit the following section. For more info see https://go.microsoft.com/fwlink/?linkid=838655 --&gt; &lt;system.webServer&gt; &lt;handlers&gt; &lt;add name="aspNetCore" path="*" verb="*" modules="AspNetCoreModule" resourceType="Unspecified" /&gt; &lt;/handlers&gt; &lt;aspNetCore processPath="dotnet" arguments=".\Transformation.dll" stdoutLogEnabled="false" stdoutLogFile=".\logs\stdout"&gt; &lt;environmentVariables&gt; &lt;environmentVariable name="ASPNETCORE_ENVIRONMENT" value="Development" /&gt; &lt;/environmentVariables&gt; &lt;/aspNetCore&gt; &lt;/system.webServer&gt;&lt;/configuration&gt;&lt;!--ProjectGuid: f0574043-a304-4eec-9e63-e3ef5d3184cd--&gt; Release 1234567891011121314&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;configuration&gt; &lt;!-- To customize the asp.net core module uncomment and edit the following section. For more info see https://go.microsoft.com/fwlink/?linkid=838655 --&gt; &lt;system.webServer&gt; &lt;handlers&gt; &lt;add name="aspNetCore" path="*" verb="*" modules="AspNetCoreModule" resourceType="Unspecified" /&gt; &lt;/handlers&gt; &lt;aspNetCore processPath="dotnet" arguments=".\Transformation.dll" stdoutLogEnabled="false" stdoutLogFile=".\logs\stdout"&gt; &lt;environmentVariables&gt;&lt;/environmentVariables&gt; &lt;/aspNetCore&gt; &lt;/system.webServer&gt;&lt;/configuration&gt;&lt;!--ProjectGuid: f0574043-a304-4eec-9e63-e3ef5d3184cd--&gt; 結論與補充 若是 ASP.NET Core 1.x 請參考 點我 範例只示範了 remove ，相關 XDT 語法請參考 MDSN XDT Reference 不同的 XML 皆可以用類似的設定做 Transformation 程式碼範例sample code 參考資料https://github.com/nil4/dotnet-transform-xdt]]></content>
+      <categories>
+        <category>程式開發</category>
+      </categories>
+      <tags>
+        <tag>ASP.NET Core</tag>
+        <tag>Transformation</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hexo教學（0）－目錄]]></title>
+    <url>%2F2018%2FHexo%E6%95%99%E5%AD%B8-0-%E7%9B%AE%E9%8C%84%2F</url>
+    <content type="text"><![CDATA[Hexo 是一個網誌框架。使用 Markdown 解析文章，透過主題產生靜態檔案。 Hexo教學（1）－快速安裝 Hexo教學（2）－建立第一篇文章 Hexo教學（3）－基本設定 Hexo教學（4）－部署到 GitHub Pages Hexo教學（5）－Material 主題設定 Hexo教學（6）－Material 程式碼高亮 Hexo教學（7）－Material 整合功能 Hexo教學（8）－Material RSS QRCode 站內搜尋 Hexo教學（9）－Sitemap.xml 與 robot.txt]]></content>
+      <categories>
+        <category>應用程式</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hexo教學（2）－第一篇文章]]></title>
+    <url>%2F2018%2FHexo%E6%95%99%E5%AD%B8-2-%E5%BB%BA%E7%AB%8B%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0%2F</url>
+    <content type="text"><![CDATA[快速建立第一個 Bolg 之後,接下當然是來產生第一篇文章 用指令產生文章， Hexo new “文章名稱” 可以快速產生一個 markdown 出來，產生的檔案放在 /source/post/ 下 1npm new first-post 產生靜態檔還記得上篇說提, Hexo 是將 markdown 產生靜態 html 的框架有了 markdown 後, 那就讓我們來產生靜態檔吧 1hexo generate 或者 1hexo g 檢查 /public/ 下是否有剛剛那篇的 html 了呢？ 讓我們再去看看 http://localhost:4000 是否有新文章了 其他相關教學請參考系列文章目錄]]></content>
+      <categories>
+        <category>應用程式</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hexo教學（1）－快速安裝]]></title>
+    <url>%2F2018%2FHexo%E6%95%99%E5%AD%B8-1-%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%9D%2F</url>
+    <content type="text"><![CDATA[那我們就開始吧。 安裝 Node.js下載Node.js 安裝 Hexo1npm install -g hexo-cli 建立第一個 Blog請在想要的目錄下打開命令列視窗 123hexo init myblogcd myblognpm install 執行站台1hexo server 或者 1hexo s 在瀏覽器輸入 http://localhost:4000 有看到下圖就成功建立第一個部落格站囉 其他相關教學請參考系列文章目錄]]></content>
+      <categories>
+        <category>應用程式</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>Node.js</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[開張大吉]]></title>
+    <url>%2F2018%2F%E9%96%8B%E5%BC%B5%E5%A4%A7%E5%90%89%2F</url>
+    <content type="text"><![CDATA[為什麼想寫部落格？ 為什麼到這把年紀才想寫部落格？ 其實！就是因為這把年紀阿！！ 最近我的老闆突然問我：Ray！你的代表作是什麼？ 我瞬間卡彈無法回答 這些年我也累積了不少東西但是我卻回答不出來，真的是年紀大了，看來得靠一些文字來記錄了． 於是乎寫部落格的想法就這樣油然而生了！ 稍微查了一下主要分為兩種方式 使用BSP（痞客邦，Blogger等等） 自建網站 （WordPress） 使用 BSP 是最省事的，但一旦業者不玩了，備份文章或搬家這真的是一場災難，而我只想保留我的心得，並未肖想成為部落客，能夠好好的保存資料才是最重要的．自建網站符合我的目的，但入門門檻實在不低，網路空間，網域，還有非我擅長的WordPress． 後來找到了 GitHub Pages，可以免費的使用，但只限定靜態頁面，原生支持 Jekyll （將 Markdown 生成靜態網頁的開源服務），試用了一陣子發現有些想要的功能要自行在安裝出來實在不容易． 最後找到了 Hexo，一套類似 Jekyll 但基於 Node.js 運行的軟體，經過幾天的安裝設定，把想要的樣式與功能都做好，成為目前部落格的樣子．接下來會把使用上的心得寫出來，總之 萬事起頭難，而我開始了！]]></content>
+      <categories>
+        <category>雜記</category>
+      </categories>
+  </entry>
+</search>
