@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[Hello World]]></title>
-    <url>%2F2019%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
-  </entry>
-  <entry>
     <title><![CDATA[用 LINQ 處理分群情境]]></title>
     <url>%2F2018%2F%E7%94%A8%20LINQ%20%E8%99%95%E7%90%86%E5%88%86%E7%BE%A4%E6%83%85%E5%A2%83%2F</url>
     <content type="text"><![CDATA[Language Integrated Query (LINQ) 是一組以直接將查詢功能整合至 C# 語言為基礎之技術的名稱。LINQ 最明顯的「語言整合」部分就是查詢運算式。 查詢運算式是以宣告式「查詢語法」撰寫。 透過使用查詢語法，您就可以利用最少的程式碼，針對資料來源執行篩選、排序及分組作業。(參考來源) LINQ的強大不是本文的重點，本文主要是示範如何簡潔的處理資料分群問題。 情境說明一組數量不固定的數字集合，想平均分配至30組中。 土法煉鋼法LINQ 解法範例程式]]></content>
