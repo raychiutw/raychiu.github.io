@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://raychiutw.github.io/"/>
-  <updated>2019-03-20T03:53:40.436Z</updated>
+  <updated>2019-03-20T06:45:22.560Z</updated>
   <id>https://raychiutw.github.io/</id>
   
   <author>
@@ -15,6 +15,62 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>靜態網站產生器大比拚</title>
+    <link href="https://raychiutw.github.io/2019/Static-Site-Generator-Comparison/"/>
+    <id>https://raychiutw.github.io/2019/Static-Site-Generator-Comparison/</id>
+    <published>2019-03-20T06:09:18.000Z</published>
+    <updated>2019-03-20T06:45:22.560Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;靜態網站產生器 (Static Site Generator) 是快速架站的利器，更是輕量級部落格架站的好幫手，本篇將常見的 Jekyll、Hexo、Hugo 三套工具做了評比‧。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="應用程式" scheme="https://raychiutw.github.io/categories/%E6%87%89%E7%94%A8%E7%A8%8B%E5%BC%8F/"/>
+    
+    
+      <category term="Static Site Generator" scheme="https://raychiutw.github.io/tags/Static-Site-Generator/"/>
+    
+      <category term="Hexo" scheme="https://raychiutw.github.io/tags/Hexo/"/>
+    
+      <category term="Hugo" scheme="https://raychiutw.github.io/tags/Hugo/"/>
+    
+      <category term="Jekyll" scheme="https://raychiutw.github.io/tags/Jekyll/"/>
+    
+      <category term="Open Source" scheme="https://raychiutw.github.io/tags/Open-Source/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MongoDB Sharding with Docker</title>
+    <link href="https://raychiutw.github.io/2019/MongoDB-Sharding-with-Docker/"/>
+    <id>https://raychiutw.github.io/2019/MongoDB-Sharding-with-Docker/</id>
+    <published>2019-03-20T05:47:02.000Z</published>
+    <updated>2019-03-20T06:10:26.719Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;Sharding 為 MongoDB 所擁有的一種資料分散處理架構，簡單的說就是將資料分片 (Shard) 儲存到不同的機器中，最常應用在大數據的案例上。在海量資料的儲存情境上，垂直擴充架構是無法滿足的，必須透過水平擴充來實現。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="系統安裝" scheme="https://raychiutw.github.io/categories/%E7%B3%BB%E7%B5%B1%E5%AE%89%E8%A3%9D/"/>
+    
+    
+      <category term="Open Source" scheme="https://raychiutw.github.io/tags/Open-Source/"/>
+    
+      <category term="MongoDB" scheme="https://raychiutw.github.io/tags/MongoDB/"/>
+    
+      <category term="NoSQL" scheme="https://raychiutw.github.io/tags/NoSQL/"/>
+    
+  </entry>
   
   <entry>
     <title>用 LINQ 處理分群情境</title>
@@ -65,7 +121,7 @@
     <link href="https://raychiutw.github.io/2018/Hexo%E6%95%99%E5%AD%B8-5-Material-%E4%B8%BB%E9%A1%8C%E8%A8%AD%E5%AE%9A/"/>
     <id>https://raychiutw.github.io/2018/Hexo教學-5-Material-主題設定/</id>
     <published>2018-05-20T13:42:37.000Z</published>
-    <updated>2019-03-19T09:34:58.082Z</updated>
+    <updated>2019-03-20T05:57:33.344Z</updated>
     
     <summary type="html">
     
@@ -79,6 +135,8 @@
     
     
       <category term="Hexo" scheme="https://raychiutw.github.io/tags/Hexo/"/>
+    
+      <category term="Hexo Theme" scheme="https://raychiutw.github.io/tags/Hexo-Theme/"/>
     
   </entry>
   
@@ -113,7 +171,7 @@
     <link href="https://raychiutw.github.io/2018/%E5%9C%A8-ASP-NET-Core-%E4%B8%AD%E4%BD%BF%E7%94%A8-AutoMapper/"/>
     <id>https://raychiutw.github.io/2018/在-ASP-NET-Core-中使用-AutoMapper/</id>
     <published>2018-05-17T05:39:35.000Z</published>
-    <updated>2019-03-19T09:36:09.907Z</updated>
+    <updated>2019-03-20T05:56:53.730Z</updated>
     
     <summary type="html">
     
@@ -126,9 +184,9 @@
       <category term="程式開發" scheme="https://raychiutw.github.io/categories/%E7%A8%8B%E5%BC%8F%E9%96%8B%E7%99%BC/"/>
     
     
-      <category term="C#" scheme="https://raychiutw.github.io/tags/C/"/>
+      <category term="ASP.NET Core" scheme="https://raychiutw.github.io/tags/ASP-NET-Core/"/>
     
-      <category term="ASP.Net Core" scheme="https://raychiutw.github.io/tags/ASP-Net-Core/"/>
+      <category term="C#" scheme="https://raychiutw.github.io/tags/C/"/>
     
       <category term="AutoMapper" scheme="https://raychiutw.github.io/tags/AutoMapper/"/>
     

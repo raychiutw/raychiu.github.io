@@ -1,6 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[靜態網站產生器大比拚]]></title>
+    <url>%2F2019%2FStatic-Site-Generator-Comparison%2F</url>
+    <content type="text"><![CDATA[靜態網站產生器 (Static Site Generator) 是快速架站的利器，更是輕量級部落格架站的好幫手，本篇將常見的 Jekyll、Hexo、Hugo 三套工具做了評比‧。 選擇靜態方法的原因？現在有很多服務器端語言，數據庫管理系統和內容管理系統，為什麼許多網站所有者會變得靜態？ 內容存儲為平面文件，因此不需要數據庫。 靜態網站不需要動態服務器端處理。 靜態網站比動態網站超快，因為它們不需要服務器端處理或數據庫訪問。 靜態網站比任何動態網站都更安全，因為可以利用更少的安全漏洞。 與CDN一起使用時的超級縮放。 緩存靜態文件比緩存動態頁面更有效。 JekyllJekyll是一個博客感知的靜態網站生成器，專為構建個人，投資組合和組織網站而設計，同時也是完全成熟的博客。 Jekyll由Github用Ruby語言構建，您可以免費使用Github Pages來託管您的靜態網站，並使用CNAME文件輕鬆將其與您的自定義頂級域名鏈接。 . 優點它是免費和開源的您可以將主題構建為寶石並通過RubyGems分發它們簡單易用借助Jekyll進口商，您可以輕鬆地從熱門平台（例如WordPress）遷移您的內容偉大的Github Pages支持帶有默認和體面的最小主題開箱即用傑基爾還有一些缺點，如： . 缺點隨著網站內容的增長，構建過程變得非常慢（這是Jekyll的主要弱點）增量構建仍然是實驗性的從Jekyll 3開始沒有內置的帖子分頁它不支持在標題或YAML中使用變量很多插件都過時了gem依賴項可能會引入不兼容性Github的頁面支持傑奇開箱即用，但只有一套Github的安全插件，可以使用沒有內置的livereload支持 HugoHugo是一個用Go構建的靜態站點生成器。它被宣傳為“世界上最快的網站構建框架”。它最近與傑基爾相比，但在人氣方面越來越受歡迎。 與Jekyll不同，Hugo是用Go編寫的，這是一種靜態編譯的語言。這在很多方面影響了Hugo的功能特別是插件。 您可以在幾秒鐘內安裝Hugo，並在不到一秒的時間內構建一個平均靜態網站。 雨果有很多優點： 開源和免費項目超快的速度，引擎和速度優化電池包括：內置分頁，帶別名的內置重定向等內置支持動態API驅動的內容內置支持無限制的內容類型由於採用了短代碼，Hugo為Markdown提供了靈活的替代方案預先製作的模板和圖案支持多個和自定義輸出完整的內置支持i18n強大的主題系統可用的免費和開源主題易於安裝無依賴性強大的內容模型雨果也有不少缺點： 主題使用Go模板，因此您需要熟悉Go來創建主題Hugo沒有附帶默認主題幸運的可擴展性和插件（主要缺點） HexoHexo是基於節點的開源靜態生成器，可在MIT許可下使用。借助Node.js平台，Hexo允許您在幾秒鐘內生成數百個靜態文件。 Hexo的優點和缺點Hexo有很多優點： 熾熱快速，速度驚人使用一個部署命令部署到Github頁面或任何其他主機強大的Markdown支持高度可擴展可用的免費和開源主題可用的免費插件對於缺點： Hexo有一個相對較大的社區，但大多數是非英語人士（來自中國） 人氣大比拚 來源出處]]></content>
+      <categories>
+        <category>應用程式</category>
+      </categories>
+      <tags>
+        <tag>Static Site Generator</tag>
+        <tag>Hexo</tag>
+        <tag>Hugo</tag>
+        <tag>Jekyll</tag>
+        <tag>Open Source</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[MongoDB Sharding with Docker]]></title>
+    <url>%2F2019%2FMongoDB-Sharding-with-Docker%2F</url>
+    <content type="text"><![CDATA[Sharding 為 MongoDB 所擁有的一種資料分散處理架構，簡單的說就是將資料分片 (Shard) 儲存到不同的機器中，最常應用在大數據的案例上。在海量資料的儲存情境上，垂直擴充架構是無法滿足的，必須透過水平擴充來實現。 基本觀念動手實作]]></content>
+      <categories>
+        <category>系統安裝</category>
+      </categories>
+      <tags>
+        <tag>Open Source</tag>
+        <tag>MongoDB</tag>
+        <tag>NoSQL</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[用 LINQ 處理分群情境]]></title>
     <url>%2F2018%2F%E7%94%A8%20LINQ%20%E8%99%95%E7%90%86%E5%88%86%E7%BE%A4%E6%83%85%E5%A2%83%2F</url>
     <content type="text"><![CDATA[Language Integrated Query (LINQ) 是一組以直接將查詢功能整合至 C# 語言為基礎之技術的名稱。LINQ 最明顯的「語言整合」部分就是查詢運算式。 查詢運算式是以宣告式「查詢語法」撰寫。 透過使用查詢語法，您就可以利用最少的程式碼，針對資料來源執行篩選、排序及分組作業。(參考來源) LINQ的強大不是本文的重點，本文主要是示範如何簡潔的處理資料分群問題。 情境說明一組數量不固定的數字集合，想平均分配至30組中。 土法煉鋼法最簡單的方式可以用一個 for 迴圈快速解決，但這實在太不優雅了。 LINQ 解法LINQ 可以很優雅地解決這個問題。 1234567891011121314151617var ids = new List&lt;int&gt;() &#123; 21, 33, 45, 21, 784, 24, 55, 68, 87, 21, 33, 45, 21, 784, 24, 55, 68, 87, 21, 33, 45, 21, 784, 24, 55, 68, 87, 21, 33, 45, 21, 784, 24, 55, 68, 87, 21, 33, 45, 21, 784, 24, 55, 68, 87, 21, 33, 45, 21, 784, 24, 55, 68, 87, 21, 33, 45, 21, 784, 24, 55, 68, 87, 21, 33, 45, 21, 784, 24, 55, 68, 87, 21, 33, 45, 21, 784, 24, 55, 68, 87,&#125;;var result = ids.Select((value, index) =&gt; new &#123; PairNum = index % 30, value &#125;) .GroupBy(pair =&gt; pair.PairNum) .Select(grp =&gt; grp.Select(g =&gt; g.value).ToList()) .ToList();result.Dump(); 分群結果 範例程式Github範例]]></content>
@@ -32,6 +60,7 @@
       </categories>
       <tags>
         <tag>Hexo</tag>
+        <tag>Hexo Theme</tag>
       </tags>
   </entry>
   <entry>
@@ -55,8 +84,8 @@
         <category>程式開發</category>
       </categories>
       <tags>
+        <tag>ASP.NET Core</tag>
         <tag>C#</tag>
-        <tag>ASP.Net Core</tag>
         <tag>AutoMapper</tag>
       </tags>
   </entry>
