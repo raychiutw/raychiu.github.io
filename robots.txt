@@ -4,6 +4,3 @@ Disallow: /css/
 Disallow: /fonts/
 Disallow: /lib/
 Allow: /
-Allow: /archives/
-Allow: /categories/
-Allow: /about/
