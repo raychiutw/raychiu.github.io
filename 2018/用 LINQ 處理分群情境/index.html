@@ -111,10 +111,12 @@
 <meta property="og:site_name" content="Ray&#39;s Note">
 <meta property="og:description" content="Language Integrated Query (LINQ) 是一組以直接將查詢功能整合至 C# 語言為基礎之技術的名稱。LINQ 最明顯的「語言整合」部分就是查詢運算式。 查詢運算式是以宣告式「查詢語法」撰寫。 透過使用查詢語法，您就可以利用最少的程式碼，針對資料來源執行篩選、排序及分組作業。(參考來源)">
 <meta property="og:locale" content="zh-TW">
-<meta property="og:updated_time" content="2019-03-19T08:27:02.199Z">
+<meta property="og:image" content="https://raychiutw.github.io/2018/用%20LINQ%20處理分群情境/linq-group.png">
+<meta property="og:updated_time" content="2019-03-20T03:53:40.436Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="用 LINQ 處理分群情境">
 <meta name="twitter:description" content="Language Integrated Query (LINQ) 是一組以直接將查詢功能整合至 C# 語言為基礎之技術的名稱。LINQ 最明顯的「語言整合」部分就是查詢運算式。 查詢運算式是以宣告式「查詢語法」撰寫。 透過使用查詢語法，您就可以利用最少的程式碼，針對資料來源執行篩選、排序及分組作業。(參考來源)">
+<meta name="twitter:image" content="https://raychiutw.github.io/2018/用%20LINQ%20處理分群情境/linq-group.png">
 
 
 
@@ -196,6 +198,10 @@
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
+    
+      
+        <p class="site-subtitle">隨手寫寫，留下紀錄</p>
+      
     
     
   </div>
@@ -438,7 +444,7 @@
                 
                   <span class="post-meta-item-text">更新於</span>
                 
-                <time title="修改時間：2019-03-19 16:27:02" itemprop="dateModified" datetime="2019-03-19T16:27:02+08:00">2019-03-19</time>
+                <time title="修改時間：2019-03-20 11:53:40" itemprop="dateModified" datetime="2019-03-20T11:53:40+08:00">2019-03-20</time>
               
             
           </span>
@@ -491,7 +497,7 @@
                 
                   <span class="post-meta-item-text">文章字數：</span>
                 
-                <span title="文章字數">242</span>
+                <span title="文章字數">991</span>
               
 
               
@@ -531,7 +537,12 @@
 <a id="more"></a>
 <p>LINQ的強大不是本文的重點，本文主要是示範如何簡潔的處理資料分群問題。</p>
 <h4 id="情境說明"><a href="#情境說明" class="headerlink" title="情境說明"></a>情境說明</h4><p>一組數量不固定的數字集合，想平均分配至30組中。</p>
-<h4 id="土法煉鋼法"><a href="#土法煉鋼法" class="headerlink" title="土法煉鋼法"></a>土法煉鋼法</h4><h4 id="LINQ-解法"><a href="#LINQ-解法" class="headerlink" title="LINQ 解法"></a>LINQ 解法</h4><h4 id="範例程式"><a href="#範例程式" class="headerlink" title="範例程式"></a>範例程式</h4>
+<h4 id="土法煉鋼法"><a href="#土法煉鋼法" class="headerlink" title="土法煉鋼法"></a>土法煉鋼法</h4><p>最簡單的方式可以用一個 for 迴圈快速解決，但這實在太不優雅了。</p>
+<h4 id="LINQ-解法"><a href="#LINQ-解法" class="headerlink" title="LINQ 解法"></a>LINQ 解法</h4><p>LINQ 可以很優雅地解決這個問題。</p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> ids = <span class="keyword">new</span> List&lt;<span class="keyword">int</span>&gt;() </span><br><span class="line">&#123;</span><br><span class="line">    <span class="number">21</span>, <span class="number">33</span>, <span class="number">45</span>, <span class="number">21</span>, <span class="number">784</span>, <span class="number">24</span>, <span class="number">55</span>, <span class="number">68</span>, <span class="number">87</span>,</span><br><span class="line">    <span class="number">21</span>, <span class="number">33</span>, <span class="number">45</span>, <span class="number">21</span>, <span class="number">784</span>, <span class="number">24</span>, <span class="number">55</span>, <span class="number">68</span>, <span class="number">87</span>,</span><br><span class="line">    <span class="number">21</span>, <span class="number">33</span>, <span class="number">45</span>, <span class="number">21</span>, <span class="number">784</span>, <span class="number">24</span>, <span class="number">55</span>, <span class="number">68</span>, <span class="number">87</span>,</span><br><span class="line">    <span class="number">21</span>, <span class="number">33</span>, <span class="number">45</span>, <span class="number">21</span>, <span class="number">784</span>, <span class="number">24</span>, <span class="number">55</span>, <span class="number">68</span>, <span class="number">87</span>,</span><br><span class="line">    <span class="number">21</span>, <span class="number">33</span>, <span class="number">45</span>, <span class="number">21</span>, <span class="number">784</span>, <span class="number">24</span>, <span class="number">55</span>, <span class="number">68</span>, <span class="number">87</span>,</span><br><span class="line">    <span class="number">21</span>, <span class="number">33</span>, <span class="number">45</span>, <span class="number">21</span>, <span class="number">784</span>, <span class="number">24</span>, <span class="number">55</span>, <span class="number">68</span>, <span class="number">87</span>,</span><br><span class="line">    <span class="number">21</span>, <span class="number">33</span>, <span class="number">45</span>, <span class="number">21</span>, <span class="number">784</span>, <span class="number">24</span>, <span class="number">55</span>, <span class="number">68</span>, <span class="number">87</span>,</span><br><span class="line">    <span class="number">21</span>, <span class="number">33</span>, <span class="number">45</span>, <span class="number">21</span>, <span class="number">784</span>, <span class="number">24</span>, <span class="number">55</span>, <span class="number">68</span>, <span class="number">87</span>,</span><br><span class="line">    <span class="number">21</span>, <span class="number">33</span>, <span class="number">45</span>, <span class="number">21</span>, <span class="number">784</span>, <span class="number">24</span>, <span class="number">55</span>, <span class="number">68</span>, <span class="number">87</span>,</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">var</span> result = ids.Select((<span class="keyword">value</span>, index) =&gt; <span class="keyword">new</span> &#123; PairNum = index % <span class="number">30</span>, <span class="keyword">value</span> &#125;)</span><br><span class="line">                .GroupBy(pair =&gt; pair.PairNum)</span><br><span class="line">                .Select(grp =&gt; grp.Select(g =&gt; g.<span class="keyword">value</span>).ToList())</span><br><span class="line">                .ToList();</span><br><span class="line">result.Dump();</span><br></pre></td></tr></table></figure>
+<h4 id="分群結果"><a href="#分群結果" class="headerlink" title="分群結果"></a>分群結果</h4><p><img src="linq-group.png" alt="結果"></p>
+<h4 id="範例程式"><a href="#範例程式" class="headerlink" title="範例程式"></a>範例程式</h4><p><a href="https://github.com/raychiutw/linq-goruopby" target="_blank" rel="noopener">Github範例</a></p>
+
       
     </div>
 
@@ -791,7 +802,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#情境說明"><span class="nav-number">1.</span> <span class="nav-text">情境說明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#土法煉鋼法"><span class="nav-number">2.</span> <span class="nav-text">土法煉鋼法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#LINQ-解法"><span class="nav-number">3.</span> <span class="nav-text">LINQ 解法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#範例程式"><span class="nav-number">4.</span> <span class="nav-text">範例程式</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#情境說明"><span class="nav-number">1.</span> <span class="nav-text">情境說明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#土法煉鋼法"><span class="nav-number">2.</span> <span class="nav-text">土法煉鋼法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#LINQ-解法"><span class="nav-number">3.</span> <span class="nav-text">LINQ 解法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分群結果"><span class="nav-number">4.</span> <span class="nav-text">分群結果</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#範例程式"><span class="nav-number">5.</span> <span class="nav-text">範例程式</span></a></li></ol></div>
             
 
           </div>

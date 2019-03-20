@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://raychiutw.github.io/2018/%E7%94%A8%20LINQ%20%E8%99%95%E7%90%86%E5%88%86%E7%BE%A4%E6%83%85%E5%A2%83/</loc>
+    
+    <lastmod>2019-03-20T03:53:40.436Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://raychiutw.github.io/2018/%E5%9C%A8-ASP-NET-Core-%E4%B8%AD%E4%BD%BF%E7%94%A8-AutoMapper/</loc>
     
     <lastmod>2019-03-19T09:36:09.907Z</lastmod>
@@ -61,13 +68,6 @@
     <loc>https://raychiutw.github.io/about/index.html</loc>
     
     <lastmod>2019-03-19T08:45:08.174Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://raychiutw.github.io/2018/%E7%94%A8%20LINQ%20%E8%99%95%E7%90%86%E5%88%86%E7%BE%A4%E6%83%85%E5%A2%83/</loc>
-    
-    <lastmod>2019-03-19T08:27:02.199Z</lastmod>
     
   </url>
   
