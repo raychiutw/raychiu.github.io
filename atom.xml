@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://raychiutw.github.io/"/>
-  <updated>2019-03-20T06:45:22.560Z</updated>
+  <updated>2019-03-20T08:29:21.000Z</updated>
   <id>https://raychiutw.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://raychiutw.github.io/2019/Static-Site-Generator-Comparison/"/>
     <id>https://raychiutw.github.io/2019/Static-Site-Generator-Comparison/</id>
     <published>2019-03-20T06:09:18.000Z</published>
-    <updated>2019-03-20T06:45:22.560Z</updated>
+    <updated>2019-03-20T08:29:21.000Z</updated>
     
     <summary type="html">
     
@@ -42,8 +42,6 @@
     
       <category term="Jekyll" scheme="https://raychiutw.github.io/tags/Jekyll/"/>
     
-      <category term="Open Source" scheme="https://raychiutw.github.io/tags/Open-Source/"/>
-    
   </entry>
   
   <entry>
@@ -51,7 +49,7 @@
     <link href="https://raychiutw.github.io/2019/MongoDB-Sharding-with-Docker/"/>
     <id>https://raychiutw.github.io/2019/MongoDB-Sharding-with-Docker/</id>
     <published>2019-03-20T05:47:02.000Z</published>
-    <updated>2019-03-20T06:10:26.719Z</updated>
+    <updated>2019-03-20T08:29:26.026Z</updated>
     
     <summary type="html">
     
@@ -63,8 +61,6 @@
     
       <category term="系統安裝" scheme="https://raychiutw.github.io/categories/%E7%B3%BB%E7%B5%B1%E5%AE%89%E8%A3%9D/"/>
     
-    
-      <category term="Open Source" scheme="https://raychiutw.github.io/tags/Open-Source/"/>
     
       <category term="MongoDB" scheme="https://raychiutw.github.io/tags/MongoDB/"/>
     
