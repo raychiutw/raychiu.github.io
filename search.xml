@@ -1,6 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Jeykll 快速安裝教學]]></title>
+    <url>%2F2019%2FJeykll-%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%9D%E6%95%99%E5%AD%B8%2F</url>
+    <content type="text"><![CDATA[安裝先安裝 Ruby Windows 可以參考安裝 RudyInstaller for Windows 更新 Rudy Gems 1gem update --system 安裝 Jekyll 1gem install jekyll bundler 第一個站台1jekyll new jekylldemo 1bundle exec jekyll serve 部署Github Pages 是和 Jekyll 最合拍的 Hosting 空間，同個一爸爸的優勢下，只要將整個原始檔案簽入 Github，過一會就會自動生成檔案。 結論優點 和 Github Pages 深度整合（其他 Hosting 空間也是很容易部署）。 相關插件資源眾多。 缺點 操作指令較少（搭配 rake 會好很多）。 產生靜態頁速度較慢。]]></content>
+      <categories>
+        <category>應用程式</category>
+      </categories>
+      <tags>
+        <tag>Static Site Generator</tag>
+        <tag>Jekyll</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hugo - 快速安裝教學]]></title>
+    <url>%2F2019%2FHugo-%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%9D%E6%95%99%E5%AD%B8%2F</url>
+    <content type="text"><![CDATA[Hugo 是用 Go 語言開發的靜態網站產生器（Static Site Generator），有著超快產生速度的優點，就讓我們來玩玩看吧。 安裝Hugo 提供多種安裝方式，含括 Windows / Linux / macOS，以下列出 Windows 與 macOS 安裝方式，其他安裝方式請直接參考官網說明。 Chocolatey (Windows)1choco install hugo -confirm Homebrew (macOS)1brew install hugo 其他安裝方式請參考 install。 檢查安裝版本1hugo version 建立新站台1hugo new site hugodemo 新增佈景主題Hugo 安裝好是沒有佈景主題的，所以接下來必須來設定佈景主題。 相較於 Hugo，Hexo、Jekyll有預設佈景主題，這點是 Hugo 較為不便的地方。 下載佈景主題使用 git 下載，好處是新版本更新很方便。 123cd hugodemogit initgit submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke 若沒有 git 的環境，可以直接下載 ananke theme 解壓縮放入 hugodemo/themes/ananke。 編輯 config.toml 並將主題設定為 Ananke1echo 'theme = "ananke"' &gt;&gt; config.toml 其他佈景主題Hugo 也提供了很多佈景主題，請直接參考 Hugo Themes。 增加一個新文章1hugo new posts/my-first-post.md 啟動站台1hugo server -D Hugo Server 執行輸出畫面 在瀏覽器中輸入紅框處網址即可看成果了。 Hugo 預設 port 為 1313，若被佔用會置換成其他 port。 目錄說明若展開 hugodemo 資料夾，會包含以下內容.├── archetypes│ └── default.md├── config.toml├── content├── data├── layouts├── static└── themes 其中 archetypes: 放置生成文件的基礎樣板資料夾。config.toml: 控制 hugo 產生網頁內容的設定檔，預設使用 toml 格式。（也支援 yaml 與 json 格式）。content: 放置 Markdown 文章與網頁內容的資料夾。data: 儲存一些 configuration 檔案的地方，協助建構靜態網頁。layouts: 儲存產生的網頁 layout 樣板（之後範例使用其他的 theme）。static: 放置靜態內容，如圖片，CSS 以及 *.js 等內容。themes: 從外部引入的 theme 檔案。 目前只要知道 config.toml, content, static 與 themes 這幾個部分即可。 站台設定打開 config.toml 1234baseURL = "https://example.org/"languageCode = "en-us"title = "My New Hugo Site"theme = "ananke" 部署當成功的執行站台後，產生的靜態檔會生成在 public 的資料夾下，將此資料夾的靜態檔部署到 Hosting 主機上。 各平台部署方式請參照。 結論優點 快！快！快！ 自動刷新動頁面 已整合眾多功能（分類、標籤、Sitemap、GA） config.toml 設定統一 缺點 提供的佈景主題較少 擴充插件較少]]></content>
+      <categories>
+        <category>應用程式</category>
+      </categories>
+      <tags>
+        <tag>Static Site Generator</tag>
+        <tag>Hugo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[樹莓派 - Retro Pie]]></title>
+    <url>%2F2019%2F%E6%A8%B9%E8%8E%93%E6%B4%BE-Retro-Pie%2F</url>
+    <content type="text"></content>
+      <categories>
+        <category>系統安裝</category>
+      </categories>
+      <tags>
+        <tag>Raspberry Pi</tag>
+        <tag>Retro Pie</tag>
+        <tag>懷舊遊戲</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[樹莓派 - Hass.io]]></title>
+    <url>%2F2019%2F%E6%A8%B9%E8%8E%93%E6%B4%BE-Hass-io%2F</url>
+    <content type="text"><![CDATA[樹莓派是個微型電腦，藉由低成本高效能的硬體，讓更多人可以踏進學習的世界，而至今，樹莓派上可以安裝很多種作業系統，做許多特定的事情，本文就是一系列的教學安裝心得。 Hass.io 是智能家居的 OS。]]></content>
+      <categories>
+        <category>系統安裝</category>
+      </categories>
+      <tags>
+        <tag>Raspberry Pi</tag>
+        <tag>Hass.io</tag>
+        <tag>智能家居</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[靜態網站產生器大比拚]]></title>
     <url>%2F2019%2FStatic-Site-Generator-Comparison%2F</url>
     <content type="text"><![CDATA[靜態網站產生器 (Static Site Generator) 是快速架站的利器，更是輕量級部落格架站的好幫手，本篇將常見的 Jekyll、Hexo、Hugo 三套工具做了評比‧。 選擇靜態網站的原因？現在有很多網站後端程式語言可供選擇，為什麼許多網站仍選擇靜態網站？ 不需要 Database。 不需要後端程式。 要速度快 靜態網站與動態網站相比更快，因為它們不需要後端處理或 Database 處理。 要安全性高 靜態網站比任何動態網站都更安全，因為安全漏洞更少。 Cache 靜態頁較容易且有效率。 JekyllJekyll是基於 Ruby Gem 的解析引擎，能夠將樣板、liquid 語言、markdown 轉換為”靜態網頁”的產生器。 Jekyll 優點 免費和開源。 簡單易用。 輕鬆地從熱門平台（例如WordPress）遷移內容。 Github Pages 支援。 自帶默認主題，安裝後即可使用。 眾多的插件。 完整的教學文件。 Jekyll 缺點 隨著網站內容的增長，構建過程變得非常慢。 很多插件都過時了。 HugoHugo 是一個用 Go 構建的靜態網站生成器。它被宣傳為“世界上最快的網站構建框架”。與Jekyll不同，Hugo是用Go編寫的，這是一種靜態編譯的語言。這在很多方面影響了 Hugo 的功能特別是插件。 可以在幾秒鐘內安裝Hugo，並在不到一秒的時間內構建一個平均靜態網站。 Hugo 優點 開源和免費。 超快的速度，引擎和速度優化。 Hugo 缺點 主題使用 Go 模板，需要熟悉 Go 來創建主題 Hugo 沒有附帶默認主題。 插件較少。 HexoHexo是基於 Node.js 的靜態網站生成器，Hexo 可以在幾秒鐘內生成數百個靜態文件。 優點 開源和免費。 自帶默認主題，安裝後即可使用。 速度快 Node.js 帶給您超級快的檔案產生速度，上百個檔案只需幾秒就能建立完成。 一鍵部署 強大的Markdown支持 Hexo 支援所有 GitHub Flavored Markdown 的功能，您甚至能在 Hexo 使用大部份的 Octopress 外掛。 豐富的外掛 Hexo 有強大的外掛系統，您可安裝外掛讓 Hexo 支援 Jade, CoffeeScript。 缺點 Hexo 有一個相對較大的社區，但大多數是非英語人士（來自中國） 錯綜複雜的 npm 生態 人氣大比拚 來源出處 結論最後選擇了 Hexo 作為 Blog 生成器，原因有幾個 中文資源多 插件功能齊全完整 node.js 較為熟悉 你，選擇哪個呢？]]></content>
@@ -52,24 +102,26 @@
   <entry>
     <title><![CDATA[Hexo教學（5）－Material 主題設定]]></title>
     <url>%2F2018%2FHexo%E6%95%99%E5%AD%B8-5-Material-%E4%B8%BB%E9%A1%8C%E8%A8%AD%E5%AE%9A%2F</url>
-    <content type="text"><![CDATA[自建 Blog 其中一種樂趣就是可以換很多種風格迥異的主題，不過仍需要一點程式基礎才能做好設定，接下來會以 Hexo 排名第二的主題 - Material 來做說明 下載主題與更名設定檔Hexo 只需要將主題文件放置於站點目錄的 themes 目錄下。從 Github 下載最新版本。並更名為 material 資料夾可任意更名，但 _config.yml 的設定需同資料夾名稱 第一次啟用時需先將 material 內的 _config.template.yml 更名為 _config.yml 如何變更主題先理解兩個名詞 站點配置文件 站點目錄下的 _config.yml 主題配置文件 material 資料夾下的 _config.yml 開啟站點配置文件，更改 language 與 theme 設定 語系支援清單 العَرَبِيَّة (ar) Deutsch (de) English (en) Español (es) Français (fr) 日本語 (ja) Malay (ms) Portuguese (Brazil) (pt-BR) 简体中文 (zh-CN) 繁體中文 (zh-TW) 1language: zh-TW 1theme: material 為什麼選擇 Material 真的很潮，Material Design 真的很潮，讓人印象深刻。 完整的文件說明，說明連結 整合眾多功能，整合了回覆留言、標籤、分類、時間軸、站內搜尋、 QR Code 等功能 Material 主題設定接下來主題配置文件的設定 設定樣式 Paradox: 標準 Material Design Isolation: 極簡風格 Nexus: 未完成，此專案已經久未更新，應該是沒有完成之日了。 1234# Schemesscheme: Paradox#scheme: Isolation#scheme: Nexus 選單設定 選單設定是比較有趣的地方，可以自由排列想要選單。 icon: 使用 Material icon，完整 icon 清單請參考 material design icons divider: 分隔線 12345678910111213141516171819202122232425262728293031323334353637383940414243# Sidebar Customizesidebar: dropdown: Email Me: link: mail@mail.com icon: email Github: link: "https://github.com/username" icon: layers homepage: use: true icon: home divider: false archives: use: true icon: inbox divider: false categories: use: true icon: chrome_reader_mode divider: false pages: 標籤: link: "/tags" icon: bookmark divider: false 時間軸: link: "/timeline" icon: timeline divider: false #About: #link: "/about" #icon: person #divider: false article_num: use: true divider: false footer: divider: true theme: true support: false feedback: false material: false 如此就一個看起來蠻完整的外觀囉。 其他相關教學請參考系列文章目錄]]></content>
+    <content type="text"><![CDATA[自建 Blog 其中一種樂趣就是可以換很多種風格迥異的主題，不過仍需要一點程式基礎才能做好設定，接下來會以 Hexo 排名第二的主題 - Material 來做說明。 下載主題與更名設定檔Hexo 只需要將主題文件放置於站點目錄的 themes 目錄下。從 Github 下載最新版本。並更名為 material。 資料夾可任意更名，但 _config.yml 的設定需同資料夾名稱。 第一次啟用時需先將 material 內的 _config.template.yml 更名為 _config.yml。 如何變更主題先理解兩個名詞 站點配置文件 站點目錄下的 _config.yml 主題配置文件 material 資料夾下的 _config.yml 開啟站點配置文件，更改 language 與 theme 設定 語系支援清單 العَرَبِيَّة (ar) Deutsch (de) English (en) Español (es) Français (fr) 日本語 (ja) Malay (ms) Portuguese (Brazil) (pt-BR) 简体中文 (zh-CN) 繁體中文 (zh-TW) 1language: zh-TW 1theme: material 為什麼選擇 Material 真的很潮，Material Design 真的很潮，讓人印象深刻。 完整的文件說明，說明連結 整合眾多功能，整合了回覆留言、標籤、分類、時間軸、站內搜尋、 QR Code 等功能 Material 主題設定接下來主題配置文件的設定 設定樣式 Paradox: 標準 Material Design Isolation: 極簡風格 Nexus: 未完成，此專案已經久未更新，應該是沒有完成之日了。 1234# Schemesscheme: Paradox#scheme: Isolation#scheme: Nexus 選單設定 選單設定是比較有趣的地方，可以自由排列想要選單。 icon: 使用 Material icon，完整 icon 清單請參考 material design icons divider: 分隔線 12345678910111213141516171819202122232425262728293031323334353637383940414243# Sidebar Customizesidebar: dropdown: Email Me: link: mail@mail.com icon: email Github: link: "https://github.com/username" icon: layers homepage: use: true icon: home divider: false archives: use: true icon: inbox divider: false categories: use: true icon: chrome_reader_mode divider: false pages: 標籤: link: "/tags" icon: bookmark divider: false 時間軸: link: "/timeline" icon: timeline divider: false #About: #link: "/about" #icon: person #divider: false article_num: use: true divider: false footer: divider: true theme: true support: false feedback: false material: false 如此就一個看起來蠻完整的外觀囉。]]></content>
       <categories>
         <category>應用程式</category>
       </categories>
       <tags>
         <tag>Hexo</tag>
-        <tag>Hexo Theme</tag>
+        <tag>Static Site Generator</tag>
+        <tag>Hexo Themes</tag>
       </tags>
   </entry>
   <entry>
     <title><![CDATA[Hexo（4）－部署到 GitHub Pages]]></title>
     <url>%2F2018%2FHexo%E6%95%99%E5%AD%B8-4-%E9%83%A8%E7%BD%B2%E5%88%B0-GitHub-Pages%2F</url>
-    <content type="text"><![CDATA[Hexo 產生的靜態網誌預設可以本機執行，但若要讓大家看看到勢必要部署到外部網路空間，由於是靜態網站部署到哪個網頁空間都不成問題，本文是建議部署到 GitHub Pages 上，以下就一步步說明步驟。 部署說明Hexo 預設可以支援以下部署方式 Git Heroku Rsync OpenShift FTPSync SFTP 手動 Copy public 資料夾 本文使用 Git 部署，需先安裝 hexo-deployer-git 套件 其他部署方式請參考 Hexo部署 1npm install hexo-deployer-git --save GitHub Pages 設定到 GitHub 上新增一個 repo，名稱必須是 {username}.github.io 設定 _config.yml1234deploy: type: git repo: https://&lt;username&gt;:&lt;password&gt;@github.com/&lt;username&gt;/&lt;username&gt;.github.io.git branch: master repo 有幾種驗證方式可以 push 到 Github，這裡選擇最簡單的自帶帳密的方式。 若有多組 Git 部署可以參考以下設定 12345deploy: type: git repo: github: https://github.com/&lt;username&gt;/&lt;username&gt;.github.io.git,master gitcafe: https://gitcafe.com/&lt;username&gt;/&lt;username&gt;.git,gitcafe-pages 若是多種部署方式可參考以下設定 12345deployer:– type: git repo:– type: heroku repo: 開始部署請執行以下命令 1hexo d 也可使用以下兩種指定，產生網頁後部署 1hexo d -g 或 1hexo g -d 執行完之後就算完成部署到外部網頁空間囉。 其他相關教學請參考系列文章目錄]]></content>
+    <content type="text"><![CDATA[Hexo 產生的靜態網誌預設可以本機執行，但若要讓大家看看到勢必要部署到外部網路空間，由於是靜態網站部署到哪個網頁空間都不成問題，本文是建議部署到 GitHub Pages 上，以下就一步步說明步驟。 部署說明Hexo 預設可以支援以下部署方式 Git Heroku Rsync OpenShift FTPSync SFTP 手動 Copy public 資料夾 本文使用 Git 部署，需先安裝 hexo-deployer-git 套件 其他部署方式請參考 Hexo部署 1npm install hexo-deployer-git --save GitHub Pages 設定到 GitHub 上新增一個 repo，名稱必須是 {username}.github.io 設定 _config.yml1234deploy: type: git repo: https://&lt;username&gt;:&lt;password&gt;@github.com/&lt;username&gt;/&lt;username&gt;.github.io.git branch: master repo 有幾種驗證方式可以 push 到 Github，這裡選擇最簡單的自帶帳密的方式。 若有多組 Git 部署可以參考以下設定 12345deploy: type: git repo: github: https://github.com/&lt;username&gt;/&lt;username&gt;.github.io.git,master gitcafe: https://gitcafe.com/&lt;username&gt;/&lt;username&gt;.git,gitcafe-pages 若是多種部署方式可參考以下設定 12345deployer:– type: git repo:– type: heroku repo: 開始部署請執行以下命令 1hexo d 也可使用以下兩種指定，產生網頁後部署 1hexo d -g 或 1hexo g -d 執行完之後就算完成部署到外部網頁空間囉。]]></content>
       <categories>
         <category>應用程式</category>
       </categories>
       <tags>
         <tag>Hexo</tag>
+        <tag>Static Site Generator</tag>
         <tag>Git</tag>
         <tag>GitHub</tag>
       </tags>
@@ -83,19 +135,20 @@
       </categories>
       <tags>
         <tag>ASP.NET Core</tag>
-        <tag>C#</tag>
         <tag>AutoMapper</tag>
+        <tag>C#</tag>
       </tags>
   </entry>
   <entry>
     <title><![CDATA[Hexo（3）－基本設定]]></title>
     <url>%2F2018%2FHexo%E6%95%99%E5%AD%B8-3-%E5%9F%BA%E6%9C%AC%E8%A8%AD%E5%AE%9A%2F</url>
-    <content type="text"><![CDATA[有了第一個自己的 Blog，也順利的產身第一篇文章，接下來我們來做一些設定，讓 Blog 更量身打造一些。 請打開目錄下的 _config.yaml ，我們一步步調整。 Site 設定Site 是 Blog 的基本資訊，請修改基本的資訊上去。 12345678# Sitetitle: Hexosubtitle:description:keywords:author: John Doelanguage:timezone: URL 設定123456# URL## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'url: https://raychiutw.github.ioroot: /permalink: :year/:month/:day/:title/permalink_defaults: url：Blog 的網址。 root：若網站有子目錄記得修改。&#39;http://yoursite.com/child&#39; and root as &#39;/child/&#39; permalink：若有 SEO 考量，可改為更簡短的設定 Directory 設定123456789# Directorysource_dir: sourcepublic_dir: publictag_dir: tagsarchive_dir: archivescategory_dir: categoriescode_dir: downloads/codei18n_dir: :langskip_render: 本區使用預設值即可 Extensions 設定1234# Extensions## Plugins: https://hexo.io/plugins/## Themes: https://hexo.io/themes/theme: landscape theme：主題設定預設 landscape，後續會改使用 material。 Deployment 設定1234# Deployment## Docs: https://hexo.io/docs/deployment.htmldeploy: type: 部署的方式會是部署到 Github Pages，這部分有後續有專文說明 結論Hexo 預設的定義並不複雜，但是要讓他更完善好用仍須費一番心思調整，接著就來一一說明。 其他相關教學請參考系列文章目錄]]></content>
+    <content type="text"><![CDATA[有了第一個自己的 Blog，也順利的產身第一篇文章，接下來我們來做一些設定，讓 Blog 更量身打造一些。 請打開目錄下的 _config.yaml ，我們一步步調整。 Site 設定Site 是 Blog 的基本資訊，請修改基本的資訊上去。 12345678# Sitetitle: Hexosubtitle:description:keywords:author: John Doelanguage:timezone: URL 設定123456# URL## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'url: https://raychiutw.github.ioroot: /permalink: :year/:month/:day/:title/permalink_defaults: url：Blog 的網址。 root：若網站有子目錄記得修改。&#39;http://yoursite.com/child&#39; and root as &#39;/child/&#39; permalink：若有 SEO 考量，可改為更簡短的設定 Directory 設定123456789# Directorysource_dir: sourcepublic_dir: publictag_dir: tagsarchive_dir: archivescategory_dir: categoriescode_dir: downloads/codei18n_dir: :langskip_render: 本區使用預設值即可 Extensions 設定1234# Extensions## Plugins: https://hexo.io/plugins/## Themes: https://hexo.io/themes/theme: landscape theme：主題設定預設 landscape，後續會改使用 material。 Deployment 設定1234# Deployment## Docs: https://hexo.io/docs/deployment.htmldeploy: type: 部署的方式會是部署到 Github Pages，這部分有後續有專文說明 結論Hexo 預設的定義並不複雜，但是要讓他更完善好用仍須費一番心思調整，接著就來一一說明。]]></content>
       <categories>
         <category>應用程式</category>
       </categories>
       <tags>
         <tag>Hexo</tag>
+        <tag>Static Site Generator</tag>
       </tags>
   </entry>
   <entry>
@@ -107,9 +160,9 @@
       </categories>
       <tags>
         <tag>ASP.NET Core</tag>
+        <tag>C#</tag>
         <tag>MSTest</tag>
         <tag>UnitTest</tag>
-        <tag>C#</tag>
       </tags>
   </entry>
   <entry>
@@ -127,35 +180,37 @@
   <entry>
     <title><![CDATA[Hexo教學（0）－目錄]]></title>
     <url>%2F2018%2FHexo%E6%95%99%E5%AD%B8-0-%E7%9B%AE%E9%8C%84%2F</url>
-    <content type="text"><![CDATA[Hexo 是一個網誌框架。使用 Markdown 解析文章，透過主題產生靜態檔案。 Hexo教學（1）－快速安裝 Hexo教學（2）－建立第一篇文章 Hexo教學（3）－基本設定 Hexo教學（4）－部署到 GitHub Pages Hexo教學（5）－Material 主題設定 Hexo教學（6）－Material 程式碼高亮 Hexo教學（7）－Material 整合功能 Hexo教學（8）－Material RSS QRCode 站內搜尋 Hexo教學（9）－Sitemap.xml 與 robot.txt]]></content>
+    <content type="text"><![CDATA[Hexo 是一個使用 Node.js 為基礎的靜態網站產生器。使用 Markdown 解析文章，透過主題產生靜態檔案。而且他是由台灣人所開發出來的。 優點 台灣人開發，中文資源豐富 Node.js 生態完整，插件完整 頁面產生速度快。 缺點 Node.js 插件眾多，依賴複雜，有可能會採坑。 Hexo教學（1）－快速安裝 Hexo教學（2）－建立第一篇文章 Hexo教學（3）－基本設定 Hexo教學（4）－部署到 GitHub Pages Hexo教學（5）－Material 主題設定 Hexo教學（6）－Material 程式碼高亮 Hexo教學（7）－Material 整合功能 Hexo教學（8）－Material RSS QRCode 站內搜尋 Hexo教學（9）－Sitemap.xml 與 robot.txt]]></content>
       <categories>
         <category>應用程式</category>
       </categories>
       <tags>
         <tag>Hexo</tag>
+        <tag>Static Site Generator</tag>
       </tags>
   </entry>
   <entry>
     <title><![CDATA[Hexo教學（2）－第一篇文章]]></title>
     <url>%2F2018%2FHexo%E6%95%99%E5%AD%B8-2-%E5%BB%BA%E7%AB%8B%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0%2F</url>
-    <content type="text"><![CDATA[快速建立第一個 Bolg 之後,接下當然是來產生第一篇文章 用指令產生文章， Hexo new “文章名稱” 可以快速產生一個 markdown 出來，產生的檔案放在 /source/post/ 下 1npm new first-post 產生靜態檔還記得上篇說提, Hexo 是將 markdown 產生靜態 html 的框架有了 markdown 後, 那就讓我們來產生靜態檔吧 1hexo generate 或者 1hexo g 檢查 /public/ 下是否有剛剛那篇的 html 了呢？ 讓我們再去看看 http://localhost:4000 是否有新文章了 其他相關教學請參考系列文章目錄]]></content>
+    <content type="text"><![CDATA[快速建立第一個 Bolg 之後，接下當然是來產生第一篇文章。 用指令產生文章Hexo new “文章名稱” 可以快速產生一個 markdown 出來，產生的檔案放在 /source/post/ 下。 1npm new first-post 產生靜態檔還記得上篇說提，Hexo 是將 markdown 產生靜態 html 的框架，有了 markdown 後，那就讓我們來產生靜態檔吧。 1hexo generate 或者 1hexo g 檢查 /public/ 下是否有剛剛那篇的 html 了呢？ 讓我們再去看看 http://localhost:4000 是否有新文章了。]]></content>
       <categories>
         <category>應用程式</category>
       </categories>
       <tags>
         <tag>Hexo</tag>
+        <tag>Static Site Generator</tag>
       </tags>
   </entry>
   <entry>
     <title><![CDATA[Hexo教學（1）－快速安裝]]></title>
     <url>%2F2018%2FHexo%E6%95%99%E5%AD%B8-1-%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%9D%2F</url>
-    <content type="text"><![CDATA[那我們就開始吧。 安裝 Node.js下載Node.js 安裝 Hexo1npm install -g hexo-cli 建立第一個 Blog請在想要的目錄下打開命令列視窗 123hexo init myblogcd myblognpm install 執行站台1hexo server 或者 1hexo s 在瀏覽器輸入 http://localhost:4000 有看到下圖就成功建立第一個部落格站囉 其他相關教學請參考系列文章目錄]]></content>
+    <content type="text"><![CDATA[那我們就開始吧。 安裝 Node.js下載Node.js 安裝 Hexo1npm install -g hexo-cli 建立第一個 Blog請在想要的目錄下打開命令列視窗。 123hexo init myblogcd myblognpm install 執行站台1hexo server 或者 1hexo s 在瀏覽器輸入 http://localhost:4000 有看到下圖就成功建立第一個部落格站囉。 。]]></content>
       <categories>
         <category>應用程式</category>
       </categories>
       <tags>
         <tag>Hexo</tag>
-        <tag>Node.js</tag>
+        <tag>Static Site Generator</tag>
       </tags>
   </entry>
   <entry>
