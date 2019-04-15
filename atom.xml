@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://raychiutw.github.io/"/>
-  <updated>2019-04-15T02:58:24.375Z</updated>
+  <updated>2019-04-15T03:18:27.000Z</updated>
   <id>https://raychiutw.github.io/</id>
   
   <author>
@@ -21,18 +21,13 @@
     <link href="https://raychiutw.github.io/2019/Jeykll-%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%9D%E6%95%99%E5%AD%B8/"/>
     <id>https://raychiutw.github.io/2019/Jeykll-快速安裝教學/</id>
     <published>2019-04-12T09:19:15.000Z</published>
-    <updated>2019-04-15T02:58:24.375Z</updated>
+    <updated>2019-04-15T03:18:27.000Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h2 id=&quot;安裝&quot;&gt;&lt;a href=&quot;#安裝&quot; class=&quot;headerlink&quot; title=&quot;安裝&quot;&gt;&lt;/a&gt;安裝&lt;/h2&gt;&lt;p&gt;先安裝 Ruby&lt;/p&gt;
-&lt;p&gt;Windows 可以參考安裝 &lt;a href=&quot;https://rubyinstaller.org/&quot;
-        
-      
+      &lt;blockquote&gt;
+&lt;p&gt;Jeykll 是 Github 的聯合創始人的作品，以 Ruby 開發的靜態網頁產生器，是目前最受歡迎的，相關資源最多的 ssg，本篇就來簡單快速教學。&lt;/p&gt;
+&lt;/blockquote&gt;
     
     </summary>
     
@@ -63,9 +58,9 @@
       <category term="應用程式" scheme="https://raychiutw.github.io/categories/%E6%87%89%E7%94%A8%E7%A8%8B%E5%BC%8F/"/>
     
     
-      <category term="Static Site Generator" scheme="https://raychiutw.github.io/tags/Static-Site-Generator/"/>
-    
       <category term="Hugo" scheme="https://raychiutw.github.io/tags/Hugo/"/>
+    
+      <category term="Static Site Generator" scheme="https://raychiutw.github.io/tags/Static-Site-Generator/"/>
     
   </entry>
   
@@ -74,9 +69,14 @@
     <link href="https://raychiutw.github.io/2019/%E6%A8%B9%E8%8E%93%E6%B4%BE-Retro-Pie/"/>
     <id>https://raychiutw.github.io/2019/樹莓派-Retro-Pie/</id>
     <published>2019-04-11T07:53:34.000Z</published>
-    <updated>2019-04-11T08:05:37.041Z</updated>
+    <updated>2019-04-15T03:35:43.304Z</updated>
     
     <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;樹莓派是個微型電腦，藉由低成本高效能的硬體，讓更多人可以踏進學習的世界，而至今，樹莓派上可以安裝很多種作業系統，做許多特定的事情，本文就是一系列的教學安裝心得。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;待續&lt;br&gt;
     
     </summary>
     
@@ -96,21 +96,17 @@
     <link href="https://raychiutw.github.io/2019/%E6%A8%B9%E8%8E%93%E6%B4%BE-Hass-io/"/>
     <id>https://raychiutw.github.io/2019/樹莓派-Hass-io/</id>
     <published>2019-04-11T07:53:09.000Z</published>
-    <updated>2019-04-11T08:09:41.627Z</updated>
+    <updated>2019-04-15T03:35:38.653Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;blockquote&gt;
+      &lt;blockquote&gt;
 &lt;p&gt;樹莓派是個微型電腦，藉由低成本高效能的硬體，讓更多人可以踏進學習的世界，而至今，樹莓派上可以安裝很多種作業系統，做許多特定的事情，本文就是一系列的教學安裝心得。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Hass.io
-        
-      
+&lt;p&gt;Hass.io 是智能家居的 OS。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;待續&lt;br&gt;
     
     </summary>
     
@@ -143,11 +139,11 @@
       <category term="應用程式" scheme="https://raychiutw.github.io/categories/%E6%87%89%E7%94%A8%E7%A8%8B%E5%BC%8F/"/>
     
     
-      <category term="Hexo" scheme="https://raychiutw.github.io/tags/Hexo/"/>
+      <category term="Hugo" scheme="https://raychiutw.github.io/tags/Hugo/"/>
     
       <category term="Static Site Generator" scheme="https://raychiutw.github.io/tags/Static-Site-Generator/"/>
     
-      <category term="Hugo" scheme="https://raychiutw.github.io/tags/Hugo/"/>
+      <category term="Hexo" scheme="https://raychiutw.github.io/tags/Hexo/"/>
     
       <category term="Jekyll" scheme="https://raychiutw.github.io/tags/Jekyll/"/>
     
@@ -239,9 +235,9 @@
       <category term="應用程式" scheme="https://raychiutw.github.io/categories/%E6%87%89%E7%94%A8%E7%A8%8B%E5%BC%8F/"/>
     
     
-      <category term="Hexo" scheme="https://raychiutw.github.io/tags/Hexo/"/>
-    
       <category term="Static Site Generator" scheme="https://raychiutw.github.io/tags/Static-Site-Generator/"/>
+    
+      <category term="Hexo" scheme="https://raychiutw.github.io/tags/Hexo/"/>
     
       <category term="Hexo Themes" scheme="https://raychiutw.github.io/tags/Hexo-Themes/"/>
     
@@ -265,9 +261,9 @@
       <category term="應用程式" scheme="https://raychiutw.github.io/categories/%E6%87%89%E7%94%A8%E7%A8%8B%E5%BC%8F/"/>
     
     
-      <category term="Hexo" scheme="https://raychiutw.github.io/tags/Hexo/"/>
-    
       <category term="Static Site Generator" scheme="https://raychiutw.github.io/tags/Static-Site-Generator/"/>
+    
+      <category term="Hexo" scheme="https://raychiutw.github.io/tags/Hexo/"/>
     
       <category term="Git" scheme="https://raychiutw.github.io/tags/Git/"/>
     
@@ -295,9 +291,9 @@
     
       <category term="ASP.NET Core" scheme="https://raychiutw.github.io/tags/ASP-NET-Core/"/>
     
-      <category term="AutoMapper" scheme="https://raychiutw.github.io/tags/AutoMapper/"/>
-    
       <category term="C#" scheme="https://raychiutw.github.io/tags/C/"/>
+    
+      <category term="AutoMapper" scheme="https://raychiutw.github.io/tags/AutoMapper/"/>
     
   </entry>
   
@@ -319,9 +315,9 @@
       <category term="應用程式" scheme="https://raychiutw.github.io/categories/%E6%87%89%E7%94%A8%E7%A8%8B%E5%BC%8F/"/>
     
     
-      <category term="Hexo" scheme="https://raychiutw.github.io/tags/Hexo/"/>
-    
       <category term="Static Site Generator" scheme="https://raychiutw.github.io/tags/Static-Site-Generator/"/>
+    
+      <category term="Hexo" scheme="https://raychiutw.github.io/tags/Hexo/"/>
     
   </entry>
   
@@ -345,11 +341,11 @@
     
       <category term="ASP.NET Core" scheme="https://raychiutw.github.io/tags/ASP-NET-Core/"/>
     
-      <category term="C#" scheme="https://raychiutw.github.io/tags/C/"/>
-    
       <category term="MSTest" scheme="https://raychiutw.github.io/tags/MSTest/"/>
     
       <category term="UnitTest" scheme="https://raychiutw.github.io/tags/UnitTest/"/>
+    
+      <category term="C#" scheme="https://raychiutw.github.io/tags/C/"/>
     
   </entry>
   
@@ -403,9 +399,9 @@
       <category term="應用程式" scheme="https://raychiutw.github.io/categories/%E6%87%89%E7%94%A8%E7%A8%8B%E5%BC%8F/"/>
     
     
-      <category term="Hexo" scheme="https://raychiutw.github.io/tags/Hexo/"/>
-    
       <category term="Static Site Generator" scheme="https://raychiutw.github.io/tags/Static-Site-Generator/"/>
+    
+      <category term="Hexo" scheme="https://raychiutw.github.io/tags/Hexo/"/>
     
   </entry>
   
@@ -427,9 +423,9 @@
       <category term="應用程式" scheme="https://raychiutw.github.io/categories/%E6%87%89%E7%94%A8%E7%A8%8B%E5%BC%8F/"/>
     
     
-      <category term="Hexo" scheme="https://raychiutw.github.io/tags/Hexo/"/>
-    
       <category term="Static Site Generator" scheme="https://raychiutw.github.io/tags/Static-Site-Generator/"/>
+    
+      <category term="Hexo" scheme="https://raychiutw.github.io/tags/Hexo/"/>
     
   </entry>
   
@@ -452,9 +448,9 @@
       <category term="應用程式" scheme="https://raychiutw.github.io/categories/%E6%87%89%E7%94%A8%E7%A8%8B%E5%BC%8F/"/>
     
     
-      <category term="Hexo" scheme="https://raychiutw.github.io/tags/Hexo/"/>
-    
       <category term="Static Site Generator" scheme="https://raychiutw.github.io/tags/Static-Site-Generator/"/>
+    
+      <category term="Hexo" scheme="https://raychiutw.github.io/tags/Hexo/"/>
     
   </entry>
   

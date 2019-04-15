@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[Jeykll 快速安裝教學]]></title>
     <url>%2F2019%2FJeykll-%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%9D%E6%95%99%E5%AD%B8%2F</url>
-    <content type="text"><![CDATA[安裝先安裝 Ruby Windows 可以參考安裝 RudyInstaller for Windows 更新 Rudy Gems 1gem update --system 安裝 Jekyll 1gem install jekyll bundler 第一個站台1jekyll new jekylldemo 1bundle exec jekyll serve 部署Github Pages 是和 Jekyll 最合拍的 Hosting 空間，同個一爸爸的優勢下，只要將整個原始檔案簽入 Github，過一會就會自動生成檔案。 結論優點 和 Github Pages 深度整合（其他 Hosting 空間也是很容易部署）。 相關插件資源眾多。 缺點 操作指令較少（搭配 rake 會好很多）。 產生靜態頁速度較慢。]]></content>
+    <content type="text"><![CDATA[Jeykll 是 Github 的聯合創始人的作品，以 Ruby 開發的靜態網頁產生器，是目前最受歡迎的，相關資源最多的 ssg，本篇就來簡單快速教學。 安裝先安裝 Ruby Windows 可以參考安裝 RudyInstaller for Windows 更新 Rudy Gems 1gem update --system 安裝 Jekyll 1gem install jekyll bundler 第一個站台1jekyll new jekylldemo 1bundle exec jekyll serve 部署Github Pages 是和 Jekyll 最合拍的 Hosting 空間，同個一爸爸的優勢下，只要將整個原始檔案簽入 Github，過一會就會自動生成檔案。 結論優點 和 Github Pages 深度整合（其他 Hosting 空間也是很容易部署）。 相關插件資源眾多。 缺點 操作指令較少（搭配 rake 會好很多）。 產生靜態頁速度較慢。]]></content>
       <categories>
         <category>應用程式</category>
       </categories>
@@ -20,14 +20,14 @@
         <category>應用程式</category>
       </categories>
       <tags>
-        <tag>Static Site Generator</tag>
         <tag>Hugo</tag>
+        <tag>Static Site Generator</tag>
       </tags>
   </entry>
   <entry>
     <title><![CDATA[樹莓派 - Retro Pie]]></title>
     <url>%2F2019%2F%E6%A8%B9%E8%8E%93%E6%B4%BE-Retro-Pie%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[樹莓派是個微型電腦，藉由低成本高效能的硬體，讓更多人可以踏進學習的世界，而至今，樹莓派上可以安裝很多種作業系統，做許多特定的事情，本文就是一系列的教學安裝心得。 待續]]></content>
       <categories>
         <category>系統安裝</category>
       </categories>
@@ -40,7 +40,7 @@
   <entry>
     <title><![CDATA[樹莓派 - Hass.io]]></title>
     <url>%2F2019%2F%E6%A8%B9%E8%8E%93%E6%B4%BE-Hass-io%2F</url>
-    <content type="text"><![CDATA[樹莓派是個微型電腦，藉由低成本高效能的硬體，讓更多人可以踏進學習的世界，而至今，樹莓派上可以安裝很多種作業系統，做許多特定的事情，本文就是一系列的教學安裝心得。 Hass.io 是智能家居的 OS。]]></content>
+    <content type="text"><![CDATA[樹莓派是個微型電腦，藉由低成本高效能的硬體，讓更多人可以踏進學習的世界，而至今，樹莓派上可以安裝很多種作業系統，做許多特定的事情，本文就是一系列的教學安裝心得。 Hass.io 是智能家居的 OS。 待續]]></content>
       <categories>
         <category>系統安裝</category>
       </categories>
@@ -58,9 +58,9 @@
         <category>應用程式</category>
       </categories>
       <tags>
-        <tag>Hexo</tag>
-        <tag>Static Site Generator</tag>
         <tag>Hugo</tag>
+        <tag>Static Site Generator</tag>
+        <tag>Hexo</tag>
         <tag>Jekyll</tag>
       </tags>
   </entry>
@@ -107,8 +107,8 @@
         <category>應用程式</category>
       </categories>
       <tags>
-        <tag>Hexo</tag>
         <tag>Static Site Generator</tag>
+        <tag>Hexo</tag>
         <tag>Hexo Themes</tag>
       </tags>
   </entry>
@@ -120,8 +120,8 @@
         <category>應用程式</category>
       </categories>
       <tags>
-        <tag>Hexo</tag>
         <tag>Static Site Generator</tag>
+        <tag>Hexo</tag>
         <tag>Git</tag>
         <tag>GitHub</tag>
       </tags>
@@ -135,8 +135,8 @@
       </categories>
       <tags>
         <tag>ASP.NET Core</tag>
-        <tag>AutoMapper</tag>
         <tag>C#</tag>
+        <tag>AutoMapper</tag>
       </tags>
   </entry>
   <entry>
@@ -147,8 +147,8 @@
         <category>應用程式</category>
       </categories>
       <tags>
-        <tag>Hexo</tag>
         <tag>Static Site Generator</tag>
+        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -160,9 +160,9 @@
       </categories>
       <tags>
         <tag>ASP.NET Core</tag>
-        <tag>C#</tag>
         <tag>MSTest</tag>
         <tag>UnitTest</tag>
+        <tag>C#</tag>
       </tags>
   </entry>
   <entry>
@@ -185,8 +185,8 @@
         <category>應用程式</category>
       </categories>
       <tags>
-        <tag>Hexo</tag>
         <tag>Static Site Generator</tag>
+        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -197,8 +197,8 @@
         <category>應用程式</category>
       </categories>
       <tags>
-        <tag>Hexo</tag>
         <tag>Static Site Generator</tag>
+        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -209,8 +209,8 @@
         <category>應用程式</category>
       </categories>
       <tags>
-        <tag>Hexo</tag>
         <tag>Static Site Generator</tag>
+        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
