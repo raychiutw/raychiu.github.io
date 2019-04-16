@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://raychiutw.github.io/"/>
-  <updated>2019-04-15T03:18:27.000Z</updated>
+  <updated>2019-04-16T07:20:55.055Z</updated>
   <id>https://raychiutw.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://raychiutw.github.io/2019/Jeykll-%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%9D%E6%95%99%E5%AD%B8/"/>
     <id>https://raychiutw.github.io/2019/Jeykll-快速安裝教學/</id>
     <published>2019-04-12T09:19:15.000Z</published>
-    <updated>2019-04-15T03:18:27.000Z</updated>
+    <updated>2019-04-16T07:20:55.055Z</updated>
     
     <summary type="html">
     
@@ -41,11 +41,11 @@
   </entry>
   
   <entry>
-    <title>Hugo - 快速安裝教學</title>
+    <title>Hugo 快速安裝教學</title>
     <link href="https://raychiutw.github.io/2019/Hugo-%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%9D%E6%95%99%E5%AD%B8/"/>
     <id>https://raychiutw.github.io/2019/Hugo-快速安裝教學/</id>
     <published>2019-04-11T08:36:30.000Z</published>
-    <updated>2019-04-15T02:43:30.889Z</updated>
+    <updated>2019-04-16T08:01:23.168Z</updated>
     
     <summary type="html">
     
@@ -378,7 +378,7 @@
     <link href="https://raychiutw.github.io/2018/Hexo%E6%95%99%E5%AD%B8-0-%E7%9B%AE%E9%8C%84/"/>
     <id>https://raychiutw.github.io/2018/Hexo教學-0-目錄/</id>
     <published>2018-05-01T01:28:34.000Z</published>
-    <updated>2019-04-15T03:06:08.892Z</updated>
+    <updated>2019-04-16T07:46:34.613Z</updated>
     
     <summary type="html">
     
@@ -386,12 +386,13 @@
 &lt;p&gt;Hexo 是一個使用 Node.js 為基礎的靜態網站產生器。使用 Markdown 解析文章，透過主題產生靜態檔案。而且他是由台灣人所開發出來的。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&quot;優點&quot;&gt;&lt;a href=&quot;#優點&quot; class=&quot;headerlink&quot; title=&quot;優點&quot;&gt;&lt;/a&gt;優點&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;台灣人開發，中文資源豐富&lt;/li&gt;
-&lt;li&gt;Node.js 生態完整，插件完整&lt;/li&gt;
+&lt;li&gt;台灣人開發，中文資源豐富。&lt;/li&gt;
+&lt;li&gt;Node.js 生態完整，插件完整。&lt;/li&gt;
 &lt;li&gt;頁面產生速度快。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&quot;缺點&quot;&gt;&lt;a href=&quot;#缺點&quot; class=&quot;headerlink&quot; title=&quot;缺點&quot;&gt;&lt;/a&gt;缺點&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;Node.js 插件眾多，依賴複雜，有可能會採坑。&lt;/li&gt;
+&lt;li&gt;Node.js 插件眾多，依賴複雜，有可能會踩坑。&lt;/li&gt;
+&lt;li&gt;Hexo _config.yaml 與 Hexo Theme _config.yaml 交互設定較複雜。&lt;/li&gt;
 &lt;/ul&gt;
     
     </summary>

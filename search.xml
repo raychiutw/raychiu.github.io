@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[Jeykll 快速安裝教學]]></title>
     <url>%2F2019%2FJeykll-%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%9D%E6%95%99%E5%AD%B8%2F</url>
-    <content type="text"><![CDATA[Jeykll 是 Github 的聯合創始人的作品，以 Ruby 開發的靜態網頁產生器，是目前最受歡迎的，相關資源最多的 ssg，本篇就來簡單快速教學。 安裝先安裝 Ruby Windows 可以參考安裝 RudyInstaller for Windows 更新 Rudy Gems 1gem update --system 安裝 Jekyll 1gem install jekyll bundler 第一個站台1jekyll new jekylldemo 1bundle exec jekyll serve 部署Github Pages 是和 Jekyll 最合拍的 Hosting 空間，同個一爸爸的優勢下，只要將整個原始檔案簽入 Github，過一會就會自動生成檔案。 結論優點 和 Github Pages 深度整合（其他 Hosting 空間也是很容易部署）。 相關插件資源眾多。 缺點 操作指令較少（搭配 rake 會好很多）。 產生靜態頁速度較慢。]]></content>
+    <content type="text"><![CDATA[Jeykll 是 Github 的聯合創始人的作品，以 Ruby 開發的靜態網頁產生器，是目前最受歡迎的，相關資源最多的 ssg，本篇就來簡單快速教學。 安裝先安裝 Ruby Windows 可以參考安裝 RudyInstaller for Windows 更新 Rudy Gems 1gem update --system 安裝 Jekyll 1gem install bundler jekyll 第一個站台1jekyll new jekylldemo 12cd jekylldemobundle exec jekyll serve 部署Github Pages 是和 Jekyll 最合拍的 Hosting 空間，同個一爸爸的優勢下，只要將整個原始檔案簽入 Github，過一會就會自動生成檔案。 結論優點 和 Github Pages 深度整合（其他 Hosting 空間也是很容易部署）。 相關插件資源眾多。 _config.yml 設定統一。 缺點 操作指令較少（搭配 rake 會好很多）。 產生靜態頁速度較慢。]]></content>
       <categories>
         <category>應用程式</category>
       </categories>
@@ -13,9 +13,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Hugo - 快速安裝教學]]></title>
+    <title><![CDATA[Hugo 快速安裝教學]]></title>
     <url>%2F2019%2FHugo-%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%9D%E6%95%99%E5%AD%B8%2F</url>
-    <content type="text"><![CDATA[Hugo 是用 Go 語言開發的靜態網站產生器（Static Site Generator），有著超快產生速度的優點，就讓我們來玩玩看吧。 安裝Hugo 提供多種安裝方式，含括 Windows / Linux / macOS，以下列出 Windows 與 macOS 安裝方式，其他安裝方式請直接參考官網說明。 Chocolatey (Windows)1choco install hugo -confirm Homebrew (macOS)1brew install hugo 其他安裝方式請參考 install。 檢查安裝版本1hugo version 建立新站台1hugo new site hugodemo 新增佈景主題Hugo 安裝好是沒有佈景主題的，所以接下來必須來設定佈景主題。 相較於 Hugo，Hexo、Jekyll有預設佈景主題，這點是 Hugo 較為不便的地方。 下載佈景主題使用 git 下載，好處是新版本更新很方便。 123cd hugodemogit initgit submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke 若沒有 git 的環境，可以直接下載 ananke theme 解壓縮放入 hugodemo/themes/ananke。 編輯 config.toml 並將主題設定為 Ananke1echo 'theme = "ananke"' &gt;&gt; config.toml 其他佈景主題Hugo 也提供了很多佈景主題，請直接參考 Hugo Themes。 增加一個新文章1hugo new posts/my-first-post.md 啟動站台1hugo server -D Hugo Server 執行輸出畫面 在瀏覽器中輸入紅框處網址即可看成果了。 Hugo 預設 port 為 1313，若被佔用會置換成其他 port。 目錄說明若展開 hugodemo 資料夾，會包含以下內容.├── archetypes│ └── default.md├── config.toml├── content├── data├── layouts├── static└── themes 其中 archetypes: 放置生成文件的基礎樣板資料夾。config.toml: 控制 hugo 產生網頁內容的設定檔，預設使用 toml 格式。（也支援 yaml 與 json 格式）。content: 放置 Markdown 文章與網頁內容的資料夾。data: 儲存一些 configuration 檔案的地方，協助建構靜態網頁。layouts: 儲存產生的網頁 layout 樣板（之後範例使用其他的 theme）。static: 放置靜態內容，如圖片，CSS 以及 *.js 等內容。themes: 從外部引入的 theme 檔案。 目前只要知道 config.toml, content, static 與 themes 這幾個部分即可。 站台設定打開 config.toml 1234baseURL = "https://example.org/"languageCode = "en-us"title = "My New Hugo Site"theme = "ananke" 部署當成功的執行站台後，產生的靜態檔會生成在 public 的資料夾下，將此資料夾的靜態檔部署到 Hosting 主機上。 各平台部署方式請參照。 結論優點 快！快！快！ 自動刷新動頁面 已整合眾多功能（分類、標籤、Sitemap、GA） config.toml 設定統一 缺點 提供的佈景主題較少 擴充插件較少]]></content>
+    <content type="text"><![CDATA[Hugo 是用 Go 語言開發的靜態網站產生器（Static Site Generator），有著超快產生速度的優點，就讓我們來玩玩看吧。 安裝Hugo 提供多種安裝方式，含括 Windows / Linux / macOS，以下列出 Windows 與 macOS 安裝方式，其他安裝方式請直接參考官網說明。 Chocolatey (Windows)1choco install hugo -confirm Homebrew (macOS)1brew install hugo 其他安裝方式請參考 install。 檢查安裝版本1hugo version 建立新站台1hugo new site hugodemo 新增佈景主題Hugo 安裝好是沒有佈景主題的，所以接下來必須來設定佈景主題。 相較於 Hugo，Hexo、Jekyll有預設佈景主題，這點是 Hugo 較為不便的地方。 下載佈景主題使用 git 下載，好處是新版本更新很方便。 123cd hugodemogit initgit submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke 若沒有 git 的環境，可以直接下載 ananke theme 解壓縮放入 hugodemo/themes/ananke。 編輯 config.toml 並將主題設定為 Ananke1echo theme = "ananke" &gt;&gt; config.toml 其他佈景主題Hugo 也提供了很多佈景主題，請直接參考 Hugo Themes。 增加一個新文章1hugo new posts/my-first-post.md 啟動站台1hugo server -D 在瀏覽器中輸入紅框處網址即可看成果了。 Hugo 預設 port 為 1313，若被佔用會置換成其他 port。 目錄說明若展開 hugodemo 資料夾，會包含以下內容.├── archetypes│ └── default.md├── config.toml├── content├── data├── layouts├── static└── themes 其中 archetypes: 放置生成文件的基礎樣板資料夾。config.toml: 控制 hugo 產生網頁內容的設定檔，預設使用 toml 格式。（也支援 yaml 與 json 格式）。content: 放置 Markdown 文章與網頁內容的資料夾。data: 儲存一些 configuration 檔案的地方，協助建構靜態網頁。layouts: 儲存產生的網頁 layout 樣板（之後範例使用其他的 theme）。static: 放置靜態內容，如圖片，CSS 以及 *.js 等內容。themes: 從外部引入的 theme 檔案。 目前只要知道 config.toml, content, static 與 themes 這幾個部分即可。 站台設定打開 config.toml 1234baseURL = "https://example.org/"languageCode = "en-us"title = "My New Hugo Site"theme = "ananke" 部署當成功的執行站台後，產生的靜態檔會生成在 public 的資料夾下，將此資料夾的靜態檔部署到 Hosting 主機上。 各平台部署方式請參考官網說明。 結論優點 快！快！快！ 已整合眾多功能（分類、標籤、Sitemap、GA）。 config.toml 設定統一。 缺點 提供的佈景主題較少。 擴充插件較少。]]></content>
       <categories>
         <category>應用程式</category>
       </categories>
@@ -180,7 +180,7 @@
   <entry>
     <title><![CDATA[Hexo教學（0）－目錄]]></title>
     <url>%2F2018%2FHexo%E6%95%99%E5%AD%B8-0-%E7%9B%AE%E9%8C%84%2F</url>
-    <content type="text"><![CDATA[Hexo 是一個使用 Node.js 為基礎的靜態網站產生器。使用 Markdown 解析文章，透過主題產生靜態檔案。而且他是由台灣人所開發出來的。 優點 台灣人開發，中文資源豐富 Node.js 生態完整，插件完整 頁面產生速度快。 缺點 Node.js 插件眾多，依賴複雜，有可能會採坑。 Hexo教學（1）－快速安裝 Hexo教學（2）－建立第一篇文章 Hexo教學（3）－基本設定 Hexo教學（4）－部署到 GitHub Pages Hexo教學（5）－Material 主題設定 Hexo教學（6）－Material 程式碼高亮 Hexo教學（7）－Material 整合功能 Hexo教學（8）－Material RSS QRCode 站內搜尋 Hexo教學（9）－Sitemap.xml 與 robot.txt]]></content>
+    <content type="text"><![CDATA[Hexo 是一個使用 Node.js 為基礎的靜態網站產生器。使用 Markdown 解析文章，透過主題產生靜態檔案。而且他是由台灣人所開發出來的。 優點 台灣人開發，中文資源豐富。 Node.js 生態完整，插件完整。 頁面產生速度快。 缺點 Node.js 插件眾多，依賴複雜，有可能會踩坑。 Hexo _config.yaml 與 Hexo Theme _config.yaml 交互設定較複雜。 系列文章連結 Hexo教學（1）－快速安裝 Hexo教學（2）－建立第一篇文章 Hexo教學（3）－基本設定 Hexo教學（4）－部署到 GitHub Pages Hexo教學（5）－Material 主題設定 Hexo教學（6）－Material 程式碼高亮 Hexo教學（7）－Material 整合功能 Hexo教學（8）－Material RSS QRCode 站內搜尋 Hexo教學（9）－Sitemap.xml 與 robot.txt]]></content>
       <categories>
         <category>應用程式</category>
       </categories>

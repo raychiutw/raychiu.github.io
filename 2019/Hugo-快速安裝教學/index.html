@@ -112,15 +112,17 @@
   <meta name="description" content="Hugo 是用 Go 語言開發的靜態網站產生器（Static Site Generator），有著超快產生速度的優點，就讓我們來玩玩看吧。">
 <meta name="keywords" content="Hugo,Static Site Generator">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hugo - 快速安裝教學">
+<meta property="og:title" content="Hugo 快速安裝教學">
 <meta property="og:url" content="https://raychiutw.github.io/2019/Hugo-快速安裝教學/index.html">
 <meta property="og:site_name" content="Ray&#39;s Notes">
 <meta property="og:description" content="Hugo 是用 Go 語言開發的靜態網站產生器（Static Site Generator），有著超快產生速度的優點，就讓我們來玩玩看吧。">
 <meta property="og:locale" content="zh-TW">
-<meta property="og:updated_time" content="2019-04-15T02:43:30.889Z">
+<meta property="og:image" content="https://raychiutw.github.io/2019/Hugo-快速安裝教學/hugo-server-output.png">
+<meta property="og:updated_time" content="2019-04-16T08:01:23.168Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hugo - 快速安裝教學">
+<meta name="twitter:title" content="Hugo 快速安裝教學">
 <meta name="twitter:description" content="Hugo 是用 Go 語言開發的靜態網站產生器（Static Site Generator），有著超快產生速度的優點，就讓我們來玩玩看吧。">
+<meta name="twitter:image" content="https://raychiutw.github.io/2019/Hugo-快速安裝教學/hugo-server-output.png">
 
 
 
@@ -139,7 +141,7 @@
   };
 </script>
 
-  <title>Hugo - 快速安裝教學 | Ray's Notes</title>
+  <title>Hugo 快速安裝教學 | Ray's Notes</title>
   
 
 
@@ -425,7 +427,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hugo - 快速安裝教學
+          <h1 class="post-title" itemprop="name headline">Hugo 快速安裝教學
 
               
             
@@ -468,7 +470,7 @@
                 
                   <span class="post-meta-item-text">更新於</span>
                 
-                <time title="修改時間：2019-04-15 10:43:30" itemprop="dateModified" datetime="2019-04-15T10:43:30+08:00">2019-04-15</time>
+                <time title="修改時間：2019-04-16 16:01:23" itemprop="dateModified" datetime="2019-04-16T16:01:23+08:00">2019-04-16</time>
               
             
           </span>
@@ -572,11 +574,11 @@
 <h3 id="下載佈景主題"><a href="#下載佈景主題" class="headerlink" title="下載佈景主題"></a>下載佈景主題</h3><p>使用 git 下載，好處是新版本更新很方便。</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> hugodemo</span><br><span class="line">git init</span><br><span class="line">git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke</span><br></pre></td></tr></table></figure>
 <p>若沒有 git 的環境，可以直接下載 <a href="https://github.com/budparr/gohugo-theme-ananke/archive/master.zip" target="_blank" rel="noopener">ananke theme</a> 解壓縮放入 <code>hugodemo/themes/ananke</code>。</p>
-<h3 id="編輯-config-toml-並將主題設定為-Ananke"><a href="#編輯-config-toml-並將主題設定為-Ananke" class="headerlink" title="編輯 config.toml 並將主題設定為 Ananke"></a>編輯 config.toml 並將主題設定為 Ananke</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">'theme = "ananke"'</span> &gt;&gt; config.toml</span><br></pre></td></tr></table></figure>
+<h3 id="編輯-config-toml-並將主題設定為-Ananke"><a href="#編輯-config-toml-並將主題設定為-Ananke" class="headerlink" title="編輯 config.toml 並將主題設定為 Ananke"></a>編輯 config.toml 並將主題設定為 Ananke</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> theme = <span class="string">"ananke"</span> &gt;&gt; config.toml</span><br></pre></td></tr></table></figure>
 <h3 id="其他佈景主題"><a href="#其他佈景主題" class="headerlink" title="其他佈景主題"></a>其他佈景主題</h3><p>Hugo 也提供了很多佈景主題，請直接參考 <a href="https://themes.gohugo.io/" target="_blank" rel="noopener">Hugo Themes</a>。</p>
 <h2 id="增加一個新文章"><a href="#增加一個新文章" class="headerlink" title="增加一個新文章"></a>增加一個新文章</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hugo new posts/my-first-post.md</span><br></pre></td></tr></table></figure>
 <h2 id="啟動站台"><a href="#啟動站台" class="headerlink" title="啟動站台"></a>啟動站台</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hugo server -D</span><br></pre></td></tr></table></figure>
-<p><a href="hugo-server-output.png">Hugo Server 執行輸出畫面</a></p>
+<p><img src="hugo-server-output.png" alt="Hugo Server 執行輸出畫面"></p>
 <p>在瀏覽器中輸入紅框處網址即可看成果了。</p>
 <blockquote>
 <p>Hugo 預設 port 為 1313，若被佔用會置換成其他 port。</p>
@@ -590,16 +592,15 @@
 <h2 id="站台設定"><a href="#站台設定" class="headerlink" title="站台設定"></a>站台設定</h2><p>打開 config.toml</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">baseURL = <span class="string">"https://example.org/"</span></span><br><span class="line">languageCode = <span class="string">"en-us"</span></span><br><span class="line">title = <span class="string">"My New Hugo Site"</span></span><br><span class="line">theme = <span class="string">"ananke"</span></span><br></pre></td></tr></table></figure>
 <h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><p>當成功的執行站台後，產生的靜態檔會生成在 <code>public</code> 的資料夾下，將此資料夾的靜態檔部署到 Hosting 主機上。</p>
-<p>各平台部署方式<a href="https://gohugo.io/hosting-and-deployment/" target="_blank" rel="noopener">請參照</a>。</p>
+<p>各平台部署方式<a href="https://gohugo.io/hosting-and-deployment/" target="_blank" rel="noopener">請參考官網說明</a>。</p>
 <h2 id="結論"><a href="#結論" class="headerlink" title="結論"></a>結論</h2><h3 id="優點"><a href="#優點" class="headerlink" title="優點"></a>優點</h3><ul>
 <li>快！快！快！</li>
-<li>自動刷新動頁面</li>
-<li>已整合眾多功能（分類、標籤、Sitemap、GA）</li>
-<li>config.toml 設定統一</li>
+<li>已整合眾多功能（分類、標籤、Sitemap、GA）。</li>
+<li>config.toml 設定統一。</li>
 </ul>
 <h3 id="缺點"><a href="#缺點" class="headerlink" title="缺點"></a>缺點</h3><ul>
-<li>提供的佈景主題較少</li>
-<li>擴充插件較少</li>
+<li>提供的佈景主題較少。</li>
+<li>擴充插件較少。</li>
 </ul>
 
       
@@ -679,7 +680,7 @@
   <li class="post-copyright-link">
     <strong>文章連結：</strong>
     
-    <a href="https://raychiutw.github.io/2019/Hugo-快速安裝教學/" title="Hugo - 快速安裝教學">https://raychiutw.github.io/2019/Hugo-快速安裝教學/</a>
+    <a href="https://raychiutw.github.io/2019/Hugo-快速安裝教學/" title="Hugo 快速安裝教學">https://raychiutw.github.io/2019/Hugo-快速安裝教學/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版權聲明： </strong>本網誌所有文章除特別聲明外，均採用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 許可協議。轉載請註明出處！</li>
