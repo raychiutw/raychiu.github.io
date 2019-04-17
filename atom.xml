@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://raychiutw.github.io/"/>
-  <updated>2019-04-16T07:20:55.055Z</updated>
+  <updated>2019-04-17T03:13:06.053Z</updated>
   <id>https://raychiutw.github.io/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>玩玩樹莓派 - 序篇</title>
+    <link href="https://raychiutw.github.io/2019/%E7%8E%A9%E7%8E%A9%E6%A8%B9%E6%A2%85%E6%B4%BE-%E5%BA%8F%E7%AF%87/"/>
+    <id>https://raychiutw.github.io/2019/玩玩樹梅派-序篇/</id>
+    <published>2019-04-17T02:56:42.000Z</published>
+    <updated>2019-04-17T03:13:06.053Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;樹莓派是個微型電腦，藉由低成本高效能的硬體，讓更多人可以踏進電腦學習的世界，而至今，樹莓派上可以安裝很多種系統，做許多特定的事情，本文就是一系列的教學安裝心得。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;預計有以下主題&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;智
+        
+      
+    
+    </summary>
+    
+      <category term="系統安裝" scheme="https://raychiutw.github.io/categories/%E7%B3%BB%E7%B5%B1%E5%AE%89%E8%A3%9D/"/>
+    
+    
+      <category term="Raspberry Pi" scheme="https://raychiutw.github.io/tags/Raspberry-Pi/"/>
+    
+  </entry>
   
   <entry>
     <title>Jeykll 快速安裝教學</title>
@@ -58,25 +89,22 @@
       <category term="應用程式" scheme="https://raychiutw.github.io/categories/%E6%87%89%E7%94%A8%E7%A8%8B%E5%BC%8F/"/>
     
     
-      <category term="Hugo" scheme="https://raychiutw.github.io/tags/Hugo/"/>
-    
       <category term="Static Site Generator" scheme="https://raychiutw.github.io/tags/Static-Site-Generator/"/>
+    
+      <category term="Hugo" scheme="https://raychiutw.github.io/tags/Hugo/"/>
     
   </entry>
   
   <entry>
-    <title>樹莓派 - Retro Pie</title>
-    <link href="https://raychiutw.github.io/2019/%E6%A8%B9%E8%8E%93%E6%B4%BE-Retro-Pie/"/>
-    <id>https://raychiutw.github.io/2019/樹莓派-Retro-Pie/</id>
+    <title>玩玩樹莓派 - RetroPie</title>
+    <link href="https://raychiutw.github.io/2019/%E7%8E%A9%E7%8E%A9%E6%A8%B9%E8%8E%93%E6%B4%BE-RetroPie/"/>
+    <id>https://raychiutw.github.io/2019/玩玩樹莓派-RetroPie/</id>
     <published>2019-04-11T07:53:34.000Z</published>
-    <updated>2019-04-15T03:35:43.304Z</updated>
+    <updated>2019-04-17T03:05:12.812Z</updated>
     
     <summary type="html">
     
-      &lt;blockquote&gt;
-&lt;p&gt;樹莓派是個微型電腦，藉由低成本高效能的硬體，讓更多人可以踏進學習的世界，而至今，樹莓派上可以安裝很多種作業系統，做許多特定的事情，本文就是一系列的教學安裝心得。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;待續&lt;br&gt;
+      &lt;p&gt;Retro-Pie，復古的、樹梅派。RetroPie 是英國的一個開源專案，內建了許多經典遊戲的模擬器：GBA、N64、PSX 等等，而最近 Steam 官方釋出 Raspberry Pi 可以用的 Steam Link，RetroPie 也把它包進套件裡面。所以現在裝好 RetroPie 後，不只可以玩經典的神奇寶貝、牧場物語、馬力歐賽車，更可以玩 GTA V、Overcooked! 2。（當然前提你要有這些老遊戲的 ROM、也要有 Steam 遊戲）&lt;/p&gt;
     
     </summary>
     
@@ -92,21 +120,15 @@
   </entry>
   
   <entry>
-    <title>樹莓派 - Hass.io</title>
-    <link href="https://raychiutw.github.io/2019/%E6%A8%B9%E8%8E%93%E6%B4%BE-Hass-io/"/>
-    <id>https://raychiutw.github.io/2019/樹莓派-Hass-io/</id>
+    <title>玩玩樹莓派 - Hass.io</title>
+    <link href="https://raychiutw.github.io/2019/%E7%8E%A9%E7%8E%A9%E6%A8%B9%E8%8E%93%E6%B4%BE-Hass-io/"/>
+    <id>https://raychiutw.github.io/2019/玩玩樹莓派-Hass-io/</id>
     <published>2019-04-11T07:53:09.000Z</published>
-    <updated>2019-04-15T03:35:38.653Z</updated>
+    <updated>2019-04-17T02:59:38.263Z</updated>
     
     <summary type="html">
     
-      &lt;blockquote&gt;
-&lt;p&gt;樹莓派是個微型電腦，藉由低成本高效能的硬體，讓更多人可以踏進學習的世界，而至今，樹莓派上可以安裝很多種作業系統，做許多特定的事情，本文就是一系列的教學安裝心得。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Hass.io 是智能家居的 OS。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;待續&lt;br&gt;
+      &lt;p&gt;Hass.io 是 Home Assistant （簡稱 HA） 的 container 版本，HA 主流安裝有兩種方式, 是 Hassbian 與 Hassio; 但其實 HA 官方目前主推 Hass.io，優點是其有著友善的圖形介面、技術要求低, 對新手友善, 整體來說相對簡單，Hassio裡有類似 Plugin Store 的設計，擴充插件較為方便。&lt;/p&gt;
     
     </summary>
     
@@ -116,6 +138,8 @@
       <category term="Raspberry Pi" scheme="https://raychiutw.github.io/tags/Raspberry-Pi/"/>
     
       <category term="Hass.io" scheme="https://raychiutw.github.io/tags/Hass-io/"/>
+    
+      <category term="Home Assistant" scheme="https://raychiutw.github.io/tags/Home-Assistant/"/>
     
       <category term="智能家居" scheme="https://raychiutw.github.io/tags/%E6%99%BA%E8%83%BD%E5%AE%B6%E5%B1%85/"/>
     
@@ -139,11 +163,11 @@
       <category term="應用程式" scheme="https://raychiutw.github.io/categories/%E6%87%89%E7%94%A8%E7%A8%8B%E5%BC%8F/"/>
     
     
-      <category term="Hugo" scheme="https://raychiutw.github.io/tags/Hugo/"/>
+      <category term="Hexo" scheme="https://raychiutw.github.io/tags/Hexo/"/>
     
       <category term="Static Site Generator" scheme="https://raychiutw.github.io/tags/Static-Site-Generator/"/>
     
-      <category term="Hexo" scheme="https://raychiutw.github.io/tags/Hexo/"/>
+      <category term="Hugo" scheme="https://raychiutw.github.io/tags/Hugo/"/>
     
       <category term="Jekyll" scheme="https://raychiutw.github.io/tags/Jekyll/"/>
     
@@ -235,9 +259,9 @@
       <category term="應用程式" scheme="https://raychiutw.github.io/categories/%E6%87%89%E7%94%A8%E7%A8%8B%E5%BC%8F/"/>
     
     
-      <category term="Static Site Generator" scheme="https://raychiutw.github.io/tags/Static-Site-Generator/"/>
-    
       <category term="Hexo" scheme="https://raychiutw.github.io/tags/Hexo/"/>
+    
+      <category term="Static Site Generator" scheme="https://raychiutw.github.io/tags/Static-Site-Generator/"/>
     
       <category term="Hexo Themes" scheme="https://raychiutw.github.io/tags/Hexo-Themes/"/>
     
@@ -261,9 +285,9 @@
       <category term="應用程式" scheme="https://raychiutw.github.io/categories/%E6%87%89%E7%94%A8%E7%A8%8B%E5%BC%8F/"/>
     
     
-      <category term="Static Site Generator" scheme="https://raychiutw.github.io/tags/Static-Site-Generator/"/>
-    
       <category term="Hexo" scheme="https://raychiutw.github.io/tags/Hexo/"/>
+    
+      <category term="Static Site Generator" scheme="https://raychiutw.github.io/tags/Static-Site-Generator/"/>
     
       <category term="Git" scheme="https://raychiutw.github.io/tags/Git/"/>
     
@@ -315,9 +339,9 @@
       <category term="應用程式" scheme="https://raychiutw.github.io/categories/%E6%87%89%E7%94%A8%E7%A8%8B%E5%BC%8F/"/>
     
     
-      <category term="Static Site Generator" scheme="https://raychiutw.github.io/tags/Static-Site-Generator/"/>
-    
       <category term="Hexo" scheme="https://raychiutw.github.io/tags/Hexo/"/>
+    
+      <category term="Static Site Generator" scheme="https://raychiutw.github.io/tags/Static-Site-Generator/"/>
     
   </entry>
   
@@ -400,9 +424,9 @@
       <category term="應用程式" scheme="https://raychiutw.github.io/categories/%E6%87%89%E7%94%A8%E7%A8%8B%E5%BC%8F/"/>
     
     
-      <category term="Static Site Generator" scheme="https://raychiutw.github.io/tags/Static-Site-Generator/"/>
-    
       <category term="Hexo" scheme="https://raychiutw.github.io/tags/Hexo/"/>
+    
+      <category term="Static Site Generator" scheme="https://raychiutw.github.io/tags/Static-Site-Generator/"/>
     
   </entry>
   
@@ -424,9 +448,9 @@
       <category term="應用程式" scheme="https://raychiutw.github.io/categories/%E6%87%89%E7%94%A8%E7%A8%8B%E5%BC%8F/"/>
     
     
-      <category term="Static Site Generator" scheme="https://raychiutw.github.io/tags/Static-Site-Generator/"/>
-    
       <category term="Hexo" scheme="https://raychiutw.github.io/tags/Hexo/"/>
+    
+      <category term="Static Site Generator" scheme="https://raychiutw.github.io/tags/Static-Site-Generator/"/>
     
   </entry>
   
@@ -449,9 +473,9 @@
       <category term="應用程式" scheme="https://raychiutw.github.io/categories/%E6%87%89%E7%94%A8%E7%A8%8B%E5%BC%8F/"/>
     
     
-      <category term="Static Site Generator" scheme="https://raychiutw.github.io/tags/Static-Site-Generator/"/>
-    
       <category term="Hexo" scheme="https://raychiutw.github.io/tags/Hexo/"/>
+    
+      <category term="Static Site Generator" scheme="https://raychiutw.github.io/tags/Static-Site-Generator/"/>
     
   </entry>
   

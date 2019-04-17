@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[玩玩樹莓派 - 序篇]]></title>
+    <url>%2F2019%2F%E7%8E%A9%E7%8E%A9%E6%A8%B9%E6%A2%85%E6%B4%BE-%E5%BA%8F%E7%AF%87%2F</url>
+    <content type="text"><![CDATA[樹莓派是個微型電腦，藉由低成本高效能的硬體，讓更多人可以踏進電腦學習的世界，而至今，樹莓派上可以安裝很多種系統，做許多特定的事情，本文就是一系列的教學安裝心得。 預計有以下主題 智能家居：Hass.io 懷舊遊戲機：Retro Pie 懷舊遊戲機：Recalbox]]></content>
+      <categories>
+        <category>系統安裝</category>
+      </categories>
+      <tags>
+        <tag>Raspberry Pi</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Jeykll 快速安裝教學]]></title>
     <url>%2F2019%2FJeykll-%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%9D%E6%95%99%E5%AD%B8%2F</url>
     <content type="text"><![CDATA[Jeykll 是 Github 的聯合創始人的作品，以 Ruby 開發的靜態網頁產生器，是目前最受歡迎的，相關資源最多的 ssg，本篇就來簡單快速教學。 安裝先安裝 Ruby Windows 可以參考安裝 RudyInstaller for Windows 更新 Rudy Gems 1gem update --system 安裝 Jekyll 1gem install bundler jekyll 第一個站台1jekyll new jekylldemo 12cd jekylldemobundle exec jekyll serve 部署Github Pages 是和 Jekyll 最合拍的 Hosting 空間，同個一爸爸的優勢下，只要將整個原始檔案簽入 Github，過一會就會自動生成檔案。 結論優點 和 Github Pages 深度整合（其他 Hosting 空間也是很容易部署）。 相關插件資源眾多。 _config.yml 設定統一。 缺點 操作指令較少（搭配 rake 會好很多）。 產生靜態頁速度較慢。]]></content>
@@ -20,14 +31,14 @@
         <category>應用程式</category>
       </categories>
       <tags>
-        <tag>Hugo</tag>
         <tag>Static Site Generator</tag>
+        <tag>Hugo</tag>
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[樹莓派 - Retro Pie]]></title>
-    <url>%2F2019%2F%E6%A8%B9%E8%8E%93%E6%B4%BE-Retro-Pie%2F</url>
-    <content type="text"><![CDATA[樹莓派是個微型電腦，藉由低成本高效能的硬體，讓更多人可以踏進學習的世界，而至今，樹莓派上可以安裝很多種作業系統，做許多特定的事情，本文就是一系列的教學安裝心得。 待續]]></content>
+    <title><![CDATA[玩玩樹莓派 - RetroPie]]></title>
+    <url>%2F2019%2F%E7%8E%A9%E7%8E%A9%E6%A8%B9%E8%8E%93%E6%B4%BE-RetroPie%2F</url>
+    <content type="text"><![CDATA[Retro-Pie，復古的、樹梅派。RetroPie 是英國的一個開源專案，內建了許多經典遊戲的模擬器：GBA、N64、PSX 等等，而最近 Steam 官方釋出 Raspberry Pi 可以用的 Steam Link，RetroPie 也把它包進套件裡面。所以現在裝好 RetroPie 後，不只可以玩經典的神奇寶貝、牧場物語、馬力歐賽車，更可以玩 GTA V、Overcooked! 2。（當然前提你要有這些老遊戲的 ROM、也要有 Steam 遊戲） RetroPie 其實是基於 Raspbian 系統的一些套件，如果你已經有一台服役中的 Raspberry Pi，也可以直接安裝 RetroPie 的套件，不過還是建議跟著下面的步驟走，安裝預先做好的 RetroPie 映像檔（pre-build image），因為我已經幫你把一些雷踩過了。]]></content>
       <categories>
         <category>系統安裝</category>
       </categories>
@@ -38,15 +49,16 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[樹莓派 - Hass.io]]></title>
-    <url>%2F2019%2F%E6%A8%B9%E8%8E%93%E6%B4%BE-Hass-io%2F</url>
-    <content type="text"><![CDATA[樹莓派是個微型電腦，藉由低成本高效能的硬體，讓更多人可以踏進學習的世界，而至今，樹莓派上可以安裝很多種作業系統，做許多特定的事情，本文就是一系列的教學安裝心得。 Hass.io 是智能家居的 OS。 待續]]></content>
+    <title><![CDATA[玩玩樹莓派 - Hass.io]]></title>
+    <url>%2F2019%2F%E7%8E%A9%E7%8E%A9%E6%A8%B9%E8%8E%93%E6%B4%BE-Hass-io%2F</url>
+    <content type="text"><![CDATA[Hass.io 是 Home Assistant （簡稱 HA） 的 container 版本，HA 主流安裝有兩種方式, 是 Hassbian 與 Hassio; 但其實 HA 官方目前主推 Hass.io，優點是其有著友善的圖形介面、技術要求低, 對新手友善, 整體來說相對簡單，Hassio裡有類似 Plugin Store 的設計，擴充插件較為方便。 事前準備硬體 Raspberry Pi 3 model B+ 16G 以上的 micro SD 卡（官方建議 32G 以上） 5v 2.5A電源線（建議要足瓦） 軟體 Hass.io images Etcher 安裝燒進記憶卡開機安裝]]></content>
       <categories>
         <category>系統安裝</category>
       </categories>
       <tags>
         <tag>Raspberry Pi</tag>
         <tag>Hass.io</tag>
+        <tag>Home Assistant</tag>
         <tag>智能家居</tag>
       </tags>
   </entry>
@@ -58,9 +70,9 @@
         <category>應用程式</category>
       </categories>
       <tags>
-        <tag>Hugo</tag>
-        <tag>Static Site Generator</tag>
         <tag>Hexo</tag>
+        <tag>Static Site Generator</tag>
+        <tag>Hugo</tag>
         <tag>Jekyll</tag>
       </tags>
   </entry>
@@ -107,8 +119,8 @@
         <category>應用程式</category>
       </categories>
       <tags>
-        <tag>Static Site Generator</tag>
         <tag>Hexo</tag>
+        <tag>Static Site Generator</tag>
         <tag>Hexo Themes</tag>
       </tags>
   </entry>
@@ -120,8 +132,8 @@
         <category>應用程式</category>
       </categories>
       <tags>
-        <tag>Static Site Generator</tag>
         <tag>Hexo</tag>
+        <tag>Static Site Generator</tag>
         <tag>Git</tag>
         <tag>GitHub</tag>
       </tags>
@@ -147,8 +159,8 @@
         <category>應用程式</category>
       </categories>
       <tags>
-        <tag>Static Site Generator</tag>
         <tag>Hexo</tag>
+        <tag>Static Site Generator</tag>
       </tags>
   </entry>
   <entry>
@@ -185,8 +197,8 @@
         <category>應用程式</category>
       </categories>
       <tags>
-        <tag>Static Site Generator</tag>
         <tag>Hexo</tag>
+        <tag>Static Site Generator</tag>
       </tags>
   </entry>
   <entry>
@@ -197,8 +209,8 @@
         <category>應用程式</category>
       </categories>
       <tags>
-        <tag>Static Site Generator</tag>
         <tag>Hexo</tag>
+        <tag>Static Site Generator</tag>
       </tags>
   </entry>
   <entry>
@@ -209,8 +221,8 @@
         <category>應用程式</category>
       </categories>
       <tags>
-        <tag>Static Site Generator</tag>
         <tag>Hexo</tag>
+        <tag>Static Site Generator</tag>
       </tags>
   </entry>
   <entry>
