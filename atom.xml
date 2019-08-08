@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://raychiutw.github.io/"/>
-  <updated>2019-08-08T02:30:20.348Z</updated>
+  <updated>2019-08-08T02:34:14.697Z</updated>
   <id>https://raychiutw.github.io/</id>
   
   <author>
@@ -21,18 +21,13 @@
     <link href="https://raychiutw.github.io/2019/AutoMapper-Extensions-Microsoft-DependencyInjection-AddAutoMapper-%E5%B7%B2%E9%81%8E%E6%99%82/"/>
     <id>https://raychiutw.github.io/2019/AutoMapper-Extensions-Microsoft-DependencyInjection-AddAutoMapper-已過時/</id>
     <published>2019-08-07T03:02:53.000Z</published>
-    <updated>2019-08-08T02:30:20.348Z</updated>
+    <updated>2019-08-08T02:34:14.697Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;blockquote&gt;
-&lt;p&gt;AutoMapper.Extensions.Microsoft.DependencyInjection 簡單的讓 AutoMapper 註冊到 ASP.NET Core 中，但更版之後出現以 AddAutoMapper()
-        
-      
+      &lt;blockquote&gt;
+&lt;p&gt;AutoMapper.Extensions.Microsoft.DependencyInjection 簡單的讓 AutoMapper 註冊到 ASP.NET Core 中，但更版之後出現以 AddAutoMapper() 已過期的訊息，紀錄一下新版的用法。&lt;/p&gt;
+&lt;/blockquote&gt;
     
     </summary>
     

@@ -466,7 +466,7 @@
                 
                   <span class="post-meta-item-text">更新於</span>
                 
-                <time title="修改時間：2019-08-08 10:30:20" itemprop="dateModified" datetime="2019-08-08T10:30:20+08:00">2019-08-08</time>
+                <time title="修改時間：2019-08-08 10:34:14" itemprop="dateModified" datetime="2019-08-08T10:34:14+08:00">2019-08-08</time>
               
             
           </span>
@@ -512,7 +512,7 @@
                 
                   <span class="post-meta-item-text">文章字數：</span>
                 
-                <span title="文章字數">838</span>
+                <span title="文章字數">839</span>
               
 
               
@@ -547,26 +547,18 @@
 
       
         
-          
-            <blockquote>
+          <blockquote>
 <p>AutoMapper.Extensions.Microsoft.DependencyInjection 簡單的讓 AutoMapper 註冊到 ASP.NET Core 中，但更版之後出現以 AddAutoMapper() 已過期的訊息，紀錄一下新版的用法。</p>
 </blockquote>
-<h3 id="舊版用法"><a href="#舊版用法" class="headerlink" title="舊版用法"></a>舊版用法</h3><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">services.AddAutoMapper();</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><figcaption><span>會掃描所有 assembliy 然後做兩件事：</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">1. 將實作 ```IProfile``` 的類別加入 mapping configuration</span><br><span class="line">2. 將 value resolvers, member value resolvers, type converters 加入 container</span><br><span class="line"></span><br><span class="line">### 更新套件後出現</span><br><span class="line"></span><br><span class="line">```c#</span><br><span class="line">ServiceCollectionExtensions.AddAutoMapper(IServiceCollection)&apos; is obsolete</span><br></pre></td></tr></table></figure>
-<h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><p>新版本異動了參數簽章</p>
-<p>改為傳入 assemblies</p>
-<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">services.AddAutoMapper(assembly1, assembly2 <span class="comment">/*, ...*/</span>);</span><br></pre></td></tr></table></figure>
-<p>或傳入 types</p>
-<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">services.AddAutoMapper(type1, type2 <span class="comment">/*, ...*/</span>);</span><br></pre></td></tr></table></figure>
-<h3 id="解決方法"><a href="#解決方法" class="headerlink" title="解決方法"></a>解決方法</h3><ol>
-<li>不怕麻煩的一個個傳入</li>
-<li>改用以下寫法，仍然可以自動全部掃描</li>
-</ol>
-<h4 id="單一專案：傳入-Starup-cs"><a href="#單一專案：傳入-Starup-cs" class="headerlink" title="單一專案：傳入 Starup.cs"></a>單一專案：傳入 Starup.cs</h4><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">services.AddAutoMapper(<span class="keyword">typeof</span>(Startup));</span><br></pre></td></tr></table></figure>
-<h4 id="多個專案參考：傳入-所有-Assemblies"><a href="#多個專案參考：傳入-所有-Assemblies" class="headerlink" title="多個專案參考：傳入 所有 Assemblies"></a>多個專案參考：傳入 所有 Assemblies</h4><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());</span><br></pre></td></tr></table></figure>
-<h3 id="參考連結"><a href="#參考連結" class="headerlink" title="參考連結"></a>參考連結</h3><p><a href="https://github.com/AutoMapper/AutoMapper.Extensions.Microsoft.DependencyInjection/issues/105" target="_blank" rel="noopener">https://github.com/AutoMapper/AutoMapper.Extensions.Microsoft.DependencyInjection/issues/105</a></p>
-
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/AutoMapper-Extensions-Microsoft-DependencyInjection-AddAutoMapper-已過時/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
