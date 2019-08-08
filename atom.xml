@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://raychiutw.github.io/"/>
-  <updated>2019-08-08T02:38:21.631Z</updated>
+  <updated>2019-08-08T07:19:52.356Z</updated>
   <id>https://raychiutw.github.io/</id>
   
   <author>
@@ -15,6 +15,50 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>隨手 Design Pattern (2) - 軟體分層設計模式 (Software Layered Architecture Pattern)</title>
+    <link href="https://raychiutw.github.io/2019/%E9%9A%A8%E6%89%8B-Design-Pattern-2-%E8%BB%9F%E9%AB%94%E5%88%86%E5%B1%A4%E8%A8%AD%E8%A8%88%E6%A8%A1%E5%BC%8F-Software-Layered-Architecture-Pattern/"/>
+    <id>https://raychiutw.github.io/2019/隨手-Design-Pattern-2-軟體分層設計模式-Software-Layered-Architecture-Pattern/</id>
+    <published>2019-08-08T02:55:23.000Z</published>
+    <updated>2019-08-08T07:19:52.356Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;軟體分層設計模式是我這幾年專案必會使用的架構，它的效益在多人團隊分工上有極大的效益，且能有效專注修改區域，提高共用性，讓我們來看看這是怎樣的架構。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="程式開發" scheme="https://raychiutw.github.io/categories/%E7%A8%8B%E5%BC%8F%E9%96%8B%E7%99%BC/"/>
+    
+    
+      <category term="Design Pattern" scheme="https://raychiutw.github.io/tags/Design-Pattern/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>隨手 Design Pattern (1) - 序篇</title>
+    <link href="https://raychiutw.github.io/2019/%E9%9A%A8%E6%89%8B-Design-Pattern-1-%E5%BA%8F%E7%AF%87/"/>
+    <id>https://raychiutw.github.io/2019/隨手-Design-Pattern-1-序篇/</id>
+    <published>2019-08-08T02:47:34.000Z</published>
+    <updated>2019-08-08T02:57:50.012Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;這個系列簡單紀錄我程式開發中用到的 Design Pattern，並附上範例說明應用情境，盡量用簡單的說明讓大家明瞭 Desin Pattern&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="程式開發" scheme="https://raychiutw.github.io/categories/%E7%A8%8B%E5%BC%8F%E9%96%8B%E7%99%BC/"/>
+    
+    
+      <category term="Design Pattern" scheme="https://raychiutw.github.io/tags/Design-Pattern/"/>
+    
+  </entry>
   
   <entry>
     <title>AutoMapper.Extensions.Microsoft.DependencyInjection - AddAutoMapper 已過時</title>
@@ -477,51 +521,6 @@
       <category term="Hexo" scheme="https://raychiutw.github.io/tags/Hexo/"/>
     
       <category term="Static Site Generator" scheme="https://raychiutw.github.io/tags/Static-Site-Generator/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo教學（1）－快速安裝</title>
-    <link href="https://raychiutw.github.io/2018/Hexo%E6%95%99%E5%AD%B8-1-%E5%BF%AB%E9%80%9F%E5%AE%89%E8%A3%9D/"/>
-    <id>https://raychiutw.github.io/2018/Hexo教學-1-快速安裝/</id>
-    <published>2018-04-29T04:27:49.000Z</published>
-    <updated>2019-04-15T02:59:56.624Z</updated>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;那我們就開始吧。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&quot;安裝-Node-js&quot;&gt;&lt;a href=&quot;#安裝-Node-js&quot; class=&quot;headerlink&quot; title=&quot;安裝 Node.js&quot;&gt;&lt;/a&gt;安裝 Node.js&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://nodejs.org/en/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;下載Node.js&lt;/a&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="應用程式" scheme="https://raychiutw.github.io/categories/%E6%87%89%E7%94%A8%E7%A8%8B%E5%BC%8F/"/>
-    
-    
-      <category term="Hexo" scheme="https://raychiutw.github.io/tags/Hexo/"/>
-    
-      <category term="Static Site Generator" scheme="https://raychiutw.github.io/tags/Static-Site-Generator/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>開張大吉</title>
-    <link href="https://raychiutw.github.io/2018/%E9%96%8B%E5%BC%B5%E5%A4%A7%E5%90%89/"/>
-    <id>https://raychiutw.github.io/2018/開張大吉/</id>
-    <published>2018-04-28T00:52:06.000Z</published>
-    <updated>2019-03-19T08:24:17.137Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;為什麼想寫部落格？&lt;/p&gt;
-&lt;p&gt;為什麼到這把年紀才想寫部落格？&lt;/p&gt;
-&lt;p&gt;其實！就是因為這把年紀阿！！&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="雜記" scheme="https://raychiutw.github.io/categories/%E9%9B%9C%E8%A8%98/"/>
-    
     
   </entry>
   

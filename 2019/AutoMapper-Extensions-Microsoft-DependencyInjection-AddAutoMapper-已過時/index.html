@@ -521,7 +521,7 @@
                 
                   <span class="post-meta-item-text">文章字數：</span>
                 
-                <span title="文章字數">832</span>
+                <span title="文章字數">827</span>
               
 
               
@@ -559,24 +559,24 @@
 <p>AutoMapper.Extensions.Microsoft.DependencyInjection 簡單的讓 AutoMapper 註冊到 ASP.NET Core 中，但更版之後出現以 AddAutoMapper() 已過期的訊息，紀錄一下新版的用法。</p>
 </blockquote>
 <a id="more"></a>
-<h3 id="舊版用法"><a href="#舊版用法" class="headerlink" title="舊版用法"></a>舊版用法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">services.AddAutoMapper();</span><br></pre></td></tr></table></figure>
+<h3 id="舊版用法"><a href="#舊版用法" class="headerlink" title="舊版用法"></a>舊版用法</h3><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">services.AddAutoMapper();</span><br></pre></td></tr></table></figure>
 <p><code>AddAutoMapper()</code> 會掃描所有 assembliy 然後做兩件事：</p>
 <ol>
 <li>將實作 <code>IProfile</code> 的類別加入 mapping configuration</li>
 <li>將 value resolvers, member value resolvers, type converters 加入 container</li>
 </ol>
-<h3 id="更新套件後出現"><a href="#更新套件後出現" class="headerlink" title="更新套件後出現"></a>更新套件後出現</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ServiceCollectionExtensions.AddAutoMapper(IServiceCollection)&apos; is obsolete</span><br></pre></td></tr></table></figure>
+<h3 id="更新套件後出現"><a href="#更新套件後出現" class="headerlink" title="更新套件後出現"></a>更新套件後出現</h3><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ServiceCollectionExtensions.AddAutoMapper(IServiceCollection)<span class="string">' is obsolete</span></span><br></pre></td></tr></table></figure>
 <h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><p>新版本異動了參數簽章</p>
 <p>改為傳入 assemblies</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">services.AddAutoMapper(assembly1, assembly2 /*, ...*/);</span><br></pre></td></tr></table></figure>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">services.AddAutoMapper(assembly1, assembly2 <span class="comment">/*, ...*/</span>);</span><br></pre></td></tr></table></figure>
 <p>或傳入 types</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">services.AddAutoMapper(type1, type2 /*, ...*/);</span><br></pre></td></tr></table></figure>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">services.AddAutoMapper(type1, type2 <span class="comment">/*, ...*/</span>);</span><br></pre></td></tr></table></figure>
 <h3 id="解決方法"><a href="#解決方法" class="headerlink" title="解決方法"></a>解決方法</h3><ol>
 <li>不怕麻煩的一個個傳入</li>
 <li>改用以下寫法，仍然可以自動全部掃描</li>
 </ol>
-<h4 id="單一專案：傳入-Starup-cs"><a href="#單一專案：傳入-Starup-cs" class="headerlink" title="單一專案：傳入 Starup.cs"></a>單一專案：傳入 Starup.cs</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">services.AddAutoMapper(typeof(Startup));</span><br></pre></td></tr></table></figure>
-<h4 id="多個專案參考：傳入-所有-Assemblies"><a href="#多個專案參考：傳入-所有-Assemblies" class="headerlink" title="多個專案參考：傳入 所有 Assemblies"></a>多個專案參考：傳入 所有 Assemblies</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());</span><br></pre></td></tr></table></figure>
+<h4 id="單一專案：傳入-Starup-cs"><a href="#單一專案：傳入-Starup-cs" class="headerlink" title="單一專案：傳入 Starup.cs"></a>單一專案：傳入 Starup.cs</h4><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">services.AddAutoMapper(<span class="keyword">typeof</span>(Startup));</span><br></pre></td></tr></table></figure>
+<h4 id="多個專案參考：傳入-所有-Assemblies"><a href="#多個專案參考：傳入-所有-Assemblies" class="headerlink" title="多個專案參考：傳入 所有 Assemblies"></a>多個專案參考：傳入 所有 Assemblies</h4><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());</span><br></pre></td></tr></table></figure>
 <h3 id="參考連結"><a href="#參考連結" class="headerlink" title="參考連結"></a>參考連結</h3><p><a href="https://github.com/AutoMapper/AutoMapper.Extensions.Microsoft.DependencyInjection/issues/105" target="_blank" rel="noopener">https://github.com/AutoMapper/AutoMapper.Extensions.Microsoft.DependencyInjection/issues/105</a></p>
 
       
@@ -689,6 +689,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2019/隨手-Design-Pattern-1-序篇/" rel="prev" title="隨手 Design Pattern (1) - 序篇">
+                隨手 Design Pattern (1) - 序篇 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -762,7 +766,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">20</span>
+                    <span class="site-state-item-count">22</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -842,7 +846,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">22</span>
+                      
+                    
+                    <span class="site-state-item-count">23</span>
                     <span class="site-state-item-name">標籤</span>
                   </a>
                 </div>
@@ -942,7 +948,7 @@
     
       <span class="post-meta-item-text">總字數：</span>
     
-    <span title="總字數">23k</span>
+    <span title="總字數">24k</span>
   
 
   
@@ -953,7 +959,7 @@
     
       <span class="post-meta-item-text">所需總閱讀時間 &asymp;</span>
     
-    <span title="所需總閱讀時間">21 分鐘</span>
+    <span title="所需總閱讀時間">22 分鐘</span>
   
 </div>
 

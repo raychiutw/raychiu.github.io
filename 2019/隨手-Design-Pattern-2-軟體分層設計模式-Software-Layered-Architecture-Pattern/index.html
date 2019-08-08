@@ -109,18 +109,18 @@
 
 
 
-  <meta name="description" content="AutoMapper 是一個類別對應轉換的套件，在ASP.NET Core專案中的用法有有點差異，本篇說明適合ASP.NET Core 的簡潔用法。">
-<meta name="keywords" content="ASP.NET Core,C#,AutoMapper">
+  <meta name="description" content="軟體分層設計模式是我這幾年專案必會使用的架構，它的效益在多人團隊分工上有極大的效益，且能有效專注修改區域，提高共用性，讓我們來看看這是怎樣的架構。">
+<meta name="keywords" content="Design Pattern">
 <meta property="og:type" content="article">
-<meta property="og:title" content="在 ASP.NET Core 中使用 AutoMapper">
-<meta property="og:url" content="https://raychiutw.github.io/2018/在-ASP-NET-Core-中使用-AutoMapper/index.html">
+<meta property="og:title" content="隨手 Design Pattern (2) - 軟體分層設計模式 (Software Layered Architecture Pattern)">
+<meta property="og:url" content="https://raychiutw.github.io/2019/隨手-Design-Pattern-2-軟體分層設計模式-Software-Layered-Architecture-Pattern/index.html">
 <meta property="og:site_name" content="Ray&#39;s Notes">
-<meta property="og:description" content="AutoMapper 是一個類別對應轉換的套件，在ASP.NET Core專案中的用法有有點差異，本篇說明適合ASP.NET Core 的簡潔用法。">
+<meta property="og:description" content="軟體分層設計模式是我這幾年專案必會使用的架構，它的效益在多人團隊分工上有極大的效益，且能有效專注修改區域，提高共用性，讓我們來看看這是怎樣的架構。">
 <meta property="og:locale" content="zh-TW">
-<meta property="og:updated_time" content="2019-03-20T05:56:53.730Z">
+<meta property="og:updated_time" content="2019-08-08T07:19:52.356Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="在 ASP.NET Core 中使用 AutoMapper">
-<meta name="twitter:description" content="AutoMapper 是一個類別對應轉換的套件，在ASP.NET Core專案中的用法有有點差異，本篇說明適合ASP.NET Core 的簡潔用法。">
+<meta name="twitter:title" content="隨手 Design Pattern (2) - 軟體分層設計模式 (Software Layered Architecture Pattern)">
+<meta name="twitter:description" content="軟體分層設計模式是我這幾年專案必會使用的架構，它的效益在多人團隊分工上有極大的效益，且能有效專注修改區域，提高共用性，讓我們來看看這是怎樣的架構。">
 
 
 
@@ -129,7 +129,7 @@
 
 
 
-  <link rel="canonical" href="https://raychiutw.github.io/2018/在-ASP-NET-Core-中使用-AutoMapper/">
+  <link rel="canonical" href="https://raychiutw.github.io/2019/隨手-Design-Pattern-2-軟體分層設計模式-Software-Layered-Architecture-Pattern/">
 
 
 
@@ -139,7 +139,7 @@
   };
 </script>
 
-  <title>在 ASP.NET Core 中使用 AutoMapper | Ray's Notes</title>
+  <title>隨手 Design Pattern (2) - 軟體分層設計模式 (Software Layered Architecture Pattern) | Ray's Notes</title>
   
 
 
@@ -408,7 +408,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://raychiutw.github.io/2018/在-ASP-NET-Core-中使用-AutoMapper/">
+    <link itemprop="mainEntityOfPage" href="https://raychiutw.github.io/2019/隨手-Design-Pattern-2-軟體分層設計模式-Software-Layered-Architecture-Pattern/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Ray Chiu">
@@ -425,7 +425,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">在 ASP.NET Core 中使用 AutoMapper
+          <h1 class="post-title" itemprop="name headline">隨手 Design Pattern (2) - 軟體分層設計模式 (Software Layered Architecture Pattern)
 
               
             
@@ -451,24 +451,12 @@
                 
               
 
-              <time title="創建時間：2018-05-17 13:39:35" itemprop="dateCreated datePublished" datetime="2018-05-17T13:39:35+08:00">2018-05-17</time>
+              <time title="創建時間：2019-08-08 10:55:23 / 修改時間：15:19:52" itemprop="dateCreated datePublished" datetime="2019-08-08T10:55:23+08:00">2019-08-08</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新於</span>
-                
-                <time title="修改時間：2019-03-20 13:56:53" itemprop="dateModified" datetime="2019-03-20T13:56:53+08:00">2019-03-20</time>
               
             
           </span>
@@ -521,7 +509,7 @@
                 
                   <span class="post-meta-item-text">文章字數：</span>
                 
-                <span title="文章字數">1.5k</span>
+                <span title="文章字數">966</span>
               
 
               
@@ -556,27 +544,35 @@
 
       
         <blockquote>
-<p>AutoMapper 是一個類別對應轉換的套件，在ASP.NET Core專案中的用法有有點差異，本篇說明適合ASP.NET Core 的簡潔用法。</p>
+<p>軟體分層設計模式是我這幾年專案必會使用的架構，它的效益在多人團隊分工上有極大的效益，且能有效專注修改區域，提高共用性，讓我們來看看這是怎樣的架構。</p>
 </blockquote>
 <a id="more"></a>
-<h4 id="安裝套件"><a href="#安裝套件" class="headerlink" title="安裝套件"></a>安裝套件</h4><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Install-Package AutoMapper.Extensions.Microsoft.DependencyInjection</span><br></pre></td></tr></table></figure>
-<p>此套件是使用 ASP.Net Core 自帶的 DI Framework，讓 AutoMapper 使用上更簡潔優雅，此套件依賴了 AutoMapper，會自動安裝。</p>
-<h4 id="加入-Startup-cs"><a href="#加入-Startup-cs" class="headerlink" title="加入 Startup.cs"></a>加入 Startup.cs</h4><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">ConfigureServices</span>(<span class="params">IServiceCollection services</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="comment">// 加入 AutoMapper</span></span><br><span class="line">	services.AddAutoMapper();</span><br><span class="line">	services.AddMvc();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>ASP.Net Core 專案中要使用什麼東西皆是相同套路，在 ConfigureServices 中 AddAutoMapper 這個 Middleware。</p>
-<h4 id="建立-Profile"><a href="#建立-Profile" class="headerlink" title="建立 Profile"></a>建立 Profile</h4><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">UserProfie</span> : <span class="title">Profile</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">UserProfie</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>	&#123;</span><br><span class="line">		<span class="comment">// 建立 Profile 對照定義</span></span><br><span class="line">		CreateMap&lt;UserResultModel, UserViewModel&gt;();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p> Profile 的重點在繼承 <code>Profile</code> 這個類別</p>
-<h4 id="使用-IMapper"><a href="#使用-IMapper" class="headerlink" title="使用 IMapper"></a>使用 IMapper</h4><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">HomeController</span> : <span class="title">Controller</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">private</span> IMapper _mapper;</span><br><span class="line">	<span class="keyword">private</span> IUserService _userService;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="title">HomeController</span>(<span class="params">IMapper mapper, IUserService userService</span>)</span></span><br><span class="line"><span class="function"></span>	&#123;</span><br><span class="line">		<span class="keyword">this</span>._mapper = mapper;</span><br><span class="line">		<span class="keyword">this</span>._userService = userService;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">public</span> IActionResult <span class="title">Index</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>	&#123;</span><br><span class="line">		<span class="comment">// 取得 user</span></span><br><span class="line">		<span class="keyword">var</span> user = <span class="keyword">this</span>._userService.Get();</span><br><span class="line"></span><br><span class="line">		<span class="comment">// 將 user 置換成 ViewModel</span></span><br><span class="line">		<span class="keyword">var</span> userViewModel = _mapper.Map&lt;IEnumerable&lt;UserViewModel&gt;&gt;(user);</span><br><span class="line"></span><br><span class="line">		ViewData[<span class="string">"User"</span>] = userViewModel;</span><br><span class="line">		<span class="keyword">return</span> View();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>只要透過建構式注入 IMapper，就可以透過 Map 這個方法 Mapper Profile 有定義到類別。</p>
-<h4 id="結論"><a href="#結論" class="headerlink" title="結論"></a>結論</h4><p>這樣的作法有什麼好處呢？</p>
-<ul>
-<li>夠簡潔。使用 AddAutoMapper 方法，啟動 AutoMapper middleware，簡單明瞭。</li>
-<li>低耦合。藉由繼承 Profile ，AutoMapper 自動取得所有定義 Profile，並將 IMapper 注入到需要的區塊中，降低程式碼對 AutoMapper 的耦合度。</li>
+<h3 id="定義"><a href="#定義" class="headerlink" title="定義"></a>定義</h3><h3 id="基本分層架構模式主分為"><a href="#基本分層架構模式主分為" class="headerlink" title="基本分層架構模式主分為"></a>基本分層架構模式主分為</h3><ul>
+<li>展示層 (Presentation Layer)：接收外部請求( view、app、ap 等等 )，呼叫業務層，並將業務層回傳的 dto 轉成 viewmodel 回傳給外部。</li>
+<li>業務層 (Business Layer)：接收展示層請求，專注處理商業邏輯，呼叫資料層，並將資料層回傳的 model 轉換成 dto 回傳給展示層。</li>
+<li>資料層 (Data Layer)：專注處理資料，資料來源來自資料庫或其他其他服務，接收業務層呼叫，執行資料處理回傳 model。</li>
+<li>共用層 (Common Layer)：將各層依賴的 model、dto、enum 等放入此層，因共用層與其他層有參考關聯，此層物件務必力求簡單，且不可有商業邏輯。</li>
 </ul>
-<p>簡單的一句話，Asp.Net Core 真叫人愛不釋手。</p>
-<p><a href="https://raychiutw.github.io/2018/%E5%9C%A8-ASP-NET-Core-%E4%B8%AD%E4%BD%BF%E7%94%A8-AutoMapper/">參考範例</a></p>
-<h4 id="參考連結"><a href="#參考連結" class="headerlink" title="參考連結"></a>參考連結</h4><ul>
-<li><a href="https://dotnetcoretutorials.com/2017/09/23/using-automapper-asp-net-core/" target="_blank" rel="noopener">Using Automapper In ASP.net Core</a></li>
-<li><a href="http://docs.automapper.org/en/stable/index.html" target="_blank" rel="noopener">AutoMapper Docs</a></li>
+<h3 id="我的實作"><a href="#我的實作" class="headerlink" title="我的實作"></a>我的實作</h3><ul>
+<li>MyLab.Common</li>
+<li>MyLab.WebApi</li>
+<li>MyLab.Service</li>
+<li>MyLab.Repository</li>
+</ul>
+<h4 id="MyLab-Common"><a href="#MyLab-Common" class="headerlink" title="MyLab.Common"></a>MyLab.Common</h4><p>共用層，跨層的 model、dto、enum 放在此專案內</p>
+<h4 id="MyLab-Repository"><a href="#MyLab-Repository" class="headerlink" title="MyLab.Repository"></a>MyLab.Repository</h4><h4 id="MyLab-Service"><a href="#MyLab-Service" class="headerlink" title="MyLab.Service"></a>MyLab.Service</h4><h4 id="MyLab-WebApi"><a href="#MyLab-WebApi" class="headerlink" title="MyLab.WebApi"></a>MyLab.WebApi</h4><h3 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h3><p>當我是一個人開發的時候，分層設計真的感受不深，更多的是為何要弄得這麼複雜，但隨著工作團隊的擴展，多人合作開發的時候，分層設計就發揮出了它的價值，各個成員專注各自的層發開，不會被其他成員影響，當需要修改或擴充時，若是要改 UI，只需要異動展示層，若是新增商業邏輯則只需專注業務層，而是為要換第三方配合廠商或者更換資料庫，則只需專注在資料層去修改，而各層的物件又可以依不同情境做重用，不需重複開發，可謂好處多多。</p>
+<p>效益整理如下</p>
+<ul>
+<li>適合多人團隊分工時不互相影響 (一條龍開發時感受不深)</li>
+<li>分層專注，可以專注修改，不會牽一髮動全身</li>
+</ul>
+<p>但真的能達到這樣的效益，其實還有一些必要前提</p>
+<ul>
+<li>物件設計須符合 SOLID 原則</li>
+<li>各層依賴介面 (Interface)，不依賴實作</li>
+<li>專案需導入 DI Framework，作到依賴注入，達成控制反轉 (IoC)</li>
+<li>撰寫單元測試 (Unit Test) 保護每次修改</li>
+<li>合理的設計各層職責物件，業務層更為重要</li>
 </ul>
 
       
@@ -591,28 +587,7 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="\2019\AutoMapper-Extensions-Microsoft-DependencyInjection-AddAutoMapper-已過時\" rel="bookmark">AutoMapper.Extensions.Microsoft.DependencyInjection - AddAutoMapper 已過時</a></div>
-      
-    </li>
-  
-    <li class="popular-posts-item">
-      
-      
-      <div class="popular-posts-title"><a href="\2018\ASP-NET-Core-無法使用-DeploymentItem-的替代方案\" rel="bookmark">ASP.NET Core 無法使用 DeploymentItem 的替代方案</a></div>
-      
-    </li>
-  
-    <li class="popular-posts-item">
-      
-      
-      <div class="popular-posts-title"><a href="\2018\ASP-NET-Core-啟用-Web-config-Transformation\" rel="bookmark">ASP.NET Core 啟用 Web.config Transformation</a></div>
-      
-    </li>
-  
-    <li class="popular-posts-item">
-      
-      
-      <div class="popular-posts-title"><a href="\2018\用 LINQ 處理分群情境\" rel="bookmark">用 LINQ 處理分群情境</a></div>
+      <div class="popular-posts-title"><a href="\2019\隨手-Design-Pattern-1-序篇\" rel="bookmark">隨手 Design Pattern (1) - 序篇</a></div>
       
     </li>
   
@@ -649,7 +624,7 @@
   <li class="post-copyright-link">
     <strong>文章連結：</strong>
     
-    <a href="https://raychiutw.github.io/2018/在-ASP-NET-Core-中使用-AutoMapper/" title="在 ASP.NET Core 中使用 AutoMapper">https://raychiutw.github.io/2018/在-ASP-NET-Core-中使用-AutoMapper/</a>
+    <a href="https://raychiutw.github.io/2019/隨手-Design-Pattern-2-軟體分層設計模式-Software-Layered-Architecture-Pattern/" title="隨手 Design Pattern (2) - 軟體分層設計模式 (Software Layered Architecture Pattern)">https://raychiutw.github.io/2019/隨手-Design-Pattern-2-軟體分層設計模式-Software-Layered-Architecture-Pattern/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版權聲明： </strong>本網誌所有文章除特別聲明外，均採用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 許可協議。轉載請註明出處！</li>
@@ -662,11 +637,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/ASP-NET-Core/" rel="tag"># ASP.NET Core</a>
-          
-            <a href="/tags/C/" rel="tag"># C#</a>
-          
-            <a href="/tags/AutoMapper/" rel="tag"># AutoMapper</a>
+            <a href="/tags/Design-Pattern/" rel="tag"># Design Pattern</a>
           
         </div>
       
@@ -679,8 +650,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/Hexo教學-3-基本設定/" rel="next" title="Hexo（3）－基本設定">
-                <i class="fa fa-chevron-left"></i> Hexo（3）－基本設定
+              <a href="/2019/隨手-Design-Pattern-1-序篇/" rel="next" title="隨手 Design Pattern (1) - 序篇">
+                <i class="fa fa-chevron-left"></i> 隨手 Design Pattern (1) - 序篇
               </a>
             
           </div>
@@ -688,10 +659,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/Hexo教學-4-部署到-GitHub-Pages/" rel="prev" title="Hexo（4）－部署到 GitHub Pages">
-                Hexo（4）－部署到 GitHub Pages <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -906,7 +873,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#安裝套件"><span class="nav-number">1.</span> <span class="nav-text">安裝套件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#加入-Startup-cs"><span class="nav-number">2.</span> <span class="nav-text">加入 Startup.cs</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#建立-Profile"><span class="nav-number">3.</span> <span class="nav-text">建立 Profile</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用-IMapper"><span class="nav-number">4.</span> <span class="nav-text">使用 IMapper</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#結論"><span class="nav-number">5.</span> <span class="nav-text">結論</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#參考連結"><span class="nav-number">6.</span> <span class="nav-text">參考連結</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#定義"><span class="nav-number">1.</span> <span class="nav-text">定義</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基本分層架構模式主分為"><span class="nav-number">2.</span> <span class="nav-text">基本分層架構模式主分為</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#我的實作"><span class="nav-number">3.</span> <span class="nav-text">我的實作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#MyLab-Common"><span class="nav-number">3.1.</span> <span class="nav-text">MyLab.Common</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#MyLab-Repository"><span class="nav-number">3.2.</span> <span class="nav-text">MyLab.Repository</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#MyLab-Service"><span class="nav-number">3.3.</span> <span class="nav-text">MyLab.Service</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#MyLab-WebApi"><span class="nav-number">3.4.</span> <span class="nav-text">MyLab.WebApi</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#心得"><span class="nav-number">4.</span> <span class="nav-text">心得</span></a></li></ol></div>
             
 
           </div>
