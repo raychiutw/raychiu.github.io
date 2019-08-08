@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://raychiutw.github.io/"/>
-  <updated>2019-04-17T03:13:06.053Z</updated>
+  <updated>2019-08-08T02:30:20.348Z</updated>
   <id>https://raychiutw.github.io/</id>
   
   <author>
@@ -15,6 +15,68 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>AutoMapper.Extensions.Microsoft.DependencyInjection - AddAutoMapper 已過時</title>
+    <link href="https://raychiutw.github.io/2019/AutoMapper-Extensions-Microsoft-DependencyInjection-AddAutoMapper-%E5%B7%B2%E9%81%8E%E6%99%82/"/>
+    <id>https://raychiutw.github.io/2019/AutoMapper-Extensions-Microsoft-DependencyInjection-AddAutoMapper-已過時/</id>
+    <published>2019-08-07T03:02:53.000Z</published>
+    <updated>2019-08-08T02:30:20.348Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;AutoMapper.Extensions.Microsoft.DependencyInjection 簡單的讓 AutoMapper 註冊到 ASP.NET Core 中，但更版之後出現以 AddAutoMapper()
+        
+      
+    
+    </summary>
+    
+      <category term="程式開發" scheme="https://raychiutw.github.io/categories/%E7%A8%8B%E5%BC%8F%E9%96%8B%E7%99%BC/"/>
+    
+    
+      <category term="ASP.NET Core" scheme="https://raychiutw.github.io/tags/ASP-NET-Core/"/>
+    
+      <category term="C#" scheme="https://raychiutw.github.io/tags/C/"/>
+    
+      <category term="AutoMapper" scheme="https://raychiutw.github.io/tags/AutoMapper/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>AutoMapper - AddAutoMapper 已過時</title>
+    <link href="https://raychiutw.github.io/2019/AutoMapper-AddAutoMapper-%E5%B7%B2%E9%81%8E%E6%99%82/"/>
+    <id>https://raychiutw.github.io/2019/AutoMapper-AddAutoMapper-已過時/</id>
+    <published>2019-08-07T03:01:08.000Z</published>
+    <updated>2019-08-07T03:03:33.851Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;AutoMapper.Extensions.Microsoft.DependencyInjection
+        
+      
+    
+    </summary>
+    
+      <category term="程式開發" scheme="https://raychiutw.github.io/categories/%E7%A8%8B%E5%BC%8F%E9%96%8B%E7%99%BC/"/>
+    
+    
+      <category term="ASP.NET Core" scheme="https://raychiutw.github.io/tags/ASP-NET-Core/"/>
+    
+      <category term="C#" scheme="https://raychiutw.github.io/tags/C/"/>
+    
+      <category term="AutoMapper" scheme="https://raychiutw.github.io/tags/AutoMapper/"/>
+    
+  </entry>
   
   <entry>
     <title>玩玩樹莓派 - 序篇</title>
@@ -476,26 +538,6 @@
       <category term="Hexo" scheme="https://raychiutw.github.io/tags/Hexo/"/>
     
       <category term="Static Site Generator" scheme="https://raychiutw.github.io/tags/Static-Site-Generator/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>開張大吉</title>
-    <link href="https://raychiutw.github.io/2018/%E9%96%8B%E5%BC%B5%E5%A4%A7%E5%90%89/"/>
-    <id>https://raychiutw.github.io/2018/開張大吉/</id>
-    <published>2018-04-28T00:52:06.000Z</published>
-    <updated>2019-03-19T08:24:17.137Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;為什麼想寫部落格？&lt;/p&gt;
-&lt;p&gt;為什麼到這把年紀才想寫部落格？&lt;/p&gt;
-&lt;p&gt;其實！就是因為這把年紀阿！！&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="雜記" scheme="https://raychiutw.github.io/categories/%E9%9B%9C%E8%A8%98/"/>
-    
     
   </entry>
   

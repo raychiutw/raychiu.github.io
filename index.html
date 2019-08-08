@@ -404,6 +404,414 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://raychiutw.github.io/2019/AutoMapper-Extensions-Microsoft-DependencyInjection-AddAutoMapper-已過時/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Ray Chiu">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="https://secure.gravatar.com/avatar/aebc3383898b7fa6e7e2020a3b4ab23f">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ray's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/AutoMapper-Extensions-Microsoft-DependencyInjection-AddAutoMapper-已過時/" class="post-title-link" itemprop="url">AutoMapper.Extensions.Microsoft.DependencyInjection - AddAutoMapper 已過時</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+
+              
+                
+              
+
+              <time title="創建時間：2019-08-07 11:02:53" itemprop="dateCreated datePublished" datetime="2019-08-07T11:02:53+08:00">2019-08-07</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新於</span>
+                
+                <time title="修改時間：2019-08-08 10:30:20" itemprop="dateModified" datetime="2019-08-08T10:30:20+08:00">2019-08-08</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分類於</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/程式開發/" itemprop="url" rel="index"><span itemprop="name">程式開發</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">文章字數：</span>
+                
+                <span title="文章字數">838</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+                
+                <span title="所需閱讀時間">1 分鐘</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>AutoMapper.Extensions.Microsoft.DependencyInjection 簡單的讓 AutoMapper 註冊到 ASP.NET Core 中，但更版之後出現以 AddAutoMapper() 已過期的訊息，紀錄一下新版的用法。</p>
+</blockquote>
+<h3 id="舊版用法"><a href="#舊版用法" class="headerlink" title="舊版用法"></a>舊版用法</h3><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">services.AddAutoMapper();</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><figcaption><span>會掃描所有 assembliy 然後做兩件事：</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">1. 將實作 ```IProfile``` 的類別加入 mapping configuration</span><br><span class="line">2. 將 value resolvers, member value resolvers, type converters 加入 container</span><br><span class="line"></span><br><span class="line">### 更新套件後出現</span><br><span class="line"></span><br><span class="line">```c#</span><br><span class="line">ServiceCollectionExtensions.AddAutoMapper(IServiceCollection)&apos; is obsolete</span><br></pre></td></tr></table></figure>
+<h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><p>新版本異動了參數簽章</p>
+<p>改為傳入 assemblies</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">services.AddAutoMapper(assembly1, assembly2 <span class="comment">/*, ...*/</span>);</span><br></pre></td></tr></table></figure>
+<p>或傳入 types</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">services.AddAutoMapper(type1, type2 <span class="comment">/*, ...*/</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="解決方法"><a href="#解決方法" class="headerlink" title="解決方法"></a>解決方法</h3><ol>
+<li>不怕麻煩的一個個傳入</li>
+<li>改用以下寫法，仍然可以自動全部掃描</li>
+</ol>
+<h4 id="單一專案：傳入-Starup-cs"><a href="#單一專案：傳入-Starup-cs" class="headerlink" title="單一專案：傳入 Starup.cs"></a>單一專案：傳入 Starup.cs</h4><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">services.AddAutoMapper(<span class="keyword">typeof</span>(Startup));</span><br></pre></td></tr></table></figure>
+<h4 id="多個專案參考：傳入-所有-Assemblies"><a href="#多個專案參考：傳入-所有-Assemblies" class="headerlink" title="多個專案參考：傳入 所有 Assemblies"></a>多個專案參考：傳入 所有 Assemblies</h4><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());</span><br></pre></td></tr></table></figure>
+<h3 id="參考連結"><a href="#參考連結" class="headerlink" title="參考連結"></a>參考連結</h3><p><a href="https://github.com/AutoMapper/AutoMapper.Extensions.Microsoft.DependencyInjection/issues/105" target="_blank" rel="noopener">https://github.com/AutoMapper/AutoMapper.Extensions.Microsoft.DependencyInjection/issues/105</a></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://raychiutw.github.io/2019/AutoMapper-AddAutoMapper-已過時/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Ray Chiu">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="https://secure.gravatar.com/avatar/aebc3383898b7fa6e7e2020a3b4ab23f">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ray's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/AutoMapper-AddAutoMapper-已過時/" class="post-title-link" itemprop="url">AutoMapper - AddAutoMapper 已過時</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+
+              
+                
+              
+
+              <time title="創建時間：2019-08-07 11:01:08 / 修改時間：11:03:33" itemprop="dateCreated datePublished" datetime="2019-08-07T11:01:08+08:00">2019-08-07</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分類於</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/程式開發/" itemprop="url" rel="index"><span itemprop="name">程式開發</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">文章字數：</span>
+                
+                <span title="文章字數">55</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+                
+                <span title="所需閱讀時間">1 分鐘</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>AutoMapper.Extensions.Microsoft.DependencyInjection </p>
+</blockquote>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://raychiutw.github.io/2019/玩玩樹梅派-序篇/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2045,427 +2453,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://raychiutw.github.io/2018/在-Git-Commit-空資料夾/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Ray Chiu">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="https://secure.gravatar.com/avatar/aebc3383898b7fa6e7e2020a3b4ab23f">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Ray's Notes">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2018/在-Git-Commit-空資料夾/" class="post-title-link" itemprop="url">Git Commit 空資料夾</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">發表於</span>
-              
-
-              
-                
-              
-
-              <time title="創建時間：2018-05-20 22:52:15" itemprop="dateCreated datePublished" datetime="2018-05-20T22:52:15+08:00">2018-05-20</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新於</span>
-                
-                <time title="修改時間：2019-03-19 16:26:53" itemprop="dateModified" datetime="2019-03-19T16:26:53+08:00">2019-03-19</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分類於</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/版本控制/" itemprop="url" rel="index"><span itemprop="name">版本控制</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">文章字數：</span>
-                
-                <span title="文章字數">287</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
-                
-                <span title="所需閱讀時間">1 分鐘</span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>Git 基本只對檔案作版控，資料夾中若沒有檔案是無法 commit 的，若想要 commit 空資料夾才可採取下面兩種做法。</p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2018/在-Git-Commit-空資料夾/#more" rel="contents">
-                閱讀全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://raychiutw.github.io/2018/Hexo教學-5-Material-主題設定/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Ray Chiu">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="https://secure.gravatar.com/avatar/aebc3383898b7fa6e7e2020a3b4ab23f">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Ray's Notes">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2018/Hexo教學-5-Material-主題設定/" class="post-title-link" itemprop="url">Hexo教學（5）－Material 主題設定</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">發表於</span>
-              
-
-              
-                
-              
-
-              <time title="創建時間：2018-05-20 21:42:37" itemprop="dateCreated datePublished" datetime="2018-05-20T21:42:37+08:00">2018-05-20</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新於</span>
-                
-                <time title="修改時間：2019-04-15 11:09:07" itemprop="dateModified" datetime="2019-04-15T11:09:07+08:00">2019-04-15</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分類於</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/應用程式/" itemprop="url" rel="index"><span itemprop="name">應用程式</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">文章字數：</span>
-                
-                <span title="文章字數">1.9k</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
-                
-                <span title="所需閱讀時間">2 分鐘</span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <blockquote>
-<p>自建 Blog 其中一種樂趣就是可以換很多種風格迥異的主題，不過仍需要一點程式基礎才能做好設定，接下來會以 Hexo 排名第二的主題 - Material 來做說明。</p>
-</blockquote>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2018/Hexo教學-5-Material-主題設定/#more" rel="contents">
-                閱讀全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一頁"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一頁"></i></a>
   </nav>
 
 
@@ -2509,7 +2501,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">19</span>
+                    <span class="site-state-item-count">21</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -2672,7 +2664,7 @@
     
       <span class="post-meta-item-text">總字數：</span>
     
-    <span title="總字數">22k</span>
+    <span title="總字數">23k</span>
   
 
   
@@ -2683,7 +2675,7 @@
     
       <span class="post-meta-item-text">所需總閱讀時間 &asymp;</span>
     
-    <span title="所需總閱讀時間">20 分鐘</span>
+    <span title="所需總閱讀時間">21 分鐘</span>
   
 </div>
 

@@ -109,18 +109,18 @@
 
 
 
-  <meta name="description" content="在 MSTest 中，若要在執行測試時能調用實體檔案，通常會用 DeploymentItem Attribute 來指定要同時部署的檔案，但屬性在 ASP.NET Core 中不再支援，本篇說明其他替代方案。">
-<meta name="keywords" content="ASP.NET Core,MSTest,UnitTest,C#">
+  <meta name="description" content="AutoMapper.Extensions.Microsoft.DependencyInjection">
+<meta name="keywords" content="ASP.NET Core,C#,AutoMapper">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ASP.NET Core 無法使用 DeploymentItem 的替代方案">
-<meta property="og:url" content="https://raychiutw.github.io/2018/ASP-NET-Core-無法使用-DeploymentItem-的替代方案/index.html">
+<meta property="og:title" content="AutoMapper - AddAutoMapper 已過時">
+<meta property="og:url" content="https://raychiutw.github.io/2019/AutoMapper-AddAutoMapper-已過時/index.html">
 <meta property="og:site_name" content="Ray&#39;s Notes">
-<meta property="og:description" content="在 MSTest 中，若要在執行測試時能調用實體檔案，通常會用 DeploymentItem Attribute 來指定要同時部署的檔案，但屬性在 ASP.NET Core 中不再支援，本篇說明其他替代方案。">
+<meta property="og:description" content="AutoMapper.Extensions.Microsoft.DependencyInjection">
 <meta property="og:locale" content="zh-TW">
-<meta property="og:updated_time" content="2019-03-19T08:26:16.964Z">
+<meta property="og:updated_time" content="2019-08-07T03:03:33.851Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ASP.NET Core 無法使用 DeploymentItem 的替代方案">
-<meta name="twitter:description" content="在 MSTest 中，若要在執行測試時能調用實體檔案，通常會用 DeploymentItem Attribute 來指定要同時部署的檔案，但屬性在 ASP.NET Core 中不再支援，本篇說明其他替代方案。">
+<meta name="twitter:title" content="AutoMapper - AddAutoMapper 已過時">
+<meta name="twitter:description" content="AutoMapper.Extensions.Microsoft.DependencyInjection">
 
 
 
@@ -129,7 +129,7 @@
 
 
 
-  <link rel="canonical" href="https://raychiutw.github.io/2018/ASP-NET-Core-無法使用-DeploymentItem-的替代方案/">
+  <link rel="canonical" href="https://raychiutw.github.io/2019/AutoMapper-AddAutoMapper-已過時/">
 
 
 
@@ -139,7 +139,7 @@
   };
 </script>
 
-  <title>ASP.NET Core 無法使用 DeploymentItem 的替代方案 | Ray's Notes</title>
+  <title>AutoMapper - AddAutoMapper 已過時 | Ray's Notes</title>
   
 
 
@@ -408,7 +408,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://raychiutw.github.io/2018/ASP-NET-Core-無法使用-DeploymentItem-的替代方案/">
+    <link itemprop="mainEntityOfPage" href="https://raychiutw.github.io/2019/AutoMapper-AddAutoMapper-已過時/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Ray Chiu">
@@ -425,7 +425,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">ASP.NET Core 無法使用 DeploymentItem 的替代方案
+          <h1 class="post-title" itemprop="name headline">AutoMapper - AddAutoMapper 已過時
 
               
             
@@ -451,24 +451,12 @@
                 
               
 
-              <time title="創建時間：2018-05-10 10:32:09" itemprop="dateCreated datePublished" datetime="2018-05-10T10:32:09+08:00">2018-05-10</time>
+              <time title="創建時間：2019-08-07 11:01:08 / 修改時間：11:03:33" itemprop="dateCreated datePublished" datetime="2019-08-07T11:01:08+08:00">2019-08-07</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新於</span>
-                
-                <time title="修改時間：2019-03-19 16:26:16" itemprop="dateModified" datetime="2019-03-19T16:26:16+08:00">2019-03-19</time>
               
             
           </span>
@@ -521,7 +509,7 @@
                 
                   <span class="post-meta-item-text">文章字數：</span>
                 
-                <span title="文章字數">1.1k</span>
+                <span title="文章字數">55</span>
               
 
               
@@ -556,17 +544,8 @@
 
       
         <blockquote>
-<p>在 MSTest 中，若要在執行測試時能調用實體檔案，通常會用 DeploymentItem Attribute 來指定要同時部署的檔案，但屬性在 ASP.NET Core 中不再支援，本篇說明其他替代方案。</p>
+<p>AutoMapper.Extensions.Microsoft.DependencyInjection </p>
 </blockquote>
-<a id="more"></a>
-<h4 id="好用的-DeploymentItem"><a href="#好用的-DeploymentItem" class="headerlink" title="好用的 DeploymentItem"></a>好用的 DeploymentItem</h4><p>在寫測試時，我們常會用以下作法調用外部檔案。</p>
-<figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System.IO;</span><br><span class="line"><span class="keyword">using</span> Microsoft.VisualStudio.TestTools.UnitTesting;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">DeploymentItem.Tests</span></span><br><span class="line">&#123;</span><br><span class="line">    [<span class="meta">TestClass</span>]</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">class</span> <span class="title">UnitTestWithDeploymentItem</span></span><br><span class="line">    &#123;</span><br><span class="line">        [<span class="meta">TestMethod</span>]</span><br><span class="line">        [<span class="meta">DeploymentItem(<span class="meta-string">"TestData\\Sample.csv"</span>)</span>]</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">TestMethod1</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">var</span> file = <span class="keyword">new</span> StreamReader(<span class="string">"Sample.csv"</span>);</span><br><span class="line">            <span class="comment">// test code ...</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><a href="https://docs.microsoft.com/en-us/windows-hardware/drivers/taef/deploymentitem-metadata" target="_blank" rel="noopener">完整使用說明</a></p>
-<p>但在 ASP.NET Core 專案中使用 DeploymentItem 不會報錯，但測試執行後會找不到檔案（因為實際上沒有作用）！</p>
-<h4 id="解決方式"><a href="#解決方式" class="headerlink" title="解決方式"></a>解決方式</h4><p>其實沒有什麼替代方式，就是不要用了，在程式碼直接指定明確的路徑就好了。</p>
-<figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System.IO;</span><br><span class="line"><span class="keyword">using</span> Microsoft.VisualStudio.TestTools.UnitTesting;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">DeploymentItem.Tests</span></span><br><span class="line">&#123;</span><br><span class="line">    [<span class="meta">TestClass</span>]</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">class</span> <span class="title">UnitTest1</span></span><br><span class="line">    &#123;</span><br><span class="line">        [<span class="meta">TestMethod</span>]</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">TestMethod1</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">var</span> file = <span class="keyword">new</span> StreamReader(<span class="string">"TestData\\Sample.csv"</span>);</span><br><span class="line">            <span class="comment">// test code ...</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>結案～</p>
-<h4 id="範例程式連結"><a href="#範例程式連結" class="headerlink" title="範例程式連結"></a>範例程式連結</h4><p><a href="https://github.com/raychiutw/asp-net-core-deploymentitem" target="_blank" rel="noopener">https://github.com/raychiutw/asp-net-core-deploymentitem</a></p>
 
       
     </div>
@@ -587,14 +566,14 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="\2019\AutoMapper-AddAutoMapper-已過時\" rel="bookmark">AutoMapper - AddAutoMapper 已過時</a></div>
+      <div class="popular-posts-title"><a href="\2019\AutoMapper-Extensions-Microsoft-DependencyInjection-AddAutoMapper-已過時\" rel="bookmark">AutoMapper.Extensions.Microsoft.DependencyInjection - AddAutoMapper 已過時</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="\2019\AutoMapper-Extensions-Microsoft-DependencyInjection-AddAutoMapper-已過時\" rel="bookmark">AutoMapper.Extensions.Microsoft.DependencyInjection - AddAutoMapper 已過時</a></div>
+      <div class="popular-posts-title"><a href="\2018\ASP-NET-Core-無法使用-DeploymentItem-的替代方案\" rel="bookmark">ASP.NET Core 無法使用 DeploymentItem 的替代方案</a></div>
       
     </li>
   
@@ -645,7 +624,7 @@
   <li class="post-copyright-link">
     <strong>文章連結：</strong>
     
-    <a href="https://raychiutw.github.io/2018/ASP-NET-Core-無法使用-DeploymentItem-的替代方案/" title="ASP.NET Core 無法使用 DeploymentItem 的替代方案">https://raychiutw.github.io/2018/ASP-NET-Core-無法使用-DeploymentItem-的替代方案/</a>
+    <a href="https://raychiutw.github.io/2019/AutoMapper-AddAutoMapper-已過時/" title="AutoMapper - AddAutoMapper 已過時">https://raychiutw.github.io/2019/AutoMapper-AddAutoMapper-已過時/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版權聲明： </strong>本網誌所有文章除特別聲明外，均採用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 許可協議。轉載請註明出處！</li>
@@ -660,11 +639,9 @@
           
             <a href="/tags/ASP-NET-Core/" rel="tag"># ASP.NET Core</a>
           
-            <a href="/tags/MSTest/" rel="tag"># MSTest</a>
-          
-            <a href="/tags/UnitTest/" rel="tag"># UnitTest</a>
-          
             <a href="/tags/C/" rel="tag"># C#</a>
+          
+            <a href="/tags/AutoMapper/" rel="tag"># AutoMapper</a>
           
         </div>
       
@@ -677,8 +654,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/ASP-NET-Core-啟用-Web-config-Transformation/" rel="next" title="ASP.NET Core 啟用 Web.config Transformation">
-                <i class="fa fa-chevron-left"></i> ASP.NET Core 啟用 Web.config Transformation
+              <a href="/2019/玩玩樹梅派-序篇/" rel="next" title="玩玩樹莓派 - 序篇">
+                <i class="fa fa-chevron-left"></i> 玩玩樹莓派 - 序篇
               </a>
             
           </div>
@@ -687,8 +664,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/Hexo教學-3-基本設定/" rel="prev" title="Hexo（3）－基本設定">
-                Hexo（3）－基本設定 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/AutoMapper-Extensions-Microsoft-DependencyInjection-AddAutoMapper-已過時/" rel="prev" title="AutoMapper.Extensions.Microsoft.DependencyInjection - AddAutoMapper 已過時">
+                AutoMapper.Extensions.Microsoft.DependencyInjection - AddAutoMapper 已過時 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -737,17 +714,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目錄
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            本站概要
-          </li>
-        </ul>
-      
 
-      <div class="site-overview-wrap sidebar-panel">
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -891,23 +859,6 @@
         </div>
       </div>
 
-      
-      <!--noindex-->
-        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-            
-            
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#好用的-DeploymentItem"><span class="nav-number">1.</span> <span class="nav-text">好用的 DeploymentItem</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解決方式"><span class="nav-number">2.</span> <span class="nav-text">解決方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#範例程式連結"><span class="nav-number">3.</span> <span class="nav-text">範例程式連結</span></a></li></ol></div>
-            
-
-          </div>
-        </div>
-      <!--/noindex-->
       
 
       
