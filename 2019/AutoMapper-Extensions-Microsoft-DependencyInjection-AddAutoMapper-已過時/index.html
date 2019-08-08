@@ -117,7 +117,7 @@
 <meta property="og:site_name" content="Ray&#39;s Notes">
 <meta property="og:description" content="AutoMapper.Extensions.Microsoft.DependencyInjection 簡單的讓 AutoMapper 註冊到 ASP.NET Core 中，但更版之後出現以 AddAutoMapper() 已過期的訊息，紀錄一下新版的用法。">
 <meta property="og:locale" content="zh-TW">
-<meta property="og:updated_time" content="2019-08-08T02:34:14.697Z">
+<meta property="og:updated_time" content="2019-08-08T02:38:21.631Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AutoMapper.Extensions.Microsoft.DependencyInjection - AddAutoMapper 已過時">
 <meta name="twitter:description" content="AutoMapper.Extensions.Microsoft.DependencyInjection 簡單的讓 AutoMapper 註冊到 ASP.NET Core 中，但更版之後出現以 AddAutoMapper() 已過期的訊息，紀錄一下新版的用法。">
@@ -468,7 +468,7 @@
                 
                   <span class="post-meta-item-text">更新於</span>
                 
-                <time title="修改時間：2019-08-08 10:34:14" itemprop="dateModified" datetime="2019-08-08T10:34:14+08:00">2019-08-08</time>
+                <time title="修改時間：2019-08-08 10:38:21" itemprop="dateModified" datetime="2019-08-08T10:38:21+08:00">2019-08-08</time>
               
             
           </span>
@@ -521,7 +521,7 @@
                 
                   <span class="post-meta-item-text">文章字數：</span>
                 
-                <span title="文章字數">839</span>
+                <span title="文章字數">832</span>
               
 
               
@@ -560,7 +560,12 @@
 </blockquote>
 <a id="more"></a>
 <h3 id="舊版用法"><a href="#舊版用法" class="headerlink" title="舊版用法"></a>舊版用法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">services.AddAutoMapper();</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><figcaption><span>會掃描所有 assembliy 然後做兩件事：</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">1. 將實作 ```IProfile``` 的類別加入 mapping configuration</span><br><span class="line">2. 將 value resolvers, member value resolvers, type converters 加入 container</span><br><span class="line"></span><br><span class="line">### 更新套件後出現</span><br><span class="line"></span><br><span class="line">```c#</span><br><span class="line">ServiceCollectionExtensions.AddAutoMapper(IServiceCollection)&apos; is obsolete</span><br></pre></td></tr></table></figure>
+<p><code>AddAutoMapper()</code> 會掃描所有 assembliy 然後做兩件事：</p>
+<ol>
+<li>將實作 <code>IProfile</code> 的類別加入 mapping configuration</li>
+<li>將 value resolvers, member value resolvers, type converters 加入 container</li>
+</ol>
+<h3 id="更新套件後出現"><a href="#更新套件後出現" class="headerlink" title="更新套件後出現"></a>更新套件後出現</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ServiceCollectionExtensions.AddAutoMapper(IServiceCollection)&apos; is obsolete</span><br></pre></td></tr></table></figure>
 <h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><p>新版本異動了參數簽章</p>
 <p>改為傳入 assemblies</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">services.AddAutoMapper(assembly1, assembly2 /*, ...*/);</span><br></pre></td></tr></table></figure>
@@ -895,7 +900,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#舊版用法"><span class="nav-number">1.</span> <span class="nav-text">舊版用法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#原因"><span class="nav-number">2.</span> <span class="nav-text">原因</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解決方法"><span class="nav-number">3.</span> <span class="nav-text">解決方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#單一專案：傳入-Starup-cs"><span class="nav-number">3.1.</span> <span class="nav-text">單一專案：傳入 Starup.cs</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多個專案參考：傳入-所有-Assemblies"><span class="nav-number">3.2.</span> <span class="nav-text">多個專案參考：傳入 所有 Assemblies</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#參考連結"><span class="nav-number">4.</span> <span class="nav-text">參考連結</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#舊版用法"><span class="nav-number">1.</span> <span class="nav-text">舊版用法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更新套件後出現"><span class="nav-number">2.</span> <span class="nav-text">更新套件後出現</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#原因"><span class="nav-number">3.</span> <span class="nav-text">原因</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解決方法"><span class="nav-number">4.</span> <span class="nav-text">解決方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#單一專案：傳入-Starup-cs"><span class="nav-number">4.1.</span> <span class="nav-text">單一專案：傳入 Starup.cs</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多個專案參考：傳入-所有-Assemblies"><span class="nav-number">4.2.</span> <span class="nav-text">多個專案參考：傳入 所有 Assemblies</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#參考連結"><span class="nav-number">5.</span> <span class="nav-text">參考連結</span></a></li></ol></div>
             
 
           </div>
