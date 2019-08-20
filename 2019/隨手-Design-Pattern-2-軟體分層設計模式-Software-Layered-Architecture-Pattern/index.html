@@ -117,10 +117,12 @@
 <meta property="og:site_name" content="Ray&#39;s Notes">
 <meta property="og:description" content="軟體分層設計模式是我這幾年專案必會使用的架構，它的效益在多人團隊分工上有極大的效益，且能有效專注修改區域，提高共用性，讓我們來看看這是怎樣的架構。">
 <meta property="og:locale" content="zh-TW">
-<meta property="og:updated_time" content="2019-08-08T07:19:52.356Z">
+<meta property="og:image" content="https://raychiutw.github.io/2019/隨手-Design-Pattern-2-軟體分層設計模式-Software-Layered-Architecture-Pattern/sla.png">
+<meta property="og:updated_time" content="2019-08-20T07:07:15.471Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="隨手 Design Pattern (2) - 軟體分層設計模式 (Software Layered Architecture Pattern)">
 <meta name="twitter:description" content="軟體分層設計模式是我這幾年專案必會使用的架構，它的效益在多人團隊分工上有極大的效益，且能有效專注修改區域，提高共用性，讓我們來看看這是怎樣的架構。">
+<meta name="twitter:image" content="https://raychiutw.github.io/2019/隨手-Design-Pattern-2-軟體分層設計模式-Software-Layered-Architecture-Pattern/sla.png">
 
 
 
@@ -451,12 +453,24 @@
                 
               
 
-              <time title="創建時間：2019-08-08 10:55:23 / 修改時間：15:19:52" itemprop="dateCreated datePublished" datetime="2019-08-08T10:55:23+08:00">2019-08-08</time>
+              <time title="創建時間：2019-08-08 10:55:23" itemprop="dateCreated datePublished" datetime="2019-08-08T10:55:23+08:00">2019-08-08</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新於</span>
+                
+                <time title="修改時間：2019-08-20 15:07:15" itemprop="dateModified" datetime="2019-08-20T15:07:15+08:00">2019-08-20</time>
               
             
           </span>
@@ -509,7 +523,7 @@
                 
                   <span class="post-meta-item-text">文章字數：</span>
                 
-                <span title="文章字數">966</span>
+                <span title="文章字數">1.4k</span>
               
 
               
@@ -547,20 +561,48 @@
 <p>軟體分層設計模式是我這幾年專案必會使用的架構，它的效益在多人團隊分工上有極大的效益，且能有效專注修改區域，提高共用性，讓我們來看看這是怎樣的架構。</p>
 </blockquote>
 <a id="more"></a>
-<h3 id="定義"><a href="#定義" class="headerlink" title="定義"></a>定義</h3><h3 id="基本分層架構模式主分為"><a href="#基本分層架構模式主分為" class="headerlink" title="基本分層架構模式主分為"></a>基本分層架構模式主分為</h3><ul>
+<h3 id="定義"><a href="#定義" class="headerlink" title="定義"></a>定義</h3><h3 id="基本分層架構模式說明"><a href="#基本分層架構模式說明" class="headerlink" title="基本分層架構模式說明"></a>基本分層架構模式說明</h3><ul>
 <li>展示層 (Presentation Layer)：接收外部請求( view、app、ap 等等 )，呼叫業務層，並將業務層回傳的 dto 轉成 viewmodel 回傳給外部。</li>
 <li>業務層 (Business Layer)：接收展示層請求，專注處理商業邏輯，呼叫資料層，並將資料層回傳的 model 轉換成 dto 回傳給展示層。</li>
 <li>資料層 (Data Layer)：專注處理資料，資料來源來自資料庫或其他其他服務，接收業務層呼叫，執行資料處理回傳 model。</li>
 <li>共用層 (Common Layer)：將各層依賴的 model、dto、enum 等放入此層，因共用層與其他層有參考關聯，此層物件務必力求簡單，且不可有商業邏輯。</li>
 </ul>
-<h3 id="我的實作"><a href="#我的實作" class="headerlink" title="我的實作"></a>我的實作</h3><ul>
-<li>MyLab.Common</li>
-<li>MyLab.WebApi</li>
-<li>MyLab.Service</li>
-<li>MyLab.Repository</li>
+<p>受了 MRKT 大大的薰陶<br>我習慣用以下方式命名</p>
+<ul>
+<li>展示層 : Controller</li>
+<li>業務層 : Service</li>
+<li>資料層 : Repoitory</li>
+<li>共用層 : Common</li>
 </ul>
-<h4 id="MyLab-Common"><a href="#MyLab-Common" class="headerlink" title="MyLab.Common"></a>MyLab.Common</h4><p>共用層，跨層的 model、dto、enum 放在此專案內</p>
-<h4 id="MyLab-Repository"><a href="#MyLab-Repository" class="headerlink" title="MyLab.Repository"></a>MyLab.Repository</h4><h4 id="MyLab-Service"><a href="#MyLab-Service" class="headerlink" title="MyLab.Service"></a>MyLab.Service</h4><h4 id="MyLab-WebApi"><a href="#MyLab-WebApi" class="headerlink" title="MyLab.WebApi"></a>MyLab.WebApi</h4><h3 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h3><p>當我是一個人開發的時候，分層設計真的感受不深，更多的是為何要弄得這麼複雜，但隨著工作團隊的擴展，多人合作開發的時候，分層設計就發揮出了它的價值，各個成員專注各自的層發開，不會被其他成員影響，當需要修改或擴充時，若是要改 UI，只需要異動展示層，若是新增商業邏輯則只需專注業務層，而是為要換第三方配合廠商或者更換資料庫，則只需專注在資料層去修改，而各層的物件又可以依不同情境做重用，不需重複開發，可謂好處多多。</p>
+<p><img src="sla.png" alt="軟體分層設計圖" title="軟體分層設計圖">。</p>
+<h3 id="我的實作"><a href="#我的實作" class="headerlink" title="我的實作"></a>我的實作</h3><ul>
+<li>Sla.Common<ul>
+<li>Enum</li>
+<li>Dto</li>
+<li>Entity</li>
+</ul>
+</li>
+<li>Sla.WebApi<ul>
+<li>Parmeter</li>
+<li>ViewModel</li>
+</ul>
+</li>
+<li>MyLab.Service<ul>
+<li>Interface</li>
+<li>Implement</li>
+</ul>
+</li>
+<li>MyLab.Repository  <ul>
+<li>Interface</li>
+<li>Implement</li>
+</ul>
+</li>
+</ul>
+<h4 id="Sla-Common"><a href="#Sla-Common" class="headerlink" title="Sla.Common"></a>Sla.Common</h4><p>共用層，跨層的 entity、dto、enum 放在此專案內</p>
+<h4 id="Sla-WebApi"><a href="#Sla-WebApi" class="headerlink" title="Sla.WebApi"></a>Sla.WebApi</h4><p>展示層 / Coontroller，以 .Net 來說，這裡通常是 MVC 專案 或 WebApi 專案，有接收的 Parameter 與 回傳 的 ViewModel 兩種類別。</p>
+<h4 id="Sla-Service"><a href="#Sla-Service" class="headerlink" title="Sla.Service"></a>Sla.Service</h4><p>商業邏輯層 / Service，商業邏輯放置於此，會定義服務介面並實作介面，讓展示層依賴介面而不是依賴實作。接收展示層的 <code>參數 Dto</code> 並回傳 <code>實體 Dto</code></p>
+<h4 id="Sla-Repository"><a href="#Sla-Repository" class="headerlink" title="Sla.Repository"></a>Sla.Repository</h4><p>資料層 / Repository，資料存取放置於此，會定義資料層介面並實作介面，讓商業邏輯層依賴介面而不是依賴實作。接收商業邏層的 <code>參數 Entity</code> 並回傳 <code>實體 Entity</code></p>
+<h3 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h3><p>當我是一個人開發的時候，分層設計真的感受不深，更多的是為何要弄得這麼複雜，但隨著工作團隊的擴展，多人合作開發的時候，分層設計就發揮出了它的價值，各個成員專注各自的層發開，不會被其他成員影響，當需要修改或擴充時，若是要改 UI，只需要異動展示層，若是新增商業邏輯則只需專注業務層，而是為要換第三方配合廠商或者更換資料庫，則只需專注在資料層去修改，而各層的物件又可以依不同情境做重用，不需重複開發，可謂好處多多。</p>
 <p>效益整理如下</p>
 <ul>
 <li>適合多人團隊分工時不互相影響 (一條龍開發時感受不深)</li>
@@ -574,6 +616,7 @@
 <li>撰寫單元測試 (Unit Test) 保護每次修改</li>
 <li>合理的設計各層職責物件，業務層更為重要</li>
 </ul>
+<h3 id="參考範例"><a href="#參考範例" class="headerlink" title="參考範例"></a>參考範例</h3><p><a href="https://github.com/raychiutw/software-layered-architecture-pattern-smaple" target="_blank" rel="noopener">Github 範例下載連結</a></p>
 
       
     </div>
@@ -873,7 +916,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#定義"><span class="nav-number">1.</span> <span class="nav-text">定義</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基本分層架構模式主分為"><span class="nav-number">2.</span> <span class="nav-text">基本分層架構模式主分為</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#我的實作"><span class="nav-number">3.</span> <span class="nav-text">我的實作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#MyLab-Common"><span class="nav-number">3.1.</span> <span class="nav-text">MyLab.Common</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#MyLab-Repository"><span class="nav-number">3.2.</span> <span class="nav-text">MyLab.Repository</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#MyLab-Service"><span class="nav-number">3.3.</span> <span class="nav-text">MyLab.Service</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#MyLab-WebApi"><span class="nav-number">3.4.</span> <span class="nav-text">MyLab.WebApi</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#心得"><span class="nav-number">4.</span> <span class="nav-text">心得</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#定義"><span class="nav-number">1.</span> <span class="nav-text">定義</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基本分層架構模式說明"><span class="nav-number">2.</span> <span class="nav-text">基本分層架構模式說明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#我的實作"><span class="nav-number">3.</span> <span class="nav-text">我的實作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Sla-Common"><span class="nav-number">3.1.</span> <span class="nav-text">Sla.Common</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Sla-WebApi"><span class="nav-number">3.2.</span> <span class="nav-text">Sla.WebApi</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Sla-Service"><span class="nav-number">3.3.</span> <span class="nav-text">Sla.Service</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Sla-Repository"><span class="nav-number">3.4.</span> <span class="nav-text">Sla.Repository</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#心得"><span class="nav-number">4.</span> <span class="nav-text">心得</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#參考範例"><span class="nav-number">5.</span> <span class="nav-text">參考範例</span></a></li></ol></div>
             
 
           </div>
