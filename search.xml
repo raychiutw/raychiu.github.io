@@ -1,14 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[隨手 Design Pattern (2) - 軟體分層設計模式 (Software Layered Architecture Pattern)]]></title>
-    <url>%2F2019%2F%E9%9A%A8%E6%89%8B-Design-Pattern-2-%E8%BB%9F%E9%AB%94%E5%88%86%E5%B1%A4%E8%A8%AD%E8%A8%88%E6%A8%A1%E5%BC%8F-Software-Layered-Architecture-Pattern%2F</url>
-    <content type="text"><![CDATA[軟體分層設計模式是我這幾年專案必會使用的架構，它的效益在多人團隊分工上有極大的效益，且能有效專注修改區域，提高共用性，讓我們來看看這是怎樣的架構。 基本說明分層架構是運用最為廣泛的架構模式，幾乎每個軟體系統都需要通過層（Layer）來隔離不同的關注點（Concern Point），以此應對不同需求的變化，使得這種變化可以獨立進行；此外，分層架構模式還是隔離業務複雜度與技術複雜度的利器。 基本分層架構模式 展示層 (Presentation Layer)：接收外部請求( view、app、ap 等等 )，呼叫業務層，並將業務層回傳的 dto 轉成 viewmodel 回傳給外部。 業務層 (Business Layer)：接收展示層請求，專注處理商業邏輯，呼叫資料層，並將資料層回傳的 model 轉換成 dto 回傳給展示層。 資料層 (Data Layer)：專注處理資料，資料來源來自資料庫或其他其他服務，接收業務層呼叫，執行資料處理回傳 model。 共用層 (Common Layer)：將各層依賴的 model、dto、enum 等放入此層，因共用層與其他層有參考關聯，此層物件務必力求簡單，且不可有商業邏輯。 受了 MRKT 大大的薰陶我習慣用以下方式命名 展示層 : Controller 業務層 : Service 資料層 : Repoitory 共用層 : Common 。 我的實作專案結構 Sla.Common Enum Dto Entity Sla.WebApi Parmeter ViewModel Sla.Service Interface Implement Sla.Repository Interface Implement Sla.Common共用層，跨層的 entity、dto、enum 放在此專案內 Sla.WebApi展示層 / Coontroller，以 .Net 來說，這裡通常是 MVC 專案 或 WebApi 專案，有接收的 Parameter 與 回傳 的 ViewModel 兩種類別。 Sla.Service商業邏輯層 / Service，商業邏輯放置於此，會定義服務介面並實作介面，讓展示層依賴介面而不是依賴實作。接收展示層的 參數 Dto 並回傳 實體 Dto Sla.Repository資料層 / Repository，資料存取放置於此，會定義資料層介面並實作介面，讓商業邏輯層依賴介面而不是依賴實作。接收商業邏層的 參數 Entity 並回傳 實體 Entity 心得當我是一個人開發的時候，分層設計真的感受不深，更多的是為何要弄得這麼複雜，但隨著工作團隊的擴展，多人合作開發的時候，分層設計就發揮出了它的價值，各個成員專注各自的層發開，不會被其他成員影響，當需要修改或擴充時，若是要改 UI，只需要異動展示層，若是新增商業邏輯則只需專注業務層，而是為要換第三方配合廠商或者更換資料庫，則只需專注在資料層去修改，而各層的物件又可以依不同情境做重用，不需重複開發，可謂好處多多。 效益整理如下 適合多人團隊分工時不互相影響 (一條龍開發時感受不深) 分層專注，可以專注修改，不會牽一髮動全身 但真的能達到這樣的效益，其實還有一些必要前提 物件設計須符合 SOLID 原則 各層依賴介面 (Interface)，不依賴實作 專案需導入 DI Framework，作到依賴注入，達成控制反轉 (IoC) 撰寫單元測試 (Unit Test) 保護每次修改 合理的設計各層職責物件，業務層更為重要 參考範例Github 範例下載連結]]></content>
+    <title><![CDATA[隨手 Design Pattern (3) - 簡單工廠模式 (Simple Factory Pattern)]]></title>
+    <url>%2F2019%2F%E9%9A%A8%E6%89%8B-Design-Pattern-3-%E7%B0%A1%E5%96%AE%E5%B7%A5%E5%BB%A0%E6%A8%A1%E5%BC%8F-Simple-Factory-Pattern%2F</url>
+    <content type="text"><![CDATA[簡單工廠是相當易用的一種設計模式，當程式複雜度高的時候時候，可以利用此模式切割複雜度高的判斷式，抽離業務邏輯與建構式，讓業務邏輯單純，隔離複雜的建構式，有效提升程式碼的可讀性，藉由 C# 語法特性更可以降低程式複雜度。 定義簡單工廠模式(Simple Factory Pattern)：又稱為靜態工廠方法(Static Factory Method)模式，它屬於類創建型模式。 角色簡單工廠模式包含如下角色： Product：抽象產品角色抽象產品角色是所有產品的父類別，在 C# 來說可以是 抽象類別 (Abstract Class) 或者是 介面 (Interface)，公開屬性與方法簽章，外部程式依賴此角色。 ConcreteProduct：具體產品角色具體產生的產品實體，藉由工廠角色依據條件而建立。 Factory：工廠角色工廠角色負責建立對應的物件。 UML 類別圖 實作說明抽象產品角色 - 本次範例用 IBrid 介面來示範，公開 Name 屬性與 Fly 方法。 123456public interface IBird&#123; string Name &#123; get; set; &#125; void Fly();&#125; 具體產品角色 - Eagle &amp; Swan 兩種鳥類的具體實作 123456789public class Eagle : IBird&#123; public string Name &#123; get; set; &#125; = &quot;老鷹&quot;; public void Fly() &#123; // 實作可以飛高空 &#125;&#125; 123456789public class Swan : IBird&#123; public string Name &#123; get; set; &#125; = &quot;天鵝&quot;; public void Fly() &#123; // 實作只能飛低空 &#125;&#125; 工廠角色：使用 switch 實作 1234567891011121314151617public static class BirdFactory&#123; public static IBird GetBird(string birdName) &#123; switch (birdName) &#123; case &quot;Swan&quot;: return new Swan(); case &quot;Eagle&quot;: return new Eagle(); default: throw new Exception(&quot;missing matching bird name&quot;); &#125; &#125;&#125; 12345678private static void Main(string[] args)&#123; var eagle = BirdFactory.GetBird(&quot;Eagle&quot;); var swan = BirdFactory.GetBird(&quot;Swan&quot;); Console.WriteLine($&quot;Bird Name : &#123;eagle.Name&#125;&quot;); Console.WriteLine($&quot;Bird Name : &#123;swan.Name&#125;&quot;);&#125; 藉由 Bird Factory 將 switch 判斷式抽離，Main 中的程式複雜度下降，這也就是簡單工廠帶來的效益，專注商業邏輯，抽離複雜的判斷式。但是其實這仍不夠好，隨著實作 IBird 的鳥類越來越來多，BirdFactory裡的 switch 會越來越複雜，也就越來越難維護。 這裡使用的是 CodeMaid 的 Spade 功能，有時間在另外做說明！ 這裡在提供一個使用 Linq 語法取代 switch 語法的範例，可以有效地降低複雜度。 123456789101112131415161718192021public static class BirdFactoryWithLinq&#123; private static readonly Dictionary&lt;string, IBird&gt; _birds; static BirdFactoryWithLinq() &#123; _birds = new Dictionary&lt;string, IBird&gt;(); _birds.Add(&quot;Eagle&quot;, new Eagle()); _birds.Add(&quot;Swan&quot;, new Swan()); &#125; private static IBird GetBird(string birdName) &#123; var bird = _birds .Where(x =&gt; x.Key.Equals(birdName)) .Select(x =&gt; x.Value) .FirstOrDefault(); return bird ?? throw new Exception(&quot;No match bird!&quot;); &#125;&#125; GetBird 的複雜度由 4 降為 1，是不是很完美。 結論 優點 缺點]]></content>
       <categories>
         <category>程式開發</category>
       </categories>
       <tags>
         <tag>Design Pattern</tag>
+        <tag>簡單工廠模式</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[隨手 Design Pattern (2) - 軟體分層設計模式 (Software Layered Architecture Pattern)]]></title>
+    <url>%2F2019%2F%E9%9A%A8%E6%89%8B-Design-Pattern-2-%E8%BB%9F%E9%AB%94%E5%88%86%E5%B1%A4%E8%A8%AD%E8%A8%88%E6%A8%A1%E5%BC%8F-Software-Layered-Architecture-Pattern%2F</url>
+    <content type="text"><![CDATA[軟體分層設計模式是我這幾年專案必會使用的架構，它的效益在多人團隊分工上有極大的效益，且能有效專注修改區域，提高共用性，讓我們來看看這是怎樣的架構。 基本說明分層架構是運用最為廣泛的架構模式，幾乎每個軟體系統都需要通過層（Layer）來隔離不同的關注點（Concern Point），以此應對不同需求的變化，使得這種變化可以獨立進行；此外，分層架構模式還是隔離業務複雜度與技術複雜度的利器。 分層架構模式 展示層 (Presentation Layer)：接收外部請求( view、app、ap 等等 )，呼叫業務層，並將業務層回傳的 dto 轉成 viewmodel 回傳給外部。 業務層 (Business Layer)：接收展示層請求，專注處理商業邏輯，呼叫資料層，並將資料層回傳的 model 轉換成 dto 回傳給展示層。 資料層 (Data Layer)：專注處理資料，資料來源來自資料庫或其他其他服務，接收業務層呼叫，執行資料處理回傳 model。 共用層 (Common Layer)：將各層依賴的 entity、dto、enum 等放入此層，因共用層與其他層有參考關聯，此層物件務必力求簡單，且不可有商業邏輯。 受了 MRKT 大大的薰陶我習慣用以下方式命名 展示層 : Controller 業務層 : Service 資料層 : Repoitory 共用層 : Common 。 我的實作專案結構 Sla.Common Enum Dto Entity Sla.WebApi Parmeter ViewModel Sla.Service Interface Implement Sla.Repository Interface Implement Sla.Common共用層，跨層的 entity、dto、enum 放在此專案內 Sla.WebApi展示層 / Coontroller，以 .Net 來說，這裡通常是 MVC 專案 或 WebApi 專案，有接收的 Parameter 與 回傳 的 ViewModel 兩種類別。 Sla.Service商業邏輯層 / Service，商業邏輯放置於此，會定義服務介面並實作介面，讓展示層依賴介面而不是依賴實作。接收展示層的 參數 Dto 並回傳 實體 Dto Sla.Repository資料層 / Repository，資料存取放置於此，會定義資料層介面並實作介面，讓商業邏輯層依賴介面而不是依賴實作。接收商業邏層的 參數 Entity 並回傳 實體 Entity 心得當我是一個人開發的時候，分層設計真的感受不深，更多的是為何要弄得這麼複雜，但隨著工作團隊的擴展，多人合作開發的時候，分層設計就發揮出了它的價值，各個成員專注各自的層發開，不會被其他成員影響，當需要修改或擴充時，若是要改 UI，只需要異動展示層，若是新增商業邏輯則只需專注業務層，而是為要換第三方配合廠商或者更換資料庫，則只需專注在資料層去修改，而各層的物件又可以依不同情境做重用，不需重複開發，可謂好處多多。 效益整理如下 適合多人團隊分工時不互相影響 (一條龍開發時感受不深) 分層專注，可以專注修改，不會牽一髮動全身 但真的能達到這樣的效益，其實還有一些必要前提 物件設計須符合 SOLID 原則 各層依賴介面 (Interface)，不依賴實作 專案需導入 DI Framework，作到依賴注入，達成控制反轉 (IoC) 撰寫單元測試 (Unit Test) 保護每次修改 合理的設計各層職責物件，業務層更為重要 參考範例Github 範例下載連結]]></content>
+      <categories>
+        <category>程式開發</category>
+      </categories>
+      <tags>
+        <tag>Design Pattern</tag>
+        <tag>軟體分層設計模式</tag>
       </tags>
   </entry>
   <entry>
@@ -25,14 +38,14 @@
   <entry>
     <title><![CDATA[AutoMapper.Extensions.Microsoft.DependencyInjection - AddAutoMapper 已過時]]></title>
     <url>%2F2019%2FAutoMapper-Extensions-Microsoft-DependencyInjection-AddAutoMapper-%E5%B7%B2%E9%81%8E%E6%99%82%2F</url>
-    <content type="text"><![CDATA[AutoMapper.Extensions.Microsoft.DependencyInjection 簡單的讓 AutoMapper 註冊到 ASP.NET Core 中，但更版之後出現以 AddAutoMapper() 已過期的訊息，紀錄一下新版的用法。 舊版用法1services.AddAutoMapper(); AddAutoMapper() 會掃描所有 assembliy 然後做兩件事： 將實作 IProfile 的類別加入 mapping configuration 將 value resolvers, member value resolvers, type converters 加入 container 更新套件後出現1ServiceCollectionExtensions.AddAutoMapper(IServiceCollection)' is obsolete 原因新版本異動了參數簽章 改為傳入 assemblies 1services.AddAutoMapper(assembly1, assembly2 /*, ...*/); 或傳入 types 1services.AddAutoMapper(type1, type2 /*, ...*/); 解決方法 不怕麻煩的一個個傳入 改用以下寫法，仍然可以自動全部掃描 單一專案：傳入 Starup.cs1services.AddAutoMapper(typeof(Startup)); 多個專案參考：傳入 所有 Assemblies1services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies()); 參考連結https://github.com/AutoMapper/AutoMapper.Extensions.Microsoft.DependencyInjection/issues/105]]></content>
+    <content type="text"><![CDATA[AutoMapper.Extensions.Microsoft.DependencyInjection 簡單的讓 AutoMapper 註冊到 ASP.NET Core 中，但更版之後出現以 AddAutoMapper() 已過期的訊息，紀錄一下新版的用法。 舊版用法1services.AddAutoMapper(); AddAutoMapper() 會掃描所有 assembliy 然後做兩件事： 將實作 IProfile 的類別加入 mapping configuration 將 value resolvers, member value resolvers, type converters 加入 container 更新套件後出現1ServiceCollectionExtensions.AddAutoMapper(IServiceCollection)&apos; is obsolete 原因新版本異動了參數簽章 改為傳入 assemblies 1services.AddAutoMapper(assembly1, assembly2 /*, ...*/); 或傳入 types 1services.AddAutoMapper(type1, type2 /*, ...*/); 解決方法 不怕麻煩的一個個傳入 改用以下寫法，仍然可以自動全部掃描 單一專案：傳入 Starup.cs1services.AddAutoMapper(typeof(Startup)); 多個專案參考：傳入 所有 Assemblies1services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies()); 參考連結https://github.com/AutoMapper/AutoMapper.Extensions.Microsoft.DependencyInjection/issues/105]]></content>
       <categories>
         <category>程式開發</category>
       </categories>
       <tags>
         <tag>ASP.NET Core</tag>
-        <tag>C#</tag>
         <tag>AutoMapper</tag>
+        <tag>C#</tag>
       </tags>
   </entry>
   <entry>
@@ -54,8 +67,8 @@
         <category>應用程式</category>
       </categories>
       <tags>
-        <tag>Static Site Generator</tag>
         <tag>Jekyll</tag>
+        <tag>Static Site Generator</tag>
       </tags>
   </entry>
   <entry>
@@ -105,10 +118,10 @@
         <category>應用程式</category>
       </categories>
       <tags>
-        <tag>Hexo</tag>
-        <tag>Static Site Generator</tag>
-        <tag>Hugo</tag>
         <tag>Jekyll</tag>
+        <tag>Static Site Generator</tag>
+        <tag>Hexo</tag>
+        <tag>Hugo</tag>
       </tags>
   </entry>
   <entry>
@@ -154,8 +167,8 @@
         <category>應用程式</category>
       </categories>
       <tags>
-        <tag>Hexo</tag>
         <tag>Static Site Generator</tag>
+        <tag>Hexo</tag>
         <tag>Hexo Themes</tag>
       </tags>
   </entry>
@@ -167,8 +180,8 @@
         <category>應用程式</category>
       </categories>
       <tags>
-        <tag>Hexo</tag>
         <tag>Static Site Generator</tag>
+        <tag>Hexo</tag>
         <tag>Git</tag>
         <tag>GitHub</tag>
       </tags>
@@ -182,8 +195,8 @@
       </categories>
       <tags>
         <tag>ASP.NET Core</tag>
-        <tag>C#</tag>
         <tag>AutoMapper</tag>
+        <tag>C#</tag>
       </tags>
   </entry>
   <entry>
@@ -194,8 +207,8 @@
         <category>應用程式</category>
       </categories>
       <tags>
-        <tag>Hexo</tag>
         <tag>Static Site Generator</tag>
+        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -207,9 +220,9 @@
       </categories>
       <tags>
         <tag>ASP.NET Core</tag>
+        <tag>C#</tag>
         <tag>MSTest</tag>
         <tag>UnitTest</tag>
-        <tag>C#</tag>
       </tags>
   </entry>
   <entry>
@@ -232,8 +245,8 @@
         <category>應用程式</category>
       </categories>
       <tags>
-        <tag>Hexo</tag>
         <tag>Static Site Generator</tag>
+        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -244,8 +257,8 @@
         <category>應用程式</category>
       </categories>
       <tags>
-        <tag>Hexo</tag>
         <tag>Static Site Generator</tag>
+        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -256,8 +269,8 @@
         <category>應用程式</category>
       </categories>
       <tags>
-        <tag>Hexo</tag>
         <tag>Static Site Generator</tag>
+        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
