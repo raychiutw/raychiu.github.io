@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://raychiutw.github.io/"/>
-  <updated>2019-08-21T04:46:10.668Z</updated>
+  <updated>2019-08-21T04:49:14.518Z</updated>
   <id>https://raychiutw.github.io/</id>
   
   <author>
@@ -21,11 +21,13 @@
     <link href="https://raychiutw.github.io/2019/%E9%9A%A8%E6%89%8B-Design-Pattern-3-%E7%B0%A1%E5%96%AE%E5%B7%A5%E5%BB%A0%E6%A8%A1%E5%BC%8F-Simple-Factory-Pattern/"/>
     <id>https://raychiutw.github.io/2019/隨手-Design-Pattern-3-簡單工廠模式-Simple-Factory-Pattern/</id>
     <published>2019-08-21T01:38:51.000Z</published>
-    <updated>2019-08-21T04:46:10.668Z</updated>
+    <updated>2019-08-21T04:49:14.518Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;簡單工廠是相當易用的一種設計模式，當程式複雜度高的時候時候，可以利用此模式切割複雜度高的判斷式，抽離業務邏輯與建構式，讓業務邏輯單純，隔離複雜的建構式，有效提升程式碼的可讀性，藉由 C# 語法特性更可以降低程式複雜度。&lt;/p&gt;
+      &lt;blockquote&gt;
+&lt;p&gt;簡單工廠是相當易用的一種設計模式，當程式複雜度高的時候時候，可以利用此模式切割複雜度高的判斷式，抽離業務邏輯與建構式，讓業務邏輯單純，隔離複雜的建構式，有效提升程式碼的可讀性，藉由 C# 語法特性更可以降低程式複雜度。&lt;/p&gt;
+&lt;/blockquote&gt;
     
     </summary>
     
