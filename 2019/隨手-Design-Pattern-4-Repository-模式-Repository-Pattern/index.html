@@ -109,14 +109,18 @@
 
 
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="about">
-<meta property="og:url" content="https://raychiutw.github.io/about/index.html">
+  <meta name="description" content="Repository 模式與 UnitOfWork 模式可說是充滿爭議，國外大神爭論不休，本篇不打算加入筆戰，只簡單提供幾個適合的應用的情境與範例，大家就自行選擇消化囉。">
+<meta name="keywords" content="C#,Design Pattern,Repository 模式">
+<meta property="og:type" content="article">
+<meta property="og:title" content="隨手 Design Pattern (4) - Repository 模式 (Repository Pattern)">
+<meta property="og:url" content="https://raychiutw.github.io/2019/隨手-Design-Pattern-4-Repository-模式-Repository-Pattern/index.html">
 <meta property="og:site_name" content="Ray&#39;s Notes">
+<meta property="og:description" content="Repository 模式與 UnitOfWork 模式可說是充滿爭議，國外大神爭論不休，本篇不打算加入筆戰，只簡單提供幾個適合的應用的情境與範例，大家就自行選擇消化囉。">
 <meta property="og:locale" content="zh-TW">
-<meta property="og:updated_time" content="2019-03-19T08:45:08.174Z">
+<meta property="og:updated_time" content="2019-08-22T09:40:59.296Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="about">
+<meta name="twitter:title" content="隨手 Design Pattern (4) - Repository 模式 (Repository Pattern)">
+<meta name="twitter:description" content="Repository 模式與 UnitOfWork 模式可說是充滿爭議，國外大神爭論不休，本篇不打算加入筆戰，只簡單提供幾個適合的應用的情境與範例，大家就自行選擇消化囉。">
 
 
 
@@ -125,7 +129,7 @@
 
 
 
-  <link rel="canonical" href="https://raychiutw.github.io/about/">
+  <link rel="canonical" href="https://raychiutw.github.io/2019/隨手-Design-Pattern-4-Repository-模式-Repository-Pattern/">
 
 
 
@@ -135,7 +139,7 @@
   };
 </script>
 
-  <title>about | Ray's Notes</title>
+  <title>隨手 Design Pattern (4) - Repository 模式 (Repository Pattern) | Ray's Notes</title>
   
 
 
@@ -384,78 +388,345 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://raychiutw.github.io/2019/隨手-Design-Pattern-4-Repository-模式-Repository-Pattern/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Ray Chiu">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="https://secure.gravatar.com/avatar/aebc3383898b7fa6e7e2020a3b4ab23f">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ray's Notes">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-<h1 class="post-title" itemprop="name headline">about
-
-</h1>
-
-<div class="post-meta">
-  
-  
-
-
-
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
+          <h1 class="post-title" itemprop="name headline">隨手 Design Pattern (4) - Repository 模式 (Repository Pattern)
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+
+              
+                
+              
+
+              <time title="創建時間：2019-08-22 16:02:36 / 修改時間：17:40:59" itemprop="dateCreated datePublished" datetime="2019-08-22T16:02:36+08:00">2019-08-22</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
           
-        
-      </div>
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分類於</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/程式開發/" itemprop="url" rel="index"><span itemprop="name">程式開發</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             閱讀次數： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">文章字數：</span>
+                
+                <span title="文章字數">3.6k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+                
+                <span title="所需閱讀時間">3 分鐘</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <blockquote>
+<p>Repository 模式與 UnitOfWork 模式可說是充滿爭議，國外大神爭論不休，本篇不打算加入筆戰，只簡單提供幾個適合的應用的情境與範例，大家就自行選擇消化囉。</p>
+</blockquote>
+<a id="more"></a>
+<h3 id="Repository-模式的好處"><a href="#Repository-模式的好處" class="headerlink" title="Repository 模式的好處"></a>Repository 模式的好處</h3><p>在軟體分層那篇文章中，資料存取層的實作便是 Repository 模式的體現，有效的將資料存取隔離於商業邏輯之外，當要抽換資料來源時，無須改動展示層與商業邏輯層(前提是 Repoistory 約定的介面沒有變動)。</p>
+<h3 id="專用型-IRepository-與-泛型-IRepository"><a href="#專用型-IRepository-與-泛型-IRepository" class="headerlink" title="專用型 IRepository 與 泛型 IRepository"></a>專用型 IRepository 與 泛型 IRepository</h3><p>我們先定義兩種應用的模式</p>
+<ul>
+<li>專用型 IRepository：一個 interface 實作 一個 Repository</li>
+</ul>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title">ICustomerRepository</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// ....</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">CustomerRepository</span> : <span class="title">ICustomerRepository</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// ....</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title">IOrderRepository</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// ....</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">OrderRepository</span> : <span class="title">IOrderRepository</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// ....</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>泛型 IRepository：一個 interface 實作 多個 Repository</li>
+</ul>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">public interface IRepository&lt;TEntity&gt;</span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// ....</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public class CustomerRepository : IRepository&lt;TEntity&gt;</span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// ....</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public class OrderRepository : IRepository&lt;TEntity&gt;</span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// ....</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>當 Repository 有不同的介面方法的時候，專用型 IRepository 能提供最大的彈性。</p>
+<p>當 Repoitory 有固定的 CRUD 的介面方法，泛型 IRepository 可以有效的減少重複的程式碼。</p>
+<p>舉例來說，OrderRepository 可以是一個資料表(Order)或一組資料表(Order、OrderDetail、OrderType etc..)，若是一個資料表時適合泛型 IRepository，而一組資料表時適合專用型 IRepository。</p>
+<h3 id="Repository-模式-with-Daaper"><a href="#Repository-模式-with-Daaper" class="headerlink" title="Repository 模式 with Daaper"></a>Repository 模式 with Daaper</h3><p>而該架構對於 Dapper 這類輕量型 ORM 可以說搭配的如魚得水，因為 Dapper 執行我們定義好的 sqlcommand，專注在強型別的操作，故對於 Repository 的介面<br>並無直接的對應操作，也讓程式設計師有了較大的彈性去定義介面的方法，下面程式範例是專用型的寫法，改成泛型也是可以的喔。</p>
+<p><a href="https://github.com/raychiutw/repository-pattern" target="_blank" rel="noopener">程式碼範例</a></p>
+<h3 id="Repository-模式-with-Entity-Framwprk"><a href="#Repository-模式-with-Entity-Framwprk" class="headerlink" title="Repository 模式 with Entity Framwprk"></a>Repository 模式 with Entity Framwprk</h3><p>若按照上面的定義，EF 定義了每個 Entity 就是一個資料表，所以要搭配  Repository 模式 應該就是適合泛型 IRepository 囉 ?</p>
+<p>答案是：不盡然，目前兩派爭論不休。</p>
+<p>一派說法是: EF 的 Entity 其實完整實作了 CRUD 功能，如此再包一層 IRepository 定義的 CURD 是多此一舉?</p>
+<p>而另一派說法則是:為了要隔離 EF 多一層 Repository 是必須的。</p>
+<p>這兩派的說法其實個有道理，大家就採用自己相信的說法吧。而我是比較支持隔離這層的。</p>
+<p>若事情只到這也就還好，但當 UnitOfWork 也進來之後，事情變得更複雜，主要原因是一般提供的 UnitOfWork 的作法有其問題，我們來一步步說明。</p>
+<h3 id="一步步說明-UnitOfWork-IRepository-與-Service-的問題"><a href="#一步步說明-UnitOfWork-IRepository-與-Service-的問題" class="headerlink" title="一步步說明 UnitOfWork IRepository 與 Service 的問題"></a>一步步說明 UnitOfWork IRepository 與 Service 的問題</h3><p>首先，關於IUnitOfWork 的定義實現</p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title">IUnitOfWork</span></span><br><span class="line">&#123;</span><br><span class="line">    IQueryable&lt;TEntity&gt; Set&lt;TEntity&gt;() <span class="keyword">where</span> TEntity : <span class="keyword">class</span>;</span><br><span class="line">    TEntity Add&lt;TEntity&gt;(TEntity entity) <span class="keyword">where</span> TEntity : <span class="keyword">class</span>;</span><br><span class="line">    TEntity Attach&lt;TEntity&gt;(TEntity entity) <span class="keyword">where</span> TEntity : <span class="keyword">class</span>;</span><br><span class="line">    TEntity Remove&lt;TEntity&gt;(TEntity entity) <span class="keyword">where</span> TEntity : <span class="keyword">class</span>;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Commit</span>(<span class="params"></span>)</span>;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">Rollback</span>(<span class="params"></span>)</span>;</span><br><span class="line">    IDbContext Context &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>接下來進行 Repository 的修改</p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">StudentRepository</span>: <span class="title">IStudentRepository</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">private</span> IUnitOfWork _unitOfWork;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">StudentRepository</span>(<span class="params">IUnitOfWork unitOfWork</span>)</span></span><br><span class="line"><span class="function"></span>    &#123;</span><br><span class="line">        _unitOfWork = unitOfWork;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Student <span class="title">Get</span>(<span class="params"><span class="keyword">int</span> id</span>)</span></span><br><span class="line"><span class="function"></span>    &#123;</span><br><span class="line">        <span class="keyword">return</span> _unitOfWork.Set&lt;Student&gt;().Where(x =&gt; x.Id == id).FirstOrDefault();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">Add</span>(<span class="params">Student student</span>)</span></span><br><span class="line"><span class="function"></span>    &#123;</span><br><span class="line">        <span class="keyword">return</span> _unitOfWork.Set&lt;Student&gt;().Add(student);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//....</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>再來是 Service 的修改</p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">StudentService</span> : <span class="title">IStudentService</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">private</span> IUnitOfWork _unitOfWork;</span><br><span class="line">    <span class="keyword">private</span> IStudentRepository _studentRepository;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">StudentService</span>(<span class="params">IUnitOfWork unitOfWork, </span></span></span><br><span class="line"><span class="function"><span class="params">        IStudentRepository studentRepository</span>)</span></span><br><span class="line"><span class="function"></span>    &#123;</span><br><span class="line">        _unitOfWork = unitOfWork;</span><br><span class="line">        _studentRepository = studentRepository;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Student <span class="title">Get</span>(<span class="params"><span class="keyword">int</span> id</span>)</span></span><br><span class="line"><span class="function"></span>    &#123;</span><br><span class="line">        <span class="comment">//return _unitOfWork.Set&lt;Student&gt;().Where(x =&gt; x.Id == id).FirstOrDefault();</span></span><br><span class="line">        <span class="keyword">return</span> _studentRepository.Get(id);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">bool</span> <span class="title">Add</span>(<span class="params">Student student</span>)</span></span><br><span class="line"><span class="function"></span>    &#123;</span><br><span class="line">        <span class="comment">//_unitOfWork.Add&lt;Student&gt;(student);</span></span><br><span class="line">        _studentRepository.Add(student);</span><br><span class="line">        <span class="keyword">return</span> _unitOfWork.Commit();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//....</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>問題來了？在StudentService 中，StudentRepository 似乎變得有些多餘，因為它所做的，UnitOfWork 也都可以做，隨著項目的複雜，這樣就會造成很多的問題，比如：</p>
+<ul>
+<li>IUnitOfWork 的職責不明確。</li>
+<li>Repository 的職責不明確。</li>
+<li>Service 很困惑，因為它不知道該使用誰。</li>
+<li>Service 的代碼越來越亂。</li>
+</ul>
+<p>### </p>
+
       
     </div>
+
     
+      
+
+  <div class="popular-posts-header">相關文章</div>
+  <ul class="popular-posts">
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="\2019\隨手-Design-Pattern-2-軟體分層設計模式-Software-Layered-Architecture-Pattern\" rel="bookmark">隨手 Design Pattern (2) - 軟體分層設計模式 (Software Layered Architecture Pattern)</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="\2019\隨手-Design-Pattern-3-簡單工廠模式-Simple-Factory-Pattern\" rel="bookmark">隨手 Design Pattern (3) - 簡單工廠模式 (Simple Factory Pattern)</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="\2018\ASP-NET-Core-無法使用-DeploymentItem-的替代方案\" rel="bookmark">ASP.NET Core 無法使用 DeploymentItem 的替代方案</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="\2018\在-ASP-NET-Core-中使用-AutoMapper\" rel="bookmark">在 ASP.NET Core 中使用 AutoMapper</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="\2018\用 LINQ 處理分群情境\" rel="bookmark">用 LINQ 處理分群情境</a></div>
+      
+    </li>
+  
+  </ul>
+
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+      <div>
+        
 
 
 
+
+  
+
+
+
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>作者： </strong>Ray Chiu</li>
+  <li class="post-copyright-link">
+    <strong>文章連結：</strong>
     
+    <a href="https://raychiutw.github.io/2019/隨手-Design-Pattern-4-Repository-模式-Repository-Pattern/" title="隨手 Design Pattern (4) - Repository 模式 (Repository Pattern)">https://raychiutw.github.io/2019/隨手-Design-Pattern-4-Repository-模式-Repository-Pattern/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版權聲明： </strong>本網誌所有文章除特別聲明外，均採用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 許可協議。轉載請註明出處！</li>
+</ul>
+
+      </div>
     
-    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/C/" rel="tag"># C#</a>
+          
+            <a href="/tags/Design-Pattern/" rel="tag"># Design Pattern</a>
+          
+            <a href="/tags/Repository-模式/" rel="tag"># Repository 模式</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/ASP-Net-Core-DI-容器中-Service-生命週期/" rel="next" title="ASP.Net Core DI 容器中 Service 生命週期">
+                <i class="fa fa-chevron-left"></i> ASP.Net Core DI 容器中 Service 生命週期
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
   </div>
 
 
           </div>
           
+
+  
+    <div class="comments" id="gitalk-container">
+    </div>
+
+  
+
+
 
         </div>
         
@@ -475,8 +746,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目錄
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            本站概要
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -632,6 +912,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Repository-模式的好處"><span class="nav-number">1.</span> <span class="nav-text">Repository 模式的好處</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#專用型-IRepository-與-泛型-IRepository"><span class="nav-number">2.</span> <span class="nav-text">專用型 IRepository 與 泛型 IRepository</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Repository-模式-with-Daaper"><span class="nav-number">3.</span> <span class="nav-text">Repository 模式 with Daaper</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Repository-模式-with-Entity-Framwprk"><span class="nav-number">4.</span> <span class="nav-text">Repository 模式 with Entity Framwprk</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一步步說明-UnitOfWork-IRepository-與-Service-的問題"><span class="nav-number">5.</span> <span class="nav-text">一步步說明 UnitOfWork IRepository 與 Service 的問題</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -822,6 +1119,34 @@
   
   
 
+
+  
+    
+
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+
+
+<script src="//cdn.jsdelivr.net/npm/js-md5@0.7.3/src/md5.min.js"></script>
+
+<script>
+  var gitalk = new Gitalk({
+    clientID: '6ebe19f851c8e2dc155c',
+    clientSecret: 'b3458f3e8a3a72c02b62c50873ab32f16ba04795',
+    repo: 'raychiutw.github.io',
+    owner: 'raychiutw',
+    admin: ['raychiutw'],
+    id: md5(location.pathname),
+    distractionFreeMode: 'true'
+  });
+  gitalk.render('gitalk-container');
+</script>
+
+  
 
 
   

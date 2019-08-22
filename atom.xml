@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://raychiutw.github.io/"/>
-  <updated>2019-08-22T02:59:11.952Z</updated>
+  <updated>2019-08-22T09:40:59.296Z</updated>
   <id>https://raychiutw.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>隨手 Design Pattern (4) - Repository 模式 (Repository Pattern)</title>
+    <link href="https://raychiutw.github.io/2019/%E9%9A%A8%E6%89%8B-Design-Pattern-4-Repository-%E6%A8%A1%E5%BC%8F-Repository-Pattern/"/>
+    <id>https://raychiutw.github.io/2019/隨手-Design-Pattern-4-Repository-模式-Repository-Pattern/</id>
+    <published>2019-08-22T08:02:36.000Z</published>
+    <updated>2019-08-22T09:40:59.296Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;Repository 模式與 UnitOfWork 模式可說是充滿爭議，國外大神爭論不休，本篇不打算加入筆戰，只簡單提供幾個適合的應用的情境與範例，大家就自行選擇消化囉。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="程式開發" scheme="https://raychiutw.github.io/categories/%E7%A8%8B%E5%BC%8F%E9%96%8B%E7%99%BC/"/>
+    
+    
+      <category term="C#" scheme="https://raychiutw.github.io/tags/C/"/>
+    
+      <category term="Design Pattern" scheme="https://raychiutw.github.io/tags/Design-Pattern/"/>
+    
+      <category term="Repository 模式" scheme="https://raychiutw.github.io/tags/Repository-%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>ASP.Net Core DI 容器中 Service 生命週期</title>
@@ -498,30 +524,6 @@
       <category term="UnitTest" scheme="https://raychiutw.github.io/tags/UnitTest/"/>
     
       <category term="C#" scheme="https://raychiutw.github.io/tags/C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ASP.NET Core 啟用 Web.config Transformation</title>
-    <link href="https://raychiutw.github.io/2018/ASP-NET-Core-%E5%95%9F%E7%94%A8-Web-config-Transformation/"/>
-    <id>https://raychiutw.github.io/2018/ASP-NET-Core-啟用-Web-config-Transformation/</id>
-    <published>2018-05-02T07:04:43.000Z</published>
-    <updated>2019-03-19T09:32:30.485Z</updated>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;.Net Framework 4.0 提供了 Transformation 功能，讓 Web.Config 與 app.Config 可以依據組態設定建置不同的參數，這項好用的功能在 .Net Core 的專案中已無法作用，本文紀錄如何再次啟用這好用的功能。&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="程式開發" scheme="https://raychiutw.github.io/categories/%E7%A8%8B%E5%BC%8F%E9%96%8B%E7%99%BC/"/>
-    
-    
-      <category term="ASP.NET Core" scheme="https://raychiutw.github.io/tags/ASP-NET-Core/"/>
-    
-      <category term="Transformation" scheme="https://raychiutw.github.io/tags/Transformation/"/>
     
   </entry>
   
