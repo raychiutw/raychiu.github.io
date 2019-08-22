@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://raychiutw.github.io/"/>
-  <updated>2019-08-21T07:28:16.116Z</updated>
+  <updated>2019-08-22T02:57:20.818Z</updated>
   <id>https://raychiutw.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ASP.Net Core DI 容器中 Service 生命週期</title>
+    <link href="https://raychiutw.github.io/2019/ASP-Net-Core-DI-%E5%AE%B9%E5%99%A8%E4%B8%AD-Service-%E7%94%9F%E5%91%BD%E9%80%B1%E6%9C%9F/"/>
+    <id>https://raychiutw.github.io/2019/ASP-Net-Core-DI-容器中-Service-生命週期/</id>
+    <published>2019-08-22T02:41:43.000Z</published>
+    <updated>2019-08-22T02:57:20.818Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;使用 DI 的時候，註冊服務的生命週期是個很重要的議題，用的好，節省記憶體。提升程式效率，用不好，則可能造成重大的異常錯誤，本篇來簡單說明一下 ASP.NET Core 注入服務的三種生命週期。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="程式開發" scheme="https://raychiutw.github.io/categories/%E7%A8%8B%E5%BC%8F%E9%96%8B%E7%99%BC/"/>
+    
+    
+      <category term="ASP.NET Core" scheme="https://raychiutw.github.io/tags/ASP-NET-Core/"/>
+    
+      <category term="DI" scheme="https://raychiutw.github.io/tags/DI/"/>
+    
+      <category term="IoC" scheme="https://raychiutw.github.io/tags/IoC/"/>
+    
+  </entry>
   
   <entry>
     <title>隨手 Design Pattern (3) - 簡單工廠模式 (Simple Factory Pattern)</title>
@@ -34,11 +60,11 @@
       <category term="程式開發" scheme="https://raychiutw.github.io/categories/%E7%A8%8B%E5%BC%8F%E9%96%8B%E7%99%BC/"/>
     
     
+      <category term="C#" scheme="https://raychiutw.github.io/tags/C/"/>
+    
       <category term="Design Pattern" scheme="https://raychiutw.github.io/tags/Design-Pattern/"/>
     
       <category term="簡單工廠模式" scheme="https://raychiutw.github.io/tags/%E7%B0%A1%E5%96%AE%E5%B7%A5%E5%BB%A0%E6%A8%A1%E5%BC%8F/"/>
-    
-      <category term="C#" scheme="https://raychiutw.github.io/tags/C/"/>
     
   </entry>
   
@@ -60,11 +86,11 @@
       <category term="程式開發" scheme="https://raychiutw.github.io/categories/%E7%A8%8B%E5%BC%8F%E9%96%8B%E7%99%BC/"/>
     
     
+      <category term="C#" scheme="https://raychiutw.github.io/tags/C/"/>
+    
       <category term="Design Pattern" scheme="https://raychiutw.github.io/tags/Design-Pattern/"/>
     
       <category term="軟體分層設計模式" scheme="https://raychiutw.github.io/tags/%E8%BB%9F%E9%AB%94%E5%88%86%E5%B1%A4%E8%A8%AD%E8%A8%88%E6%A8%A1%E5%BC%8F/"/>
-    
-      <category term="C#" scheme="https://raychiutw.github.io/tags/C/"/>
     
   </entry>
   
@@ -110,9 +136,9 @@
     
       <category term="ASP.NET Core" scheme="https://raychiutw.github.io/tags/ASP-NET-Core/"/>
     
-      <category term="AutoMapper" scheme="https://raychiutw.github.io/tags/AutoMapper/"/>
-    
       <category term="C#" scheme="https://raychiutw.github.io/tags/C/"/>
+    
+      <category term="AutoMapper" scheme="https://raychiutw.github.io/tags/AutoMapper/"/>
     
   </entry>
   
@@ -165,9 +191,9 @@
       <category term="應用程式" scheme="https://raychiutw.github.io/categories/%E6%87%89%E7%94%A8%E7%A8%8B%E5%BC%8F/"/>
     
     
-      <category term="Jekyll" scheme="https://raychiutw.github.io/tags/Jekyll/"/>
-    
       <category term="Static Site Generator" scheme="https://raychiutw.github.io/tags/Static-Site-Generator/"/>
+    
+      <category term="Jekyll" scheme="https://raychiutw.github.io/tags/Jekyll/"/>
     
   </entry>
   
@@ -263,13 +289,13 @@
       <category term="應用程式" scheme="https://raychiutw.github.io/categories/%E6%87%89%E7%94%A8%E7%A8%8B%E5%BC%8F/"/>
     
     
-      <category term="Jekyll" scheme="https://raychiutw.github.io/tags/Jekyll/"/>
+      <category term="Hexo" scheme="https://raychiutw.github.io/tags/Hexo/"/>
     
       <category term="Static Site Generator" scheme="https://raychiutw.github.io/tags/Static-Site-Generator/"/>
     
-      <category term="Hexo" scheme="https://raychiutw.github.io/tags/Hexo/"/>
-    
       <category term="Hugo" scheme="https://raychiutw.github.io/tags/Hugo/"/>
+    
+      <category term="Jekyll" scheme="https://raychiutw.github.io/tags/Jekyll/"/>
     
   </entry>
   
@@ -359,9 +385,9 @@
       <category term="應用程式" scheme="https://raychiutw.github.io/categories/%E6%87%89%E7%94%A8%E7%A8%8B%E5%BC%8F/"/>
     
     
-      <category term="Static Site Generator" scheme="https://raychiutw.github.io/tags/Static-Site-Generator/"/>
-    
       <category term="Hexo" scheme="https://raychiutw.github.io/tags/Hexo/"/>
+    
+      <category term="Static Site Generator" scheme="https://raychiutw.github.io/tags/Static-Site-Generator/"/>
     
       <category term="Hexo Themes" scheme="https://raychiutw.github.io/tags/Hexo-Themes/"/>
     
@@ -385,9 +411,9 @@
       <category term="應用程式" scheme="https://raychiutw.github.io/categories/%E6%87%89%E7%94%A8%E7%A8%8B%E5%BC%8F/"/>
     
     
-      <category term="Static Site Generator" scheme="https://raychiutw.github.io/tags/Static-Site-Generator/"/>
-    
       <category term="Hexo" scheme="https://raychiutw.github.io/tags/Hexo/"/>
+    
+      <category term="Static Site Generator" scheme="https://raychiutw.github.io/tags/Static-Site-Generator/"/>
     
       <category term="Git" scheme="https://raychiutw.github.io/tags/Git/"/>
     
@@ -415,9 +441,9 @@
     
       <category term="ASP.NET Core" scheme="https://raychiutw.github.io/tags/ASP-NET-Core/"/>
     
-      <category term="AutoMapper" scheme="https://raychiutw.github.io/tags/AutoMapper/"/>
-    
       <category term="C#" scheme="https://raychiutw.github.io/tags/C/"/>
+    
+      <category term="AutoMapper" scheme="https://raychiutw.github.io/tags/AutoMapper/"/>
     
   </entry>
   
@@ -439,9 +465,9 @@
       <category term="應用程式" scheme="https://raychiutw.github.io/categories/%E6%87%89%E7%94%A8%E7%A8%8B%E5%BC%8F/"/>
     
     
-      <category term="Static Site Generator" scheme="https://raychiutw.github.io/tags/Static-Site-Generator/"/>
-    
       <category term="Hexo" scheme="https://raychiutw.github.io/tags/Hexo/"/>
+    
+      <category term="Static Site Generator" scheme="https://raychiutw.github.io/tags/Static-Site-Generator/"/>
     
   </entry>
   
@@ -465,11 +491,11 @@
     
       <category term="ASP.NET Core" scheme="https://raychiutw.github.io/tags/ASP-NET-Core/"/>
     
-      <category term="C#" scheme="https://raychiutw.github.io/tags/C/"/>
-    
       <category term="MSTest" scheme="https://raychiutw.github.io/tags/MSTest/"/>
     
       <category term="UnitTest" scheme="https://raychiutw.github.io/tags/UnitTest/"/>
+    
+      <category term="C#" scheme="https://raychiutw.github.io/tags/C/"/>
     
   </entry>
   
@@ -494,39 +520,6 @@
       <category term="ASP.NET Core" scheme="https://raychiutw.github.io/tags/ASP-NET-Core/"/>
     
       <category term="Transformation" scheme="https://raychiutw.github.io/tags/Transformation/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo教學（0）－目錄</title>
-    <link href="https://raychiutw.github.io/2018/Hexo%E6%95%99%E5%AD%B8-0-%E7%9B%AE%E9%8C%84/"/>
-    <id>https://raychiutw.github.io/2018/Hexo教學-0-目錄/</id>
-    <published>2018-05-01T01:28:34.000Z</published>
-    <updated>2019-04-16T07:46:34.613Z</updated>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;Hexo 是一個使用 Node.js 為基礎的靜態網站產生器。使用 Markdown 解析文章，透過主題產生靜態檔案。而且他是由台灣人所開發出來的。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&quot;優點&quot;&gt;&lt;a href=&quot;#優點&quot; class=&quot;headerlink&quot; title=&quot;優點&quot;&gt;&lt;/a&gt;優點&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;台灣人開發，中文資源豐富。&lt;/li&gt;
-&lt;li&gt;Node.js 生態完整，插件完整。&lt;/li&gt;
-&lt;li&gt;頁面產生速度快。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;缺點&quot;&gt;&lt;a href=&quot;#缺點&quot; class=&quot;headerlink&quot; title=&quot;缺點&quot;&gt;&lt;/a&gt;缺點&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;Node.js 插件眾多，依賴複雜，有可能會踩坑。&lt;/li&gt;
-&lt;li&gt;Hexo _config.yaml 與 Hexo Theme _config.yaml 交互設定較複雜。&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="應用程式" scheme="https://raychiutw.github.io/categories/%E6%87%89%E7%94%A8%E7%A8%8B%E5%BC%8F/"/>
-    
-    
-      <category term="Static Site Generator" scheme="https://raychiutw.github.io/tags/Static-Site-Generator/"/>
-    
-      <category term="Hexo" scheme="https://raychiutw.github.io/tags/Hexo/"/>
     
   </entry>
   

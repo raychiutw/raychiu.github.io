@@ -109,13 +109,18 @@
 
 
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Ray&#39;s Notes">
-<meta property="og:url" content="https://raychiutw.github.io/archives/2019/index.html">
+  <meta name="description" content="使用 DI 的時候，註冊服務的生命週期是個很重要的議題，用的好，節省記憶體。提升程式效率，用不好，則可能造成重大的異常錯誤，本篇來簡單說明一下 ASP.NET Core 注入服務的三種生命週期。">
+<meta name="keywords" content="ASP.NET Core,DI,IoC">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ASP.Net Core DI 容器中 Service 生命週期">
+<meta property="og:url" content="https://raychiutw.github.io/2019/ASP-Net-Core-DI-容器中-Service-生命週期/index.html">
 <meta property="og:site_name" content="Ray&#39;s Notes">
+<meta property="og:description" content="使用 DI 的時候，註冊服務的生命週期是個很重要的議題，用的好，節省記憶體。提升程式效率，用不好，則可能造成重大的異常錯誤，本篇來簡單說明一下 ASP.NET Core 注入服務的三種生命週期。">
 <meta property="og:locale" content="zh-TW">
+<meta property="og:updated_time" content="2019-08-22T02:57:20.818Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ray&#39;s Notes">
+<meta name="twitter:title" content="ASP.Net Core DI 容器中 Service 生命週期">
+<meta name="twitter:description" content="使用 DI 的時候，註冊服務的生命週期是個很重要的議題，用的好，節省記憶體。提升程式效率，用不好，則可能造成重大的異常錯誤，本篇來簡單說明一下 ASP.NET Core 注入服務的三種生命週期。">
 
 
 
@@ -124,7 +129,7 @@
 
 
 
-  <link rel="canonical" href="https://raychiutw.github.io/archives/2019/">
+  <link rel="canonical" href="https://raychiutw.github.io/2019/ASP-Net-Core-DI-容器中-Service-生命週期/">
 
 
 
@@ -134,7 +139,7 @@
   };
 </script>
 
-  <title>歸檔 | Ray's Notes</title>
+  <title>ASP.Net Core DI 容器中 Service 生命週期 | Ray's Notes</title>
   
 
 
@@ -193,7 +198,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -286,7 +291,7 @@
         
         
           
-          <li class="menu-item menu-item-archives menu-item-active">
+          <li class="menu-item menu-item-archives">
 
     
     
@@ -383,423 +388,315 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://raychiutw.github.io/2019/ASP-Net-Core-DI-容器中-Service-生命週期/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Ray Chiu">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="https://secure.gravatar.com/avatar/aebc3383898b7fa6e7e2020a3b4ab23f">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ray's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">ASP.Net Core DI 容器中 Service 生命週期
+
+              
+            
+          </h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+
+              
+                
+              
+
+              <time title="創建時間：2019-08-22 10:41:43 / 修改時間：10:57:20" itemprop="dateCreated datePublished" datetime="2019-08-22T10:41:43+08:00">2019-08-22</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
           
-        
-        嗯..! 目前共有 24 篇文章。 繼續努力。
-      </span>
-      
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分類於</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/程式開發/" itemprop="url" rel="index"><span itemprop="name">程式開發</span></a></span>
 
-      
-
-        
-        
-        
-
-        
+                
+                
+              
+            </span>
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2019">2019</h1>
-          </div>
-        
-        
 
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/ASP-Net-Core-DI-容器中-Service-生命週期/" itemprop="url">
+          
             
-              <span itemprop="name">ASP.Net Core DI 容器中 Service 生命週期</span>
             
-          </a>
-        
-      </h2>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-22T10:41:43+08:00" content="2019-08-22">
-          08-22
-        </time>
-      </div>
+          
+          
 
-    </header>
-  </article>
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             閱讀次數： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
 
+          
+            <div class="post-symbolscount">
+              
 
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">文章字數：</span>
+                
+                <span title="文章字數">652</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
+                
+                <span title="所需閱讀時間">1 分鐘</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/隨手-Design-Pattern-3-簡單工廠模式-Simple-Factory-Pattern/" itemprop="url">
-            
-              <span itemprop="name">隨手 Design Pattern (3) - 簡單工廠模式 (Simple Factory Pattern)</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-21T09:38:51+08:00" content="2019-08-21">
-          08-21
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/隨手-Design-Pattern-2-軟體分層設計模式-Software-Layered-Architecture-Pattern/" itemprop="url">
-            
-              <span itemprop="name">隨手 Design Pattern (2) - 軟體分層設計模式 (Software Layered Architecture Pattern)</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-08T10:55:23+08:00" content="2019-08-08">
-          08-08
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <blockquote>
+<p>使用 DI 的時候，註冊服務的生命週期是個很重要的議題，用的好，節省記憶體。提升程式效率，用不好，則可能造成重大的異常錯誤，本篇來簡單說明一下 ASP.NET Core 注入服務的三種生命週期。</p>
+</blockquote>
+<a id="more"></a>
+<h3 id="Service-生命週期"><a href="#Service-生命週期" class="headerlink" title="Service 生命週期"></a>Service 生命週期</h3><p>ASP.NET Core提供了一個內置的服務容器 <code>IServiceProvider</code> 負責管理服務的生命週期，從被依賴注入容器創建開始（就是將服務注入到你要使用的類的構造函數中），然後框架負責創建依賴關係的實例，並在不再需要時對其進行處理（就是說等我們調用完服務時，容器會自己去對注入的服務進行釋放）。</p>
+<h3 id="三種生命週期"><a href="#三種生命週期" class="headerlink" title="三種生命週期"></a>三種生命週期</h3><p>查看微軟程式碼，ServiceLifetime 有三種列舉值。</p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Microsoft.Extensions.DependencyInjection.ServiceLifetime</span></span><br><span class="line"><span class="keyword">public</span>  <span class="keyword">enum</span> ServiceLifetime</span><br><span class="line">&#123;</span><br><span class="line">    Singleton,</span><br><span class="line">    Scoped,</span><br><span class="line">    Transient</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>Singleton 單一實例模式：<br>單一實例對像對每個對象和每個請求都是相同的，不同客戶端不同請求都是相同的。</p>
+</li>
+<li><p>Transient 暫時性模式：<br>暫時性對象，無論是不是同一個請求（同一個請求裡的不同服務）同一個客戶端，每次都是創建新的實例。</p>
+</li>
+<li><p>Scoped 作用域模式：<br>作用域對像在一個客戶端請求中是相同的，但在多個客戶端請求中是不同的。</p>
+</li>
+</ul>
+<p>了解了生命周期的不同，要記得註冊服務時，要選擇適合的生命週期唷！</p>
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/隨手-Design-Pattern-1-序篇/" itemprop="url">
-            
-              <span itemprop="name">隨手 Design Pattern (1) - 序篇</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-08T10:47:34+08:00" content="2019-08-08">
-          08-08
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/AutoMapper-Extensions-Microsoft-DependencyInjection-AddAutoMapper-已過時/" itemprop="url">
-            
-              <span itemprop="name">AutoMapper.Extensions.Microsoft.DependencyInjection - AddAutoMapper 已過時</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-07T11:02:53+08:00" content="2019-08-07">
-          08-07
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/玩玩樹梅派-序篇/" itemprop="url">
-            
-              <span itemprop="name">玩玩樹莓派 - 序篇</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-04-17T10:56:42+08:00" content="2019-04-17">
-          04-17
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/Jeykll-快速安裝教學/" itemprop="url">
-            
-              <span itemprop="name">Jeykll 快速安裝教學</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-04-12T17:19:15+08:00" content="2019-04-12">
-          04-12
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/Hugo-快速安裝教學/" itemprop="url">
-            
-              <span itemprop="name">Hugo 快速安裝教學</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-04-11T16:36:30+08:00" content="2019-04-11">
-          04-11
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/玩玩樹莓派-RetroPie/" itemprop="url">
-            
-              <span itemprop="name">玩玩樹莓派 - RetroPie</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-04-11T15:53:34+08:00" content="2019-04-11">
-          04-11
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/玩玩樹莓派-Hass-io/" itemprop="url">
-            
-              <span itemprop="name">玩玩樹莓派 - Hass.io</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-04-11T15:53:09+08:00" content="2019-04-11">
-          04-11
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+
+    
+      
+
+  <div class="popular-posts-header">相關文章</div>
+  <ul class="popular-posts">
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="\2018\ASP-NET-Core-無法使用-DeploymentItem-的替代方案\" rel="bookmark">ASP.NET Core 無法使用 DeploymentItem 的替代方案</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="\2018\在-ASP-NET-Core-中使用-AutoMapper\" rel="bookmark">在 ASP.NET Core 中使用 AutoMapper</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="\2018\ASP-NET-Core-啟用-Web-config-Transformation\" rel="bookmark">ASP.NET Core 啟用 Web.config Transformation</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="\2019\AutoMapper-Extensions-Microsoft-DependencyInjection-AddAutoMapper-已過時\" rel="bookmark">AutoMapper.Extensions.Microsoft.DependencyInjection - AddAutoMapper 已過時</a></div>
+      
+    </li>
+  
+  </ul>
+
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+      <div>
+        
+
+
+
+
+  
+
+
+
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>作者： </strong>Ray Chiu</li>
+  <li class="post-copyright-link">
+    <strong>文章連結：</strong>
+    
+    <a href="https://raychiutw.github.io/2019/ASP-Net-Core-DI-容器中-Service-生命週期/" title="ASP.Net Core DI 容器中 Service 生命週期">https://raychiutw.github.io/2019/ASP-Net-Core-DI-容器中-Service-生命週期/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版權聲明： </strong>本網誌所有文章除特別聲明外，均採用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 許可協議。轉載請註明出處！</li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/ASP-NET-Core/" rel="tag"># ASP.NET Core</a>
+          
+            <a href="/tags/DI/" rel="tag"># DI</a>
+          
+            <a href="/tags/IoC/" rel="tag"># IoC</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/隨手-Design-Pattern-3-簡單工廠模式-Simple-Factory-Pattern/" rel="next" title="隨手 Design Pattern (3) - 簡單工廠模式 (Simple Factory Pattern)">
+                <i class="fa fa-chevron-left"></i> 隨手 Design Pattern (3) - 簡單工廠模式 (Simple Factory Pattern)
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
-
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/archives/2019/page/2/">2</a><a class="extend next" rel="next" href="/archives/2019/page/2/"><i class="fa fa-angle-right" aria-label="下一頁"></i></a>
-  </nav>
+  </article>
 
 
+  </div>
 
 
           </div>
           
+
+  
+    <div class="comments" id="gitalk-container">
+    </div>
+
+  
+
+
 
         </div>
         
@@ -819,8 +716,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目錄
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            本站概要
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -974,6 +880,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Service-生命週期"><span class="nav-number">1.</span> <span class="nav-text">Service 生命週期</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三種生命週期"><span class="nav-number">2.</span> <span class="nav-text">三種生命週期</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -1150,6 +1073,10 @@
 
 
   
+  <script src="/js/src/scrollspy.js?v=7.0.1"></script>
+<script src="/js/src/post-details.js?v=7.0.1"></script>
+
+
 
   
 
@@ -1160,6 +1087,34 @@
   
   
 
+
+  
+    
+
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+
+
+<script src="//cdn.jsdelivr.net/npm/js-md5@0.7.3/src/md5.min.js"></script>
+
+<script>
+  var gitalk = new Gitalk({
+    clientID: '6ebe19f851c8e2dc155c',
+    clientSecret: 'b3458f3e8a3a72c02b62c50873ab32f16ba04795',
+    repo: 'raychiutw.github.io',
+    owner: 'raychiutw',
+    admin: ['raychiutw'],
+    id: md5(location.pathname),
+    distractionFreeMode: 'true'
+  });
+  gitalk.render('gitalk-container');
+</script>
+
+  
 
 
   
