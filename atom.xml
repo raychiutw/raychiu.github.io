@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://raychiutw.github.io/"/>
-  <updated>2019-08-22T02:57:20.818Z</updated>
+  <updated>2019-08-22T02:59:11.952Z</updated>
   <id>https://raychiutw.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://raychiutw.github.io/2019/ASP-Net-Core-DI-%E5%AE%B9%E5%99%A8%E4%B8%AD-Service-%E7%94%9F%E5%91%BD%E9%80%B1%E6%9C%9F/"/>
     <id>https://raychiutw.github.io/2019/ASP-Net-Core-DI-容器中-Service-生命週期/</id>
     <published>2019-08-22T02:41:43.000Z</published>
-    <updated>2019-08-22T02:57:20.818Z</updated>
+    <updated>2019-08-22T02:59:11.952Z</updated>
     
     <summary type="html">
     
@@ -35,6 +35,8 @@
     
     
       <category term="ASP.NET Core" scheme="https://raychiutw.github.io/tags/ASP-NET-Core/"/>
+    
+      <category term="C#" scheme="https://raychiutw.github.io/tags/C/"/>
     
       <category term="DI" scheme="https://raychiutw.github.io/tags/DI/"/>
     
