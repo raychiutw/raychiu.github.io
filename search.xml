@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[隨手 Design Pattern (5) - 雙重檢查鎖定模式 (Double-Checked Locking Pattern)]]></title>
+    <url>%2F2019%2F%E9%9A%A8%E6%89%8B-Design-Pattern-5-%E9%9B%99%E9%87%8D%E6%AA%A2%E6%9F%A5%E9%8E%96%E5%AE%9A%E6%A8%A1%E5%BC%8F-Double-Checked-Locking-Pattern%2F</url>
+    <content type="text"><![CDATA[雙重檢查鎖定 (Double-Checked Locking Pattern) 是另外一個常用的設計模式，用來減少並發系統中競爭和同步的開銷。雙重檢查鎖定模式首先驗證鎖定條件(第一次檢查)，只有通過鎖定條件驗證才真正的進行加鎖邏輯並再次驗證條件(第二次檢查)。常用來避免快取在同一時間被重複建立。 定義我們先來看看來自 Wiki 的定義 雙重檢查鎖定模式（也被稱為”雙重檢查加鎖優化”，”鎖暗示”（Lock hint）[1]) 是一種軟體設計模式用來減少並發系統中競爭和同步的開銷。雙重檢查鎖定模式首先驗證鎖定條件(第一次檢查)，只有通過鎖定條件驗證才真正的進行加鎖邏輯並再次驗證條件(第二次檢查)。該模式在某些語言在某些硬體平台的實現可能是不安全的。有的時候，這一模式被看做是反模式。它通常用於減少加鎖開銷，尤其是為多執行緒環境中的單例模式實現「惰性初始化」。惰性初始化的意思是直到第一次訪問時才初始化它的值。 C# 實際範例在一般的情境下，我最常使用在快取建立的情境，在快取要建立前，使用 Double-Checked Locking 防止快取的重複建立。 使用快取範例先來說明 ASP.NET Core 下如何使用快取，範例是使用 WebApi 專案範本。 Startup 註冊 MemoryCache 12345678910111213141516171819using Microsoft.AspNetCore.Builder;using Microsoft.AspNetCore.Mvc;using Microsoft.Extensions.DependencyInjection;public class Startup&#123; public void ConfigureServices(IServiceCollection services) &#123; // Register MemoryCache services.AddMemoryCache(); services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2); &#125; public void Configure(IApplicationBuilder app) &#123; app.UseMvcWithDefaultRoute(); &#125;&#125; 再來 Contorller 以下設定 1234567891011121314151617181920212223242526272829303132333435363738using System;using Microsoft.AspNetCore.Mvc;using Microsoft.Extensions.Caching.Memory;namespace DoubleCheckedLocking.WebApplication.Controllers&#123; [Route("api/[controller]")] [ApiController] public class ValuesController : ControllerBase &#123; private IMemoryCache _cache; public ValuesController(IMemoryCache memoryCache) &#123; this._cache = memoryCache; &#125; // 取得快取值 var cacheEntry = this._cache.Get&lt;DateTime&gt;("key"); // 快取檢查 if (this._cache.Get&lt;DateTime&gt;("key") == null) &#123; // 無快取, 所以重新取值 cacheEntry = DateTime.Now; // 設定快取過期時間 var cacheEntryOptions = new MemoryCacheEntryOptions() .SetAbsoluteExpiration(TimeSpan.FromSeconds(3)); // 加入快取 _cache.Set("key", cacheEntry, cacheEntryOptions); &#125; return cacheEntry.ToString(); &#125; &#125;&#125; 會遇到的問題當大量連線請求執行這段程式碼的時候，是有可能在極短暫時間下，快取不存在的鎖定判斷會被通過多次請求，而導致快取被重複建立，而當快取建立的成本很高的時候(比如說連接資料庫)，更可能造成後端的負載壓力，在筆者工作環境中，是個同時上線人數達 2000 人的大系統是，屢屢遇到快取鎖定失效導致資料庫負擔過重的案例，這時候 Double-Checked Locking 便派上用場，讓我們將快取的程式碼繼續導入 Double-Checked Locking。 1234567891011121314151617181920212223242526272829303132 // GET api/values [HttpGet] public ActionResult&lt;string&gt; Get() &#123; // 取得快取值 var cacheEntry = this._cache.Get&lt;DateTime&gt;("key"); // 第一次檢查 if (cacheEntry == null) &#123; // 鎖定 lock (padlock) &#123; // 第二次檢查 if (this._cache.Get&lt;DateTime&gt;("key") == null) &#123; // 無快取, 所以重新取值 cacheEntry = DateTime.Now; // 設定快取過期時間 var cacheEntryOptions = new MemoryCacheEntryOptions() .SetAbsoluteExpiration(TimeSpan.FromSeconds(3)); // 加入快取 _cache.Set("key", cacheEntry, cacheEntryOptions); &#125; &#125; &#125; return cacheEntry.ToString(); &#125;&#125; 這裡要注意的是，第二次的檢查務必重新取得快取來判斷，若繼續沿用第一次檢查的變數，將會導致無效檢查。 結語Double-Checked Locking 在快取情境下使用非常適合，另外一個適用情境是單例模式 (Singleton Pattern)，之後講到 Singleton 再說明囉。]]></content>
+      <categories>
+        <category>程式開發</category>
+      </categories>
+      <tags>
+        <tag>C#</tag>
+        <tag>Design Pattern</tag>
+        <tag>雙重檢查鎖定模式</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[隨手 Design Pattern (4) - Repository 模式 (Repository Pattern)]]></title>
     <url>%2F2019%2F%E9%9A%A8%E6%89%8B-Design-Pattern-4-Repository-%E6%A8%A1%E5%BC%8F-Repository-Pattern%2F</url>
     <content type="text"><![CDATA[Repository 模式與 UnitOfWork 模式可說是充滿爭議，國外大神爭論不休，本篇不打算加入筆戰，只簡單提供幾個適合的應用的情境與範例，大家就自行選擇消化囉。 Repository 模式的好處在軟體分層那篇文章中，資料存取層的實作便是 Repository 模式的體現，有效的將資料存取隔離於商業邏輯之外，當要抽換資料來源時，無須改動展示層與商業邏輯層(前提是 Repoistory 約定的介面沒有變動)。 專用型 IRepository 與 泛型 IRepository我們先定義兩種應用的模式 專用型 IRepository：一個 interface 實作 一個 Repository 12345678910111213141516171819public interface ICustomerRepository&#123; // ....&#125;public class CustomerRepository : ICustomerRepository&#123; // ....&#125;public interface IOrderRepository&#123; // ....&#125;public class OrderRepository : IOrderRepository&#123; // ....&#125; 泛型 IRepository：一個 interface 實作 多個 Repository 1234567891011121314public interface IRepository&lt;TEntity&gt;&#123; // ....&#125;public class CustomerRepository : IRepository&lt;TEntity&gt;&#123; // ....&#125;public class OrderRepository : IRepository&lt;TEntity&gt;&#123; // ....&#125; 當 Repository 有不同的介面方法的時候，專用型 IRepository 能提供最大的彈性。 當 Repoitory 有固定的 CRUD 的介面方法，泛型 IRepository 可以有效的減少重複的程式碼。 舉例來說，OrderRepository 可以是一個資料表(Order)或一組資料表(Order、OrderDetail、OrderType etc..)，若是一個資料表時適合泛型 IRepository，而一組資料表時適合專用型 IRepository。 Repository 模式 with Daaper而該架構對於 Dapper 這類輕量型 ORM 可以說搭配的如魚得水，因為 Dapper 執行我們定義好的 sqlcommand，專注在強型別的操作，故對於 Repository 的介面並無直接的對應操作，也讓程式設計師有了較大的彈性去定義介面的方法，下面程式範例是專用型的寫法，改成泛型也是可以的喔。 程式碼範例 Repository 模式 with Entity Framwprk若按照上面的定義，EF 定義了每個 Entity 就是一個資料表，所以要搭配 Repository 模式 應該就是適合泛型 IRepository 囉 ? 答案是：不盡然，目前兩派爭論不休。 一派說法是: EF 的 Entity 其實完整實作了 CRUD 功能，如此再包一層 IRepository 定義的 CURD 是多此一舉? 而另一派說法則是:為了要隔離 EF 多一層 Repository 是必須的。 這兩派的說法其實個有道理，大家就採用自己相信的說法吧。而我是比較支持隔離這層的。 若事情只到這也就還好，但當 UnitOfWork 也進來之後，事情變得更複雜，主要原因是一般提供的 UnitOfWork 的作法有其問題，我們來一步步說明。 一步步說明 UnitOfWork IRepository 與 Service 的問題首先，關於IUnitOfWork 的定義實現 12345678910public interface IUnitOfWork&#123; IQueryable&lt;TEntity&gt; Set&lt;TEntity&gt;() where TEntity : class; TEntity Add&lt;TEntity&gt;(TEntity entity) where TEntity : class; TEntity Attach&lt;TEntity&gt;(TEntity entity) where TEntity : class; TEntity Remove&lt;TEntity&gt;(TEntity entity) where TEntity : class; void Commit(); void Rollback(); IDbContext Context &#123; get; set; &#125;&#125; 接下來進行 Repository 的修改 123456789101112131415161718192021public class StudentRepository: IStudentRepository&#123; private IUnitOfWork _unitOfWork; public StudentRepository(IUnitOfWork unitOfWork) &#123; _unitOfWork = unitOfWork; &#125; public Student Get(int id) &#123; return _unitOfWork.Set&lt;Student&gt;().Where(x =&gt; x.Id == id).FirstOrDefault(); &#125; public void Add(Student student) &#123; return _unitOfWork.Set&lt;Student&gt;().Add(student); &#125; //....&#125; 再來是 Service 的修改 123456789101112131415161718192021222324252627public class StudentService : IStudentService&#123; private IUnitOfWork _unitOfWork; private IStudentRepository _studentRepository; public StudentService(IUnitOfWork unitOfWork, IStudentRepository studentRepository) &#123; _unitOfWork = unitOfWork; _studentRepository = studentRepository; &#125; public Student Get(int id) &#123; //return _unitOfWork.Set&lt;Student&gt;().Where(x =&gt; x.Id == id).FirstOrDefault(); return _studentRepository.Get(id); &#125; public bool Add(Student student) &#123; //_unitOfWork.Add&lt;Student&gt;(student); _studentRepository.Add(student); return _unitOfWork.Commit(); &#125; //....&#125; 問題來了？在StudentService 中，StudentRepository 似乎變得有些多餘，因為它所做的，UnitOfWork 也都可以做，隨著項目的複雜，這樣就會造成很多的問題，比如： IUnitOfWork 的職責不明確。 Repository 的職責不明確。 Service 很困惑，因為它不知道該使用誰。 Service 的代碼越來越亂。 ###]]></content>
@@ -56,7 +69,7 @@
   <entry>
     <title><![CDATA[隨手 Design Pattern (1) - 序篇]]></title>
     <url>%2F2019%2F%E9%9A%A8%E6%89%8B-Design-Pattern-1-%E5%BA%8F%E7%AF%87%2F</url>
-    <content type="text"><![CDATA[這個系列簡單紀錄我程式開發中用到的 Design Pattern，並附上範例說明應用情境，盡量用簡單的說明讓大家明瞭 Desin Pattern 預計會有以下項目： 軟體分層設計模式 (Software Layered Architecture Pattern) 簡單工廠模式 Respository 模式]]></content>
+    <content type="text"><![CDATA[這個系列簡單紀錄我程式開發中用到的 Design Pattern，並附上範例說明應用情境，盡量用簡單的說明讓大家明瞭 Desin Pattern 預計會有以下項目： 軟體分層設計模式 (Software Layered Architecture Pattern) 簡單工廠模式 (Simple Factory Pattern) Respository 模式 (Respository Pattern) 雙重檢查鎖定模式 (Double-Checked Locking Pattern)]]></content>
       <categories>
         <category>程式開發</category>
       </categories>
@@ -75,6 +88,7 @@
         <tag>ASP.NET Core</tag>
         <tag>C#</tag>
         <tag>AutoMapper</tag>
+        <tag>Nuget Package</tag>
       </tags>
   </entry>
   <entry>
@@ -226,6 +240,7 @@
         <tag>ASP.NET Core</tag>
         <tag>C#</tag>
         <tag>AutoMapper</tag>
+        <tag>Nuget Package</tag>
       </tags>
   </entry>
   <entry>

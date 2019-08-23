@@ -109,18 +109,18 @@
 
 
 
-  <meta name="description" content="Git 基本只對檔案作版控，資料夾中若沒有檔案是無法 commit 的，若想要 commit 空資料夾才可採取下面兩種做法。">
-<meta name="keywords" content="Git">
+  <meta name="description" content="雙重檢查鎖定 (Double-Checked Locking Pattern) 是另外一個常用的設計模式，用來減少並發系統中競爭和同步的開銷。雙重檢查鎖定模式首先驗證鎖定條件(第一次檢查)，只有通過鎖定條件驗證才真正的進行加鎖邏輯並再次驗證條件(第二次檢查)。常用來避免快取在同一時間被重複建立。">
+<meta name="keywords" content="C#,Design Pattern,雙重檢查鎖定模式">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Git Commit 空資料夾">
-<meta property="og:url" content="https://raychiutw.github.io/2018/在-Git-Commit-空資料夾/index.html">
+<meta property="og:title" content="隨手 Design Pattern (5) - 雙重檢查鎖定模式 (Double-Checked Locking Pattern)">
+<meta property="og:url" content="https://raychiutw.github.io/2019/隨手-Design-Pattern-5-雙重檢查鎖定模式-Double-Checked-Locking-Pattern/index.html">
 <meta property="og:site_name" content="Ray&#39;s Notes">
-<meta property="og:description" content="Git 基本只對檔案作版控，資料夾中若沒有檔案是無法 commit 的，若想要 commit 空資料夾才可採取下面兩種做法。">
+<meta property="og:description" content="雙重檢查鎖定 (Double-Checked Locking Pattern) 是另外一個常用的設計模式，用來減少並發系統中競爭和同步的開銷。雙重檢查鎖定模式首先驗證鎖定條件(第一次檢查)，只有通過鎖定條件驗證才真正的進行加鎖邏輯並再次驗證條件(第二次檢查)。常用來避免快取在同一時間被重複建立。">
 <meta property="og:locale" content="zh-TW">
-<meta property="og:updated_time" content="2019-03-19T08:26:53.004Z">
+<meta property="og:updated_time" content="2019-08-23T03:57:37.536Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Git Commit 空資料夾">
-<meta name="twitter:description" content="Git 基本只對檔案作版控，資料夾中若沒有檔案是無法 commit 的，若想要 commit 空資料夾才可採取下面兩種做法。">
+<meta name="twitter:title" content="隨手 Design Pattern (5) - 雙重檢查鎖定模式 (Double-Checked Locking Pattern)">
+<meta name="twitter:description" content="雙重檢查鎖定 (Double-Checked Locking Pattern) 是另外一個常用的設計模式，用來減少並發系統中競爭和同步的開銷。雙重檢查鎖定模式首先驗證鎖定條件(第一次檢查)，只有通過鎖定條件驗證才真正的進行加鎖邏輯並再次驗證條件(第二次檢查)。常用來避免快取在同一時間被重複建立。">
 
 
 
@@ -129,7 +129,7 @@
 
 
 
-  <link rel="canonical" href="https://raychiutw.github.io/2018/在-Git-Commit-空資料夾/">
+  <link rel="canonical" href="https://raychiutw.github.io/2019/隨手-Design-Pattern-5-雙重檢查鎖定模式-Double-Checked-Locking-Pattern/">
 
 
 
@@ -139,7 +139,7 @@
   };
 </script>
 
-  <title>Git Commit 空資料夾 | Ray's Notes</title>
+  <title>隨手 Design Pattern (5) - 雙重檢查鎖定模式 (Double-Checked Locking Pattern) | Ray's Notes</title>
   
 
 
@@ -408,7 +408,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://raychiutw.github.io/2018/在-Git-Commit-空資料夾/">
+    <link itemprop="mainEntityOfPage" href="https://raychiutw.github.io/2019/隨手-Design-Pattern-5-雙重檢查鎖定模式-Double-Checked-Locking-Pattern/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Ray Chiu">
@@ -425,7 +425,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Git Commit 空資料夾
+          <h1 class="post-title" itemprop="name headline">隨手 Design Pattern (5) - 雙重檢查鎖定模式 (Double-Checked Locking Pattern)
 
               
             
@@ -451,24 +451,12 @@
                 
               
 
-              <time title="創建時間：2018-05-20 22:52:15" itemprop="dateCreated datePublished" datetime="2018-05-20T22:52:15+08:00">2018-05-20</time>
+              <time title="創建時間：2019-08-23 09:43:44 / 修改時間：11:57:37" itemprop="dateCreated datePublished" datetime="2019-08-23T09:43:44+08:00">2019-08-23</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新於</span>
-                
-                <time title="修改時間：2019-03-19 16:26:53" itemprop="dateModified" datetime="2019-03-19T16:26:53+08:00">2019-03-19</time>
               
             
           </span>
@@ -485,7 +473,7 @@
                 <span class="post-meta-item-text">分類於</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/版本控制/" itemprop="url" rel="index"><span itemprop="name">版本控制</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/程式開發/" itemprop="url" rel="index"><span itemprop="name">程式開發</span></a></span>
 
                 
                 
@@ -521,7 +509,7 @@
                 
                   <span class="post-meta-item-text">文章字數：</span>
                 
-                <span title="文章字數">287</span>
+                <span title="文章字數">3.5k</span>
               
 
               
@@ -535,7 +523,7 @@
                 
                   <span class="post-meta-item-text">所需閱讀時間 &asymp;</span>
                 
-                <span title="所需閱讀時間">1 分鐘</span>
+                <span title="所需閱讀時間">3 分鐘</span>
               
             </div>
           
@@ -555,20 +543,24 @@
       
 
       
-        <p>Git 基本只對檔案作版控，資料夾中若沒有檔案是無法 commit 的，若想要 commit 空資料夾才可採取下面兩種做法。</p>
+        <blockquote>
+<p>雙重檢查鎖定 (Double-Checked Locking Pattern) 是另外一個常用的設計模式，用來減少並發系統中競爭和同步的開銷。雙重檢查鎖定模式首先驗證鎖定條件(第一次檢查)，只有通過鎖定條件驗證才真正的進行加鎖邏輯並再次驗證條件(第二次檢查)。常用來避免快取在同一時間被重複建立。</p>
+</blockquote>
 <a id="more"></a>
+<h3 id="定義"><a href="#定義" class="headerlink" title="定義"></a>定義</h3><p>我們先來看看來自 Wiki 的定義</p>
 <blockquote>
-<p>新增 .gitkeep / .keep</p>
+<p>雙重檢查鎖定模式（也被稱為”雙重檢查加鎖優化”，”鎖暗示”（Lock hint）[1]) 是一種軟體設計模式用來減少並發系統中競爭和同步的開銷。雙重檢查鎖定模式首先驗證鎖定條件(第一次檢查)，只有通過鎖定條件驗證才真正的進行加鎖邏輯並再次驗證條件(第二次檢查)。<br>該模式在某些語言在某些硬體平台的實現可能是不安全的。有的時候，這一模式被看做是反模式。<br>它通常用於減少加鎖開銷，尤其是為多執行緒環境中的單例模式實現「惰性初始化」。惰性初始化的意思是直到第一次訪問時才初始化它的值。</p>
 </blockquote>
-<p>在目的空資料夾開啟 Git Bash，執行以下命令，產生空檔案</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch .gitkeep</span><br></pre></td></tr></table></figure>
-<p>檔案名稱其實隨意都可，但 .gitkeep / .keep 較常見。</p>
-<blockquote>
-<p>新增 .gitingore</p>
-</blockquote>
-<p>在目的空資夾下新增一個 .gitingore 檔案並編輯如下</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 忽略所有文件</span></span><br><span class="line">*</span><br><span class="line"><span class="comment"># 除了這個文件</span></span><br><span class="line">!.gitignore</span><br></pre></td></tr></table></figure>
-<p>我個人是比較喜歡第一種作法，讓 .gitingore 還是總控在根目錄下。</p>
+<h3 id="C-實際範例"><a href="#C-實際範例" class="headerlink" title="C# 實際範例"></a>C# 實際範例</h3><p>在一般的情境下，我最常使用在快取建立的情境，在快取要建立前，使用 Double-Checked Locking 防止快取的重複建立。</p>
+<h4 id="使用快取範例"><a href="#使用快取範例" class="headerlink" title="使用快取範例"></a>使用快取範例</h4><p>先來說明 ASP.NET Core 下如何使用快取，範例是使用 WebApi 專案範本。</p>
+<p>Startup 註冊 MemoryCache</p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> Microsoft.AspNetCore.Builder;</span><br><span class="line"><span class="keyword">using</span> Microsoft.AspNetCore.Mvc;</span><br><span class="line"><span class="keyword">using</span> Microsoft.Extensions.DependencyInjection;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Startup</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">ConfigureServices</span>(<span class="params">IServiceCollection services</span>)</span></span><br><span class="line"><span class="function"></span>    &#123;</span><br><span class="line">        <span class="comment">// Register MemoryCache</span></span><br><span class="line">        services.AddMemoryCache();</span><br><span class="line"></span><br><span class="line">        services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">Configure</span>(<span class="params">IApplicationBuilder app</span>)</span></span><br><span class="line"><span class="function"></span>    &#123;</span><br><span class="line">        app.UseMvcWithDefaultRoute();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>再來 Contorller 以下設定</p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> Microsoft.AspNetCore.Mvc;</span><br><span class="line"><span class="keyword">using</span> Microsoft.Extensions.Caching.Memory;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">DoubleCheckedLocking.WebApplication.Controllers</span></span><br><span class="line">&#123;</span><br><span class="line">    [<span class="meta">Route(<span class="meta-string">"api/[controller]"</span>)</span>]</span><br><span class="line">    [<span class="meta">ApiController</span>]</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">class</span> <span class="title">ValuesController</span> : <span class="title">ControllerBase</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">private</span> IMemoryCache _cache;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">ValuesController</span>(<span class="params">IMemoryCache memoryCache</span>)</span></span><br><span class="line"><span class="function"></span>        &#123;</span><br><span class="line">            <span class="keyword">this</span>._cache = memoryCache;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 取得快取值</span></span><br><span class="line">            <span class="keyword">var</span> cacheEntry = <span class="keyword">this</span>._cache.Get&lt;DateTime&gt;(<span class="string">"key"</span>);</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 快取檢查</span></span><br><span class="line">            <span class="keyword">if</span> (<span class="keyword">this</span>._cache.Get&lt;DateTime&gt;(<span class="string">"key"</span>) == <span class="literal">null</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="comment">// 無快取, 所以重新取值</span></span><br><span class="line">                cacheEntry = DateTime.Now;</span><br><span class="line"></span><br><span class="line">                <span class="comment">// 設定快取過期時間</span></span><br><span class="line">                <span class="keyword">var</span> cacheEntryOptions = <span class="keyword">new</span> MemoryCacheEntryOptions()</span><br><span class="line">                    .SetAbsoluteExpiration(TimeSpan.FromSeconds(<span class="number">3</span>));</span><br><span class="line"></span><br><span class="line">                <span class="comment">// 加入快取</span></span><br><span class="line">                _cache.Set(<span class="string">"key"</span>, cacheEntry, cacheEntryOptions);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">return</span> cacheEntry.ToString();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="會遇到的問題"><a href="#會遇到的問題" class="headerlink" title="會遇到的問題"></a>會遇到的問題</h4><p>當大量連線請求執行這段程式碼的時候，是有可能在極短暫時間下，快取不存在的鎖定判斷會被通過多次請求，而導致快取被重複建立，而當快取建立的成本很高的時候(比如說連接資料庫)，更可能造成後端的負載壓力，在筆者工作環境中，是個同時上線人數達 2000 人的大系統是，屢屢遇到快取鎖定失效導致資料庫負擔過重的案例，這時候 Double-Checked Locking 便派上用場，讓我們將快取的程式碼繼續導入 Double-Checked Locking。</p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">    <span class="comment">// GET api/values</span></span><br><span class="line">    [<span class="meta">HttpGet</span>]</span><br><span class="line">    <span class="function"><span class="keyword">public</span> ActionResult&lt;<span class="keyword">string</span>&gt; <span class="title">Get</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>    &#123;</span><br><span class="line">        <span class="comment">// 取得快取值</span></span><br><span class="line">        <span class="keyword">var</span> cacheEntry = <span class="keyword">this</span>._cache.Get&lt;DateTime&gt;(<span class="string">"key"</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 第一次檢查</span></span><br><span class="line">        <span class="keyword">if</span> (cacheEntry == <span class="literal">null</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">// 鎖定</span></span><br><span class="line">            <span class="keyword">lock</span> (padlock)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="comment">// 第二次檢查</span></span><br><span class="line">                <span class="keyword">if</span> (<span class="keyword">this</span>._cache.Get&lt;DateTime&gt;(<span class="string">"key"</span>) == <span class="literal">null</span>)</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="comment">// 無快取, 所以重新取值</span></span><br><span class="line">                    cacheEntry = DateTime.Now;</span><br><span class="line"></span><br><span class="line">                    <span class="comment">// 設定快取過期時間</span></span><br><span class="line">                    <span class="keyword">var</span> cacheEntryOptions = <span class="keyword">new</span> MemoryCacheEntryOptions()</span><br><span class="line">                        .SetAbsoluteExpiration(TimeSpan.FromSeconds(<span class="number">3</span>));</span><br><span class="line"></span><br><span class="line">                    <span class="comment">// 加入快取</span></span><br><span class="line">                    _cache.Set(<span class="string">"key"</span>, cacheEntry, cacheEntryOptions);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> cacheEntry.ToString();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>這裡要注意的是，第二次的檢查務必重新取得快取來判斷，若繼續沿用第一次檢查的變數，將會導致無效檢查。</p>
+<h3 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h3><p>Double-Checked Locking 在快取情境下使用非常適合，另外一個適用情境是單例模式 (Singleton Pattern)，之後講到 Singleton 再說明囉。</p>
 
       
     </div>
@@ -582,7 +574,35 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="\2018\Hexo教學-4-部署到-GitHub-Pages\" rel="bookmark">Hexo（4）－部署到 GitHub Pages</a></div>
+      <div class="popular-posts-title"><a href="\2019\隨手-Design-Pattern-2-軟體分層設計模式-Software-Layered-Architecture-Pattern\" rel="bookmark">隨手 Design Pattern (2) - 軟體分層設計模式 (Software Layered Architecture Pattern)</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="\2019\隨手-Design-Pattern-3-簡單工廠模式-Simple-Factory-Pattern\" rel="bookmark">隨手 Design Pattern (3) - 簡單工廠模式 (Simple Factory Pattern)</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="\2019\隨手-Design-Pattern-4-Repository-模式-Repository-Pattern\" rel="bookmark">隨手 Design Pattern (4) - Repository 模式 (Repository Pattern)</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="\2018\ASP-NET-Core-無法使用-DeploymentItem-的替代方案\" rel="bookmark">ASP.NET Core 無法使用 DeploymentItem 的替代方案</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="\2018\在-ASP-NET-Core-中使用-AutoMapper\" rel="bookmark">在 ASP.NET Core 中使用 AutoMapper</a></div>
       
     </li>
   
@@ -619,7 +639,7 @@
   <li class="post-copyright-link">
     <strong>文章連結：</strong>
     
-    <a href="https://raychiutw.github.io/2018/在-Git-Commit-空資料夾/" title="Git Commit 空資料夾">https://raychiutw.github.io/2018/在-Git-Commit-空資料夾/</a>
+    <a href="https://raychiutw.github.io/2019/隨手-Design-Pattern-5-雙重檢查鎖定模式-Double-Checked-Locking-Pattern/" title="隨手 Design Pattern (5) - 雙重檢查鎖定模式 (Double-Checked Locking Pattern)">https://raychiutw.github.io/2019/隨手-Design-Pattern-5-雙重檢查鎖定模式-Double-Checked-Locking-Pattern/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版權聲明： </strong>本網誌所有文章除特別聲明外，均採用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 許可協議。轉載請註明出處！</li>
@@ -632,7 +652,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Git/" rel="tag"># Git</a>
+            <a href="/tags/C/" rel="tag"># C#</a>
+          
+            <a href="/tags/Design-Pattern/" rel="tag"># Design Pattern</a>
+          
+            <a href="/tags/雙重檢查鎖定模式/" rel="tag"># 雙重檢查鎖定模式</a>
           
         </div>
       
@@ -645,8 +669,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/Hexo教學-5-Material-主題設定/" rel="next" title="Hexo教學（5）－Material 主題設定">
-                <i class="fa fa-chevron-left"></i> Hexo教學（5）－Material 主題設定
+              <a href="/2019/隨手-Design-Pattern-4-Repository-模式-Repository-Pattern/" rel="next" title="隨手 Design Pattern (4) - Repository 模式 (Repository Pattern)">
+                <i class="fa fa-chevron-left"></i> 隨手 Design Pattern (4) - Repository 模式 (Repository Pattern)
               </a>
             
           </div>
@@ -654,10 +678,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/用 LINQ 處理分群情境/" rel="prev" title="用 LINQ 處理分群情境">
-                用 LINQ 處理分群情境 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -705,8 +725,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目錄
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            本站概要
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -868,6 +897,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#定義"><span class="nav-number">1.</span> <span class="nav-text">定義</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#C-實際範例"><span class="nav-number">2.</span> <span class="nav-text">C# 實際範例</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#使用快取範例"><span class="nav-number">2.1.</span> <span class="nav-text">使用快取範例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#會遇到的問題"><span class="nav-number">2.2.</span> <span class="nav-text">會遇到的問題</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#結語"><span class="nav-number">3.</span> <span class="nav-text">結語</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       

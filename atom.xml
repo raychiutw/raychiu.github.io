@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://raychiutw.github.io/"/>
-  <updated>2019-08-22T09:40:59.296Z</updated>
+  <updated>2019-08-23T03:57:37.536Z</updated>
   <id>https://raychiutw.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>隨手 Design Pattern (5) - 雙重檢查鎖定模式 (Double-Checked Locking Pattern)</title>
+    <link href="https://raychiutw.github.io/2019/%E9%9A%A8%E6%89%8B-Design-Pattern-5-%E9%9B%99%E9%87%8D%E6%AA%A2%E6%9F%A5%E9%8E%96%E5%AE%9A%E6%A8%A1%E5%BC%8F-Double-Checked-Locking-Pattern/"/>
+    <id>https://raychiutw.github.io/2019/隨手-Design-Pattern-5-雙重檢查鎖定模式-Double-Checked-Locking-Pattern/</id>
+    <published>2019-08-23T01:43:44.000Z</published>
+    <updated>2019-08-23T03:57:37.536Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;雙重檢查鎖定 (Double-Checked Locking Pattern) 是另外一個常用的設計模式，用來減少並發系統中競爭和同步的開銷。雙重檢查鎖定模式首先驗證鎖定條件(第一次檢查)，只有通過鎖定條件驗證才真正的進行加鎖邏輯並再次驗證條件(第二次檢查)。常用來避免快取在同一時間被重複建立。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="程式開發" scheme="https://raychiutw.github.io/categories/%E7%A8%8B%E5%BC%8F%E9%96%8B%E7%99%BC/"/>
+    
+    
+      <category term="C#" scheme="https://raychiutw.github.io/tags/C/"/>
+    
+      <category term="Design Pattern" scheme="https://raychiutw.github.io/tags/Design-Pattern/"/>
+    
+      <category term="雙重檢查鎖定模式" scheme="https://raychiutw.github.io/tags/%E9%9B%99%E9%87%8D%E6%AA%A2%E6%9F%A5%E9%8E%96%E5%AE%9A%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>隨手 Design Pattern (4) - Repository 模式 (Repository Pattern)</title>
@@ -127,7 +153,7 @@
     <link href="https://raychiutw.github.io/2019/%E9%9A%A8%E6%89%8B-Design-Pattern-1-%E5%BA%8F%E7%AF%87/"/>
     <id>https://raychiutw.github.io/2019/隨手-Design-Pattern-1-序篇/</id>
     <published>2019-08-08T02:47:34.000Z</published>
-    <updated>2019-08-08T02:57:50.012Z</updated>
+    <updated>2019-08-23T02:25:53.592Z</updated>
     
     <summary type="html">
     
@@ -149,7 +175,7 @@
     <link href="https://raychiutw.github.io/2019/AutoMapper-Extensions-Microsoft-DependencyInjection-AddAutoMapper-%E5%B7%B2%E9%81%8E%E6%99%82/"/>
     <id>https://raychiutw.github.io/2019/AutoMapper-Extensions-Microsoft-DependencyInjection-AddAutoMapper-已過時/</id>
     <published>2019-08-07T03:02:53.000Z</published>
-    <updated>2019-08-21T04:52:10.976Z</updated>
+    <updated>2019-08-23T03:58:33.820Z</updated>
     
     <summary type="html">
     
@@ -167,6 +193,8 @@
       <category term="C#" scheme="https://raychiutw.github.io/tags/C/"/>
     
       <category term="AutoMapper" scheme="https://raychiutw.github.io/tags/AutoMapper/"/>
+    
+      <category term="Nuget Package" scheme="https://raychiutw.github.io/tags/Nuget-Package/"/>
     
   </entry>
   
@@ -454,7 +482,7 @@
     <link href="https://raychiutw.github.io/2018/%E5%9C%A8-ASP-NET-Core-%E4%B8%AD%E4%BD%BF%E7%94%A8-AutoMapper/"/>
     <id>https://raychiutw.github.io/2018/在-ASP-NET-Core-中使用-AutoMapper/</id>
     <published>2018-05-17T05:39:35.000Z</published>
-    <updated>2019-03-20T05:56:53.730Z</updated>
+    <updated>2019-08-23T03:58:54.619Z</updated>
     
     <summary type="html">
     
@@ -472,6 +500,8 @@
       <category term="C#" scheme="https://raychiutw.github.io/tags/C/"/>
     
       <category term="AutoMapper" scheme="https://raychiutw.github.io/tags/AutoMapper/"/>
+    
+      <category term="Nuget Package" scheme="https://raychiutw.github.io/tags/Nuget-Package/"/>
     
   </entry>
   
@@ -496,34 +526,6 @@
       <category term="Hexo" scheme="https://raychiutw.github.io/tags/Hexo/"/>
     
       <category term="Static Site Generator" scheme="https://raychiutw.github.io/tags/Static-Site-Generator/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ASP.NET Core 無法使用 DeploymentItem 的替代方案</title>
-    <link href="https://raychiutw.github.io/2018/ASP-NET-Core-%E7%84%A1%E6%B3%95%E4%BD%BF%E7%94%A8-DeploymentItem-%E7%9A%84%E6%9B%BF%E4%BB%A3%E6%96%B9%E6%A1%88/"/>
-    <id>https://raychiutw.github.io/2018/ASP-NET-Core-無法使用-DeploymentItem-的替代方案/</id>
-    <published>2018-05-10T02:32:09.000Z</published>
-    <updated>2019-03-19T08:26:16.964Z</updated>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;在 MSTest 中，若要在執行測試時能調用實體檔案，通常會用 DeploymentItem Attribute 來指定要同時部署的檔案，但屬性在 ASP.NET Core 中不再支援，本篇說明其他替代方案。&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="程式開發" scheme="https://raychiutw.github.io/categories/%E7%A8%8B%E5%BC%8F%E9%96%8B%E7%99%BC/"/>
-    
-    
-      <category term="ASP.NET Core" scheme="https://raychiutw.github.io/tags/ASP-NET-Core/"/>
-    
-      <category term="MSTest" scheme="https://raychiutw.github.io/tags/MSTest/"/>
-    
-      <category term="UnitTest" scheme="https://raychiutw.github.io/tags/UnitTest/"/>
-    
-      <category term="C#" scheme="https://raychiutw.github.io/tags/C/"/>
     
   </entry>
   
