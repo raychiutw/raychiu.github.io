@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://raychiutw.github.io/"/>
-  <updated>2019-08-23T03:57:37.536Z</updated>
+  <updated>2019-08-28T01:32:47.053Z</updated>
   <id>https://raychiutw.github.io/</id>
   
   <author>
@@ -17,11 +17,37 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>隨手 Design Pattern (6) - 單例模式 (Singleton Pattern)</title>
+    <link href="https://raychiutw.github.io/2019/%E9%9A%A8%E6%89%8B-Design-Pattern-6-%E5%96%AE%E4%BE%8B%E6%A8%A1%E5%BC%8F-Singleton-Pattern/"/>
+    <id>https://raychiutw.github.io/2019/隨手-Design-Pattern-6-單例模式-Singleton-Pattern/</id>
+    <published>2019-08-23T04:05:26.000Z</published>
+    <updated>2019-08-28T01:32:47.053Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;單例模式是軟件工程中最著名的模式之一。從本質上講，單例是一個只允許創建自身的單個實例的類，通常可以簡單地訪問該實例。最常見的是，單例在創建實例時不允許指定任何參數 - 否則對實例的第二個請求但具有不同的參數可能會有問題！（如果對於具有相同參數的所有請求，應訪問相同的實例，則工廠模式更合適。）本文僅處理不需要參數的情況。通常，單例的要求是它們是懶惰地創建的 - 即在第一次需要之前不創建實例。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="程式開發" scheme="https://raychiutw.github.io/categories/%E7%A8%8B%E5%BC%8F%E9%96%8B%E7%99%BC/"/>
+    
+    
+      <category term="Design Pattern" scheme="https://raychiutw.github.io/tags/Design-Pattern/"/>
+    
+      <category term="C#" scheme="https://raychiutw.github.io/tags/C/"/>
+    
+      <category term="Singleton Pattern" scheme="https://raychiutw.github.io/tags/Singleton-Pattern/"/>
+    
+  </entry>
+  
+  <entry>
     <title>隨手 Design Pattern (5) - 雙重檢查鎖定模式 (Double-Checked Locking Pattern)</title>
     <link href="https://raychiutw.github.io/2019/%E9%9A%A8%E6%89%8B-Design-Pattern-5-%E9%9B%99%E9%87%8D%E6%AA%A2%E6%9F%A5%E9%8E%96%E5%AE%9A%E6%A8%A1%E5%BC%8F-Double-Checked-Locking-Pattern/"/>
     <id>https://raychiutw.github.io/2019/隨手-Design-Pattern-5-雙重檢查鎖定模式-Double-Checked-Locking-Pattern/</id>
     <published>2019-08-23T01:43:44.000Z</published>
-    <updated>2019-08-23T03:57:37.536Z</updated>
+    <updated>2019-08-23T04:07:36.667Z</updated>
     
     <summary type="html">
     
@@ -34,11 +60,11 @@
       <category term="程式開發" scheme="https://raychiutw.github.io/categories/%E7%A8%8B%E5%BC%8F%E9%96%8B%E7%99%BC/"/>
     
     
-      <category term="C#" scheme="https://raychiutw.github.io/tags/C/"/>
-    
       <category term="Design Pattern" scheme="https://raychiutw.github.io/tags/Design-Pattern/"/>
     
-      <category term="雙重檢查鎖定模式" scheme="https://raychiutw.github.io/tags/%E9%9B%99%E9%87%8D%E6%AA%A2%E6%9F%A5%E9%8E%96%E5%AE%9A%E6%A8%A1%E5%BC%8F/"/>
+      <category term="C#" scheme="https://raychiutw.github.io/tags/C/"/>
+    
+      <category term="Double-Checked Locking Pattern" scheme="https://raychiutw.github.io/tags/Double-Checked-Locking-Pattern/"/>
     
   </entry>
   
@@ -47,7 +73,7 @@
     <link href="https://raychiutw.github.io/2019/%E9%9A%A8%E6%89%8B-Design-Pattern-4-Repository-%E6%A8%A1%E5%BC%8F-Repository-Pattern/"/>
     <id>https://raychiutw.github.io/2019/隨手-Design-Pattern-4-Repository-模式-Repository-Pattern/</id>
     <published>2019-08-22T08:02:36.000Z</published>
-    <updated>2019-08-22T09:40:59.296Z</updated>
+    <updated>2019-08-23T04:07:50.124Z</updated>
     
     <summary type="html">
     
@@ -60,11 +86,11 @@
       <category term="程式開發" scheme="https://raychiutw.github.io/categories/%E7%A8%8B%E5%BC%8F%E9%96%8B%E7%99%BC/"/>
     
     
-      <category term="C#" scheme="https://raychiutw.github.io/tags/C/"/>
-    
       <category term="Design Pattern" scheme="https://raychiutw.github.io/tags/Design-Pattern/"/>
     
-      <category term="Repository 模式" scheme="https://raychiutw.github.io/tags/Repository-%E6%A8%A1%E5%BC%8F/"/>
+      <category term="C#" scheme="https://raychiutw.github.io/tags/C/"/>
+    
+      <category term="Repository Pattern" scheme="https://raychiutw.github.io/tags/Repository-Pattern/"/>
     
   </entry>
   
@@ -101,7 +127,7 @@
     <link href="https://raychiutw.github.io/2019/%E9%9A%A8%E6%89%8B-Design-Pattern-3-%E7%B0%A1%E5%96%AE%E5%B7%A5%E5%BB%A0%E6%A8%A1%E5%BC%8F-Simple-Factory-Pattern/"/>
     <id>https://raychiutw.github.io/2019/隨手-Design-Pattern-3-簡單工廠模式-Simple-Factory-Pattern/</id>
     <published>2019-08-21T01:38:51.000Z</published>
-    <updated>2019-08-21T07:28:16.116Z</updated>
+    <updated>2019-08-23T04:08:07.495Z</updated>
     
     <summary type="html">
     
@@ -114,11 +140,11 @@
       <category term="程式開發" scheme="https://raychiutw.github.io/categories/%E7%A8%8B%E5%BC%8F%E9%96%8B%E7%99%BC/"/>
     
     
-      <category term="C#" scheme="https://raychiutw.github.io/tags/C/"/>
-    
       <category term="Design Pattern" scheme="https://raychiutw.github.io/tags/Design-Pattern/"/>
     
-      <category term="簡單工廠模式" scheme="https://raychiutw.github.io/tags/%E7%B0%A1%E5%96%AE%E5%B7%A5%E5%BB%A0%E6%A8%A1%E5%BC%8F/"/>
+      <category term="C#" scheme="https://raychiutw.github.io/tags/C/"/>
+    
+      <category term="Simple Factory Pattern" scheme="https://raychiutw.github.io/tags/Simple-Factory-Pattern/"/>
     
   </entry>
   
@@ -127,7 +153,7 @@
     <link href="https://raychiutw.github.io/2019/%E9%9A%A8%E6%89%8B-Design-Pattern-2-%E8%BB%9F%E9%AB%94%E5%88%86%E5%B1%A4%E8%A8%AD%E8%A8%88%E6%A8%A1%E5%BC%8F-Software-Layered-Architecture-Pattern/"/>
     <id>https://raychiutw.github.io/2019/隨手-Design-Pattern-2-軟體分層設計模式-Software-Layered-Architecture-Pattern/</id>
     <published>2019-08-08T02:55:23.000Z</published>
-    <updated>2019-08-21T04:52:44.456Z</updated>
+    <updated>2019-08-23T04:09:02.072Z</updated>
     
     <summary type="html">
     
@@ -140,11 +166,11 @@
       <category term="程式開發" scheme="https://raychiutw.github.io/categories/%E7%A8%8B%E5%BC%8F%E9%96%8B%E7%99%BC/"/>
     
     
-      <category term="C#" scheme="https://raychiutw.github.io/tags/C/"/>
-    
       <category term="Design Pattern" scheme="https://raychiutw.github.io/tags/Design-Pattern/"/>
     
-      <category term="軟體分層設計模式" scheme="https://raychiutw.github.io/tags/%E8%BB%9F%E9%AB%94%E5%88%86%E5%B1%A4%E8%A8%AD%E8%A8%88%E6%A8%A1%E5%BC%8F/"/>
+      <category term="C#" scheme="https://raychiutw.github.io/tags/C/"/>
+    
+      <category term="Software Layered Architecture Pattern" scheme="https://raychiutw.github.io/tags/Software-Layered-Architecture-Pattern/"/>
     
   </entry>
   
@@ -153,7 +179,7 @@
     <link href="https://raychiutw.github.io/2019/%E9%9A%A8%E6%89%8B-Design-Pattern-1-%E5%BA%8F%E7%AF%87/"/>
     <id>https://raychiutw.github.io/2019/隨手-Design-Pattern-1-序篇/</id>
     <published>2019-08-08T02:47:34.000Z</published>
-    <updated>2019-08-23T02:25:53.592Z</updated>
+    <updated>2019-08-23T04:05:58.127Z</updated>
     
     <summary type="html">
     
@@ -190,9 +216,9 @@
     
       <category term="ASP.NET Core" scheme="https://raychiutw.github.io/tags/ASP-NET-Core/"/>
     
-      <category term="C#" scheme="https://raychiutw.github.io/tags/C/"/>
-    
       <category term="AutoMapper" scheme="https://raychiutw.github.io/tags/AutoMapper/"/>
+    
+      <category term="C#" scheme="https://raychiutw.github.io/tags/C/"/>
     
       <category term="Nuget Package" scheme="https://raychiutw.github.io/tags/Nuget-Package/"/>
     
@@ -345,9 +371,9 @@
       <category term="應用程式" scheme="https://raychiutw.github.io/categories/%E6%87%89%E7%94%A8%E7%A8%8B%E5%BC%8F/"/>
     
     
-      <category term="Hexo" scheme="https://raychiutw.github.io/tags/Hexo/"/>
-    
       <category term="Static Site Generator" scheme="https://raychiutw.github.io/tags/Static-Site-Generator/"/>
+    
+      <category term="Hexo" scheme="https://raychiutw.github.io/tags/Hexo/"/>
     
       <category term="Hugo" scheme="https://raychiutw.github.io/tags/Hugo/"/>
     
@@ -441,9 +467,9 @@
       <category term="應用程式" scheme="https://raychiutw.github.io/categories/%E6%87%89%E7%94%A8%E7%A8%8B%E5%BC%8F/"/>
     
     
-      <category term="Hexo" scheme="https://raychiutw.github.io/tags/Hexo/"/>
-    
       <category term="Static Site Generator" scheme="https://raychiutw.github.io/tags/Static-Site-Generator/"/>
+    
+      <category term="Hexo" scheme="https://raychiutw.github.io/tags/Hexo/"/>
     
       <category term="Hexo Themes" scheme="https://raychiutw.github.io/tags/Hexo-Themes/"/>
     
@@ -467,9 +493,9 @@
       <category term="應用程式" scheme="https://raychiutw.github.io/categories/%E6%87%89%E7%94%A8%E7%A8%8B%E5%BC%8F/"/>
     
     
-      <category term="Hexo" scheme="https://raychiutw.github.io/tags/Hexo/"/>
-    
       <category term="Static Site Generator" scheme="https://raychiutw.github.io/tags/Static-Site-Generator/"/>
+    
+      <category term="Hexo" scheme="https://raychiutw.github.io/tags/Hexo/"/>
     
       <category term="Git" scheme="https://raychiutw.github.io/tags/Git/"/>
     
@@ -497,35 +523,11 @@
     
       <category term="ASP.NET Core" scheme="https://raychiutw.github.io/tags/ASP-NET-Core/"/>
     
-      <category term="C#" scheme="https://raychiutw.github.io/tags/C/"/>
-    
       <category term="AutoMapper" scheme="https://raychiutw.github.io/tags/AutoMapper/"/>
     
+      <category term="C#" scheme="https://raychiutw.github.io/tags/C/"/>
+    
       <category term="Nuget Package" scheme="https://raychiutw.github.io/tags/Nuget-Package/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo（3）－基本設定</title>
-    <link href="https://raychiutw.github.io/2018/Hexo%E6%95%99%E5%AD%B8-3-%E5%9F%BA%E6%9C%AC%E8%A8%AD%E5%AE%9A/"/>
-    <id>https://raychiutw.github.io/2018/Hexo教學-3-基本設定/</id>
-    <published>2018-05-10T08:37:52.000Z</published>
-    <updated>2019-04-15T03:07:53.344Z</updated>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;有了第一個自己的 Blog，也順利的產身第一篇文章，接下來我們來做一些設定，讓 Blog 更量身打造一些。&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-      <category term="應用程式" scheme="https://raychiutw.github.io/categories/%E6%87%89%E7%94%A8%E7%A8%8B%E5%BC%8F/"/>
-    
-    
-      <category term="Hexo" scheme="https://raychiutw.github.io/tags/Hexo/"/>
-    
-      <category term="Static Site Generator" scheme="https://raychiutw.github.io/tags/Static-Site-Generator/"/>
     
   </entry>
   
