@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://raychiutw.github.io/"/>
-  <updated>2019-08-28T01:32:47.053Z</updated>
+  <updated>2019-08-28T02:30:47.034Z</updated>
   <id>https://raychiutw.github.io/</id>
   
   <author>
@@ -21,13 +21,18 @@
     <link href="https://raychiutw.github.io/2019/%E9%9A%A8%E6%89%8B-Design-Pattern-6-%E5%96%AE%E4%BE%8B%E6%A8%A1%E5%BC%8F-Singleton-Pattern/"/>
     <id>https://raychiutw.github.io/2019/隨手-Design-Pattern-6-單例模式-Singleton-Pattern/</id>
     <published>2019-08-23T04:05:26.000Z</published>
-    <updated>2019-08-28T01:32:47.053Z</updated>
+    <updated>2019-08-28T02:30:47.034Z</updated>
     
     <summary type="html">
     
       &lt;blockquote&gt;
 &lt;p&gt;單例模式是軟件工程中最著名的模式之一。從本質上講，單例是一個只允許創建自身的單個實例的類，通常可以簡單地訪問該實例。最常見的是，單例在創建實例時不允許指定任何參數 - 否則對實例的第二個請求但具有不同的參數可能會有問題！（如果對於具有相同參數的所有請求，應訪問相同的實例，則工廠模式更合適。）本文僅處理不需要參數的情況。通常，單例的要求是它們是懶惰地創建的 - 即在第一次需要之前不創建實例。&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;p&gt;總結 Singleton 模式有兩個特點&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;單一實例 (Single Instance)&lt;/li&gt;
+&lt;li&gt;延遲建立實例 (Lazy Instantiation)&lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     
@@ -47,7 +52,7 @@
     <link href="https://raychiutw.github.io/2019/%E9%9A%A8%E6%89%8B-Design-Pattern-5-%E9%9B%99%E9%87%8D%E6%AA%A2%E6%9F%A5%E9%8E%96%E5%AE%9A%E6%A8%A1%E5%BC%8F-Double-Checked-Locking-Pattern/"/>
     <id>https://raychiutw.github.io/2019/隨手-Design-Pattern-5-雙重檢查鎖定模式-Double-Checked-Locking-Pattern/</id>
     <published>2019-08-23T01:43:44.000Z</published>
-    <updated>2019-08-23T04:07:36.667Z</updated>
+    <updated>2019-08-28T02:26:29.067Z</updated>
     
     <summary type="html">
     

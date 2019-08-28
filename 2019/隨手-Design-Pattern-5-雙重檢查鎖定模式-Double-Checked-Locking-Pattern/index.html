@@ -117,7 +117,7 @@
 <meta property="og:site_name" content="Ray&#39;s Notes">
 <meta property="og:description" content="雙重檢查鎖定 (Double-Checked Locking Pattern) 是另外一個常用的設計模式，用來減少並發系統中競爭和同步的開銷。雙重檢查鎖定模式首先驗證鎖定條件(第一次檢查)，只有通過鎖定條件驗證才真正的進行加鎖邏輯並再次驗證條件(第二次檢查)。常用來避免快取在同一時間被重複建立。">
 <meta property="og:locale" content="zh-TW">
-<meta property="og:updated_time" content="2019-08-23T04:07:36.667Z">
+<meta property="og:updated_time" content="2019-08-28T02:26:29.067Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="隨手 Design Pattern (5) - 雙重檢查鎖定模式 (Double-Checked Locking Pattern)">
 <meta name="twitter:description" content="雙重檢查鎖定 (Double-Checked Locking Pattern) 是另外一個常用的設計模式，用來減少並發系統中競爭和同步的開銷。雙重檢查鎖定模式首先驗證鎖定條件(第一次檢查)，只有通過鎖定條件驗證才真正的進行加鎖邏輯並再次驗證條件(第二次檢查)。常用來避免快取在同一時間被重複建立。">
@@ -451,12 +451,24 @@
                 
               
 
-              <time title="創建時間：2019-08-23 09:43:44 / 修改時間：12:07:36" itemprop="dateCreated datePublished" datetime="2019-08-23T09:43:44+08:00">2019-08-23</time>
+              <time title="創建時間：2019-08-23 09:43:44" itemprop="dateCreated datePublished" datetime="2019-08-23T09:43:44+08:00">2019-08-23</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新於</span>
+                
+                <time title="修改時間：2019-08-28 10:26:29" itemprop="dateModified" datetime="2019-08-28T10:26:29+08:00">2019-08-28</time>
               
             
           </span>
@@ -561,6 +573,7 @@
 <figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">    <span class="comment">// GET api/values</span></span><br><span class="line">    [<span class="meta">HttpGet</span>]</span><br><span class="line">    <span class="function"><span class="keyword">public</span> ActionResult&lt;<span class="keyword">string</span>&gt; <span class="title">Get</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>    &#123;</span><br><span class="line">        <span class="comment">// 取得快取值</span></span><br><span class="line">        <span class="keyword">var</span> cacheEntry = <span class="keyword">this</span>._cache.Get&lt;DateTime&gt;(<span class="string">"key"</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 第一次檢查</span></span><br><span class="line">        <span class="keyword">if</span> (cacheEntry == <span class="literal">null</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">// 鎖定</span></span><br><span class="line">            <span class="keyword">lock</span> (padlock)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="comment">// 第二次檢查</span></span><br><span class="line">                <span class="keyword">if</span> (<span class="keyword">this</span>._cache.Get&lt;DateTime&gt;(<span class="string">"key"</span>) == <span class="literal">null</span>)</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="comment">// 無快取, 所以重新取值</span></span><br><span class="line">                    cacheEntry = DateTime.Now;</span><br><span class="line"></span><br><span class="line">                    <span class="comment">// 設定快取過期時間</span></span><br><span class="line">                    <span class="keyword">var</span> cacheEntryOptions = <span class="keyword">new</span> MemoryCacheEntryOptions()</span><br><span class="line">                        .SetAbsoluteExpiration(TimeSpan.FromSeconds(<span class="number">3</span>));</span><br><span class="line"></span><br><span class="line">                    <span class="comment">// 加入快取</span></span><br><span class="line">                    _cache.Set(<span class="string">"key"</span>, cacheEntry, cacheEntryOptions);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> cacheEntry.ToString();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>這裡要注意的是，第二次的檢查務必重新取得快取來判斷，若繼續沿用第一次檢查的變數，將會導致無效檢查。</p>
 <h3 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h3><p>Double-Checked Locking 在快取情境下使用非常適合，另外一個適用情境是單例模式 (Singleton Pattern)，之後講到 Singleton 再說明囉。</p>
+<p><a href="https://github.com/raychiutw/double-checked-locking-pattern" target="_blank" rel="noopener">程式碼範例</a></p>
 
       
     </div>

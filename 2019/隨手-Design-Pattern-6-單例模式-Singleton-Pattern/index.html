@@ -109,18 +109,18 @@
 
 
 
-  <meta name="description" content="單例模式是軟件工程中最著名的模式之一。從本質上講，單例是一個只允許創建自身的單個實例的類，通常可以簡單地訪問該實例。最常見的是，單例在創建實例時不允許指定任何參數 - 否則對實例的第二個請求但具有不同的參數可能會有問題！（如果對於具有相同參數的所有請求，應訪問相同的實例，則工廠模式更合適。）本文僅處理不需要參數的情況。通常，單例的要求是它們是懶惰地創建的 - 即在第一次需要之前不創建實例。">
+  <meta name="description" content="單例模式是軟件工程中最著名的模式之一。從本質上講，單例是一個只允許創建自身的單個實例的類，通常可以簡單地訪問該實例。最常見的是，單例在創建實例時不允許指定任何參數 - 否則對實例的第二個請求但具有不同的參數可能會有問題！（如果對於具有相同參數的所有請求，應訪問相同的實例，則工廠模式更合適。）本文僅處理不需要參數的情況。通常，單例的要求是它們是懶惰地創建的 - 即在第一次需要之前不創建實例。  總">
 <meta name="keywords" content="Design Pattern,C#,Singleton Pattern">
 <meta property="og:type" content="article">
 <meta property="og:title" content="隨手 Design Pattern (6) - 單例模式 (Singleton Pattern)">
 <meta property="og:url" content="https://raychiutw.github.io/2019/隨手-Design-Pattern-6-單例模式-Singleton-Pattern/index.html">
 <meta property="og:site_name" content="Ray&#39;s Notes">
-<meta property="og:description" content="單例模式是軟件工程中最著名的模式之一。從本質上講，單例是一個只允許創建自身的單個實例的類，通常可以簡單地訪問該實例。最常見的是，單例在創建實例時不允許指定任何參數 - 否則對實例的第二個請求但具有不同的參數可能會有問題！（如果對於具有相同參數的所有請求，應訪問相同的實例，則工廠模式更合適。）本文僅處理不需要參數的情況。通常，單例的要求是它們是懶惰地創建的 - 即在第一次需要之前不創建實例。">
+<meta property="og:description" content="單例模式是軟件工程中最著名的模式之一。從本質上講，單例是一個只允許創建自身的單個實例的類，通常可以簡單地訪問該實例。最常見的是，單例在創建實例時不允許指定任何參數 - 否則對實例的第二個請求但具有不同的參數可能會有問題！（如果對於具有相同參數的所有請求，應訪問相同的實例，則工廠模式更合適。）本文僅處理不需要參數的情況。通常，單例的要求是它們是懶惰地創建的 - 即在第一次需要之前不創建實例。  總">
 <meta property="og:locale" content="zh-TW">
-<meta property="og:updated_time" content="2019-08-28T01:32:47.053Z">
+<meta property="og:updated_time" content="2019-08-28T02:30:47.034Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="隨手 Design Pattern (6) - 單例模式 (Singleton Pattern)">
-<meta name="twitter:description" content="單例模式是軟件工程中最著名的模式之一。從本質上講，單例是一個只允許創建自身的單個實例的類，通常可以簡單地訪問該實例。最常見的是，單例在創建實例時不允許指定任何參數 - 否則對實例的第二個請求但具有不同的參數可能會有問題！（如果對於具有相同參數的所有請求，應訪問相同的實例，則工廠模式更合適。）本文僅處理不需要參數的情況。通常，單例的要求是它們是懶惰地創建的 - 即在第一次需要之前不創建實例。">
+<meta name="twitter:description" content="單例模式是軟件工程中最著名的模式之一。從本質上講，單例是一個只允許創建自身的單個實例的類，通常可以簡單地訪問該實例。最常見的是，單例在創建實例時不允許指定任何參數 - 否則對實例的第二個請求但具有不同的參數可能會有問題！（如果對於具有相同參數的所有請求，應訪問相同的實例，則工廠模式更合適。）本文僅處理不需要參數的情況。通常，單例的要求是它們是懶惰地創建的 - 即在第一次需要之前不創建實例。  總">
 
 
 
@@ -468,7 +468,7 @@
                 
                   <span class="post-meta-item-text">更新於</span>
                 
-                <time title="修改時間：2019-08-28 09:32:47" itemprop="dateModified" datetime="2019-08-28T09:32:47+08:00">2019-08-28</time>
+                <time title="修改時間：2019-08-28 10:30:47" itemprop="dateModified" datetime="2019-08-28T10:30:47+08:00">2019-08-28</time>
               
             
           </span>
@@ -558,20 +558,19 @@
         <blockquote>
 <p>單例模式是軟件工程中最著名的模式之一。從本質上講，單例是一個只允許創建自身的單個實例的類，通常可以簡單地訪問該實例。最常見的是，單例在創建實例時不允許指定任何參數 - 否則對實例的第二個請求但具有不同的參數可能會有問題！（如果對於具有相同參數的所有請求，應訪問相同的實例，則工廠模式更合適。）本文僅處理不需要參數的情況。通常，單例的要求是它們是懶惰地創建的 - 即在第一次需要之前不創建實例。</p>
 </blockquote>
-<a id="more"></a>
-<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>在C＃中實現單例模式有各種不同的方法。我將以優雅的相反順序呈現它們，從最常見的，不是線程安全的，以及完全延遲加載，線程安全，簡單且高性能的版本開始。</p>
-<p>然而，所有這些實現共享四個共同特徵：</p>
-<ul>
-<li>單個構造函數，它是私有且無參數的。這可以防止其他類實例化它（這將違反模式）。(C#來說,類別必須 <code>sealed</code> ，且 建構式為 <code>private</code>)</li>
-<li>一個靜態變量，用於保存對單個已創建實例的引用。(C# 來說 需要一個 <code>public</code> 與 <code>statc</code> 的 )</li>
-<li>公共靜態意味著獲取對單個創建實例的引用，必要時創建一個實例。</li>
-</ul>
 <p>總結 Singleton 模式有兩個特點</p>
 <ul>
 <li>單一實例 (Single Instance)</li>
 <li>延遲建立實例 (Lazy Instantiation)</li>
 </ul>
-<h3 id="範例碼"><a href="#範例碼" class="headerlink" title="範例碼"></a>範例碼</h3><p>完整範例連結</p>
+<a id="more"></a>
+<h3 id="C-實作"><a href="#C-實作" class="headerlink" title="C# 實作"></a>C# 實作</h3><p>在C＃中實現單例模式有各種不同的方法。從最常見的，不是執行緒安全的，以及完全延遲加載，安全，簡單且高性能的版本開始。</p>
+<p>而有此共同特徵：</p>
+<ul>
+<li>單個構造函數，它是私有且無參數的。這可以防止其他類實例化它（這將違反模式）。(C#來說類別必須 <code>sealed</code> ，且 建構式為 <code>private</code>)</li>
+<li>一個靜態變量，用於保存對單個已創建實例的引用。(C# 來說需要一個 <code>public</code> 與 <code>statc</code> 的 )</li>
+<li>公共靜態意味著獲取對單個創建實例的引用，必要時創建一個實例。(C# 來說類別需 <code>public</code> 與 <code>static</code>)</li>
+</ul>
 <h4 id="非執行緒安全-Singleton"><a href="#非執行緒安全-Singleton" class="headerlink" title="非執行緒安全 Singleton"></a>非執行緒安全 Singleton</h4><p>這是個不好的案例，此方式不是執行緒安全，無法確保在多執行緒情況下是唯一的實例。</p>
 <figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">sealed</span> <span class="keyword">class</span> <span class="title">NotThreadSafeSingleton</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> NotThreadSafeSingleton _instance = <span class="literal">null</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">NotThreadSafeSingleton</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>    &#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> NotThreadSafeSingleton Instance</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">get</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (_instance == <span class="literal">null</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                _instance = <span class="keyword">new</span> NotThreadSafeSingleton();</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">return</span> _instance;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h4 id="簡單執行緒安全-Singleton"><a href="#簡單執行緒安全-Singleton" class="headerlink" title="簡單執行緒安全 Singleton"></a>簡單執行緒安全 Singleton</h4><p>使用 Lock 來確保執行緒安全。</p>
@@ -585,6 +584,7 @@
 <h4 id="使用-NET-4-的-Lazy"><a href="#使用-NET-4-的-Lazy" class="headerlink" title="使用 .NET 4 的 Lazy\"></a>使用 .NET 4 的 Lazy\<t></t></h4><p>此方式使用後 .Net Framework 4 之後提供的 Lazy\<t>，如此可以簡單的達成 Singleton 要求的 <code>唯一</code> 與 <code>延遲建立</code>。</t></p>
 <figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">sealed</span> <span class="keyword">class</span> <span class="title">DotNet4LazySingleton</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">readonly</span> Lazy&lt;DotNet4LazySingleton&gt; lazy = <span class="keyword">new</span> Lazy&lt;DotNet4LazySingleton&gt;(() =&gt; <span class="keyword">new</span> DotNet4LazySingleton());</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">DotNet4LazySingleton</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>    &#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> DotNet4LazySingleton Instance &#123; <span class="keyword">get</span> &#123; <span class="keyword">return</span> lazy.Value; &#125; &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="結語"><a href="#結語" class="headerlink" title="結語"></a>結語</h3><p>除了第一個範例不建議之外，其餘的是可以依實際情況斟酌使用。</p>
+<p><a href="https://github.com/raychiutw/singleton-pattern" target="_blank" rel="noopener">程式碼範例</a></p>
 
       
     </div>
@@ -932,7 +932,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#範例碼"><span class="nav-number">2.</span> <span class="nav-text">範例碼</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#非執行緒安全-Singleton"><span class="nav-number">2.1.</span> <span class="nav-text">非執行緒安全 Singleton</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#簡單執行緒安全-Singleton"><span class="nav-number">2.2.</span> <span class="nav-text">簡單執行緒安全 Singleton</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用-Double-checked-Locking-確保執行緒安全"><span class="nav-number">2.3.</span> <span class="nav-text">使用 Double-checked Locking 確保執行緒安全</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#不使用-Lock-確保執行緒安全-非-Lazy"><span class="nav-number">2.4.</span> <span class="nav-text">不使用 Lock, 確保執行緒安全 (非 Lazy)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#完整-Lazy-實例"><span class="nav-number">2.5.</span> <span class="nav-text">完整 Lazy 實例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用-NET-4-的-Lazy"><span class="nav-number">2.6.</span> <span class="nav-text">使用 .NET 4 的 Lazy\</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#結語"><span class="nav-number">3.</span> <span class="nav-text">結語</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#C-實作"><span class="nav-number">1.</span> <span class="nav-text">C# 實作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#非執行緒安全-Singleton"><span class="nav-number">1.1.</span> <span class="nav-text">非執行緒安全 Singleton</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#簡單執行緒安全-Singleton"><span class="nav-number">1.2.</span> <span class="nav-text">簡單執行緒安全 Singleton</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用-Double-checked-Locking-確保執行緒安全"><span class="nav-number">1.3.</span> <span class="nav-text">使用 Double-checked Locking 確保執行緒安全</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#不使用-Lock-確保執行緒安全-非-Lazy"><span class="nav-number">1.4.</span> <span class="nav-text">不使用 Lock, 確保執行緒安全 (非 Lazy)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#完整-Lazy-實例"><span class="nav-number">1.5.</span> <span class="nav-text">完整 Lazy 實例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用-NET-4-的-Lazy"><span class="nav-number">1.6.</span> <span class="nav-text">使用 .NET 4 的 Lazy\</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#結語"><span class="nav-number">2.</span> <span class="nav-text">結語</span></a></li></ol></div>
             
 
           </div>
