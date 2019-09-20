@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://raychiutw.github.io/2019/%E9%9A%A8%E6%89%8B-Design-Pattern-4-Repository-%E6%A8%A1%E5%BC%8F-Repository-Pattern/</loc>
+    
+    <lastmod>2019-09-20T07:28:41.712Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://raychiutw.github.io/2019/%E9%9A%A8%E6%89%8B-Design-Pattern-6-%E5%96%AE%E4%BE%8B%E6%A8%A1%E5%BC%8F-Singleton-Pattern/</loc>
     
     <lastmod>2019-08-28T02:35:29.990Z</lastmod>
@@ -26,13 +33,6 @@
     <loc>https://raychiutw.github.io/2019/%E9%9A%A8%E6%89%8B-Design-Pattern-3-%E7%B0%A1%E5%96%AE%E5%B7%A5%E5%BB%A0%E6%A8%A1%E5%BC%8F-Simple-Factory-Pattern/</loc>
     
     <lastmod>2019-08-23T04:08:07.495Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://raychiutw.github.io/2019/%E9%9A%A8%E6%89%8B-Design-Pattern-4-Repository-%E6%A8%A1%E5%BC%8F-Repository-Pattern/</loc>
-    
-    <lastmod>2019-08-23T04:07:50.124Z</lastmod>
     
   </url>
   
