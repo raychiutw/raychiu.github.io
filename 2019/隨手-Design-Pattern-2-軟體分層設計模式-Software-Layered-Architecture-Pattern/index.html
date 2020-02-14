@@ -110,7 +110,7 @@
 
 
   <meta name="description" content="軟體分層設計模式是我這幾年專案必會使用的架構，它的效益在多人團隊分工上有極大的效益，且能有效專注修改區域，提高共用性，讓我們來看看這是怎樣的架構。">
-<meta name="keywords" content="Design Pattern,C#,Software Layered Architecture Pattern">
+<meta name="keywords" content="C#,Design Pattern,Software Layered Architecture Pattern">
 <meta property="og:type" content="article">
 <meta property="og:title" content="隨手 Design Pattern (2) - 軟體分層設計模式 (Software Layered Architecture Pattern)">
 <meta property="og:url" content="https://raychiutw.github.io/2019/隨手-Design-Pattern-2-軟體分層設計模式-Software-Layered-Architecture-Pattern/index.html">
@@ -118,7 +118,7 @@
 <meta property="og:description" content="軟體分層設計模式是我這幾年專案必會使用的架構，它的效益在多人團隊分工上有極大的效益，且能有效專注修改區域，提高共用性，讓我們來看看這是怎樣的架構。">
 <meta property="og:locale" content="zh-TW">
 <meta property="og:image" content="https://raychiutw.github.io/2019/隨手-Design-Pattern-2-軟體分層設計模式-Software-Layered-Architecture-Pattern/sla.png">
-<meta property="og:updated_time" content="2019-08-23T04:09:02.072Z">
+<meta property="og:updated_time" content="2020-02-14T06:54:59.284Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="隨手 Design Pattern (2) - 軟體分層設計模式 (Software Layered Architecture Pattern)">
 <meta name="twitter:description" content="軟體分層設計模式是我這幾年專案必會使用的架構，它的效益在多人團隊分工上有極大的效益，且能有效專注修改區域，提高共用性，讓我們來看看這是怎樣的架構。">
@@ -470,7 +470,7 @@
                 
                   <span class="post-meta-item-text">更新於</span>
                 
-                <time title="修改時間：2019-08-23 12:09:02" itemprop="dateModified" datetime="2019-08-23T12:09:02+08:00">2019-08-23</time>
+                <time title="修改時間：2020-02-14 14:54:59" itemprop="dateModified" datetime="2020-02-14T14:54:59+08:00">2020-02-14</time>
               
             
           </span>
@@ -566,7 +566,7 @@
 <li>展示層 (Presentation Layer)：接收外部請求( view、app、ap 等等 )，呼叫業務層，並將業務層回傳的 dto 轉成 viewmodel 回傳給外部。</li>
 <li>業務層 (Business Layer)：接收展示層請求，專注處理商業邏輯，呼叫資料層，並將資料層回傳的 model 轉換成 dto 回傳給展示層。</li>
 <li>資料層 (Data Layer)：專注處理資料，資料來源來自資料庫或其他其他服務，接收業務層呼叫，執行資料處理回傳 model。</li>
-<li>共用層 (Common Layer)：將各層依賴的 entity、dto、enum 等放入此層，因共用層與其他層有參考關聯，此層物件務必力求簡單，且不可有商業邏輯。</li>
+<li>共用層 (Common Layer)：將各層依賴的 enum 等跨專案放入此層，因共用層與其他層有參考關聯，此層物件務必力求簡單，且不可有商業邏輯。</li>
 </ul>
 <p>受了 MRKT 大大的薰陶<br>我習慣用以下方式命名</p>
 <ul>
@@ -580,8 +580,6 @@
 <ul>
 <li>Sla.Common<ul>
 <li>Enum</li>
-<li>Dto</li>
-<li>Entity</li>
 </ul>
 </li>
 <li>Sla.WebApi<ul>
@@ -592,11 +590,13 @@
 <li>Sla.Service<ul>
 <li>Interface</li>
 <li>Implement</li>
+<li>Dto</li>
 </ul>
 </li>
 <li>Sla.Repository  <ul>
 <li>Interface</li>
 <li>Implement</li>
+<li>Entity</li>
 </ul>
 </li>
 </ul>
@@ -639,7 +639,7 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="\2019\隨手-Design-Pattern-4-Repository-模式-Repository-Pattern\" rel="bookmark">隨手 Design Pattern (4) - Repository 模式 (Repository Pattern)</a></div>
+      <div class="popular-posts-title"><a href="\2019\隨手-Design-Pattern-5-雙重檢查鎖定模式-Double-Checked-Locking-Pattern\" rel="bookmark">隨手 Design Pattern (5) - 雙重檢查鎖定模式 (Double-Checked Locking Pattern)</a></div>
       
     </li>
   
@@ -653,14 +653,14 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="\2019\隨手-Design-Pattern-5-雙重檢查鎖定模式-Double-Checked-Locking-Pattern\" rel="bookmark">隨手 Design Pattern (5) - 雙重檢查鎖定模式 (Double-Checked Locking Pattern)</a></div>
+      <div class="popular-posts-title"><a href="\2019\隨手-Design-Pattern-4-Repository-模式-Repository-Pattern\" rel="bookmark">隨手 Design Pattern (4) - Repository 模式 (Repository Pattern)</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="\2019\隨手-Design-Pattern-1-序篇\" rel="bookmark">隨手 Design Pattern (1) - 序篇</a></div>
+      <div class="popular-posts-title"><a href="\2018\在-ASP-NET-Core-中使用-AutoMapper\" rel="bookmark">在 ASP.NET Core 中使用 AutoMapper</a></div>
       
     </li>
   
@@ -710,9 +710,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Design-Pattern/" rel="tag"># Design Pattern</a>
-          
             <a href="/tags/C/" rel="tag"># C#</a>
+          
+            <a href="/tags/Design-Pattern/" rel="tag"># Design Pattern</a>
           
             <a href="/tags/Software-Layered-Architecture-Pattern/" rel="tag"># Software Layered Architecture Pattern</a>
           
@@ -814,7 +814,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">27</span>
+                    <span class="site-state-item-count">28</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -998,7 +998,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2018 – <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; 2018 – <span itemprop="copyrightYear">2020</span>
   <span class="with-love" id="animate">
     <i class="fa fa-heart"></i>
   </span>
@@ -1012,7 +1012,7 @@
     
       <span class="post-meta-item-text">總字數：</span>
     
-    <span title="總字數">72k</span>
+    <span title="總字數">73k</span>
   
 
   
@@ -1023,7 +1023,7 @@
     
       <span class="post-meta-item-text">所需總閱讀時間 &asymp;</span>
     
-    <span title="所需總閱讀時間">1:05</span>
+    <span title="所需總閱讀時間">1:06</span>
   
 </div>
 
